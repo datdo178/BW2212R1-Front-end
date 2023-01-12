@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill</title>
+    <style>
+        tr {
+            text-emphasis: 10px;
+            color: chocolate;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        tr:nth-child(odd) {
+            color: darkgreen;
+        }
+
+        img {
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>TOP 10 HIT SONGS - Jan 2023</h2>
+    <p>* To avoid storing too much unnecessery data on my repository, only one mp3 file is using for this practice site
+    </p>
+
+    <table id="song_list"></table>
+    <br>
+    <h2>Video: Sai Gon Lullaby</h2>
+    <video controls src="./media/video/Sai-Gon-Lullaby.mp4" type="video/mp4"></video>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qaZ0oAh4evU" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <script>
+        let elm_table = document.getElementById("song_list");
+
+        for (let i = 1; i < 11; i++) {
+            let elm_tr = document.createElement("tr");
+
+            const order = `<td>${('0' + i).slice(-2)}</td>`
+            const avatar = `<td><img src="./media/image/${i}.song_avatar.jpeg" width="90" height="90" alt=""></td>`
+            const song = `<td>Song name ${i}<br><audio controls src="./media/audio/Cong-TocTien.mp3" type="audio/mp3"></audio></td>`
+
+            elm_tr.innerHTML = order + avatar + song
+            elm_table.appendChild(elm_tr)
+        }
+    </script>
+</body>
+
+</html>
