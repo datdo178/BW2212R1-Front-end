@@ -17,19 +17,19 @@
             <fieldset>
                 <legend>Personal Details</legend>
                 <label for="fname">Name:</label>
-                <input type="text" id="fname" placeholder="Enter name here">
+                <input type="text" id="fname" name="fname" placeholder="Enter name here">
                 <br>
                 <label for="address">Address:</label>
-                <input type="text" id="address" placeholder="Enter address here">
+                <input type="text" id="address" name="address" placeholder="Enter address here">
                 <br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Enter email here">
+                <input type="email" id="email" name="email" placeholder="Enter email here">
                 <br>
                 <label for="phone">Phone number:</label>
-                <input type="tel" id="phone" placeholder="Enter 10 digit number" maxlength="10">
+                <input type="tel" id="phone" name="phone" placeholder="Enter 10 digit number" maxlength="10">
                 <br>
                 <label for=" iq">IQ:</label>
-                <input type="number" id="iq" placeholder="Enter IQ here">
+                <input type="number" id="iq" name="iq" placeholder="Enter IQ here">
                 <br>
                 Gender:
                 <br><br>
@@ -41,7 +41,7 @@
                 <label for="gother">Other</label>
                 <br><br>
                 <label for="bday">Date of Proposed Outing:</label>
-                <input type="date" id="bday" style="width:130px">
+                <input type="date" id="bday" name="bday" style="width:130px">
             </fieldset>
             <fieldset>
                 Check All That Apply
@@ -56,7 +56,7 @@
             </fieldset>
             <fieldset>
                 Political Persuasion:
-                <input list="pp" value="Left Wing">
+                <input list="pp" value="Left Wing" name="pp">
                 <datalist id="pp">
                     <option value="Left Wing"></option>
                     <option value="Right Wing"></option>
@@ -64,7 +64,7 @@
                     <option value="Nazi"></option>
                 </datalist>
                 Education Level Compelted:
-                <input list="elc" value="University">
+                <input list="elc" value="University" name="elc">
                 <datalist id="elc">
                     <option value="University"></option>
                     <option value="College"></option>
@@ -76,14 +76,14 @@
                 <legend>Essay Section</legend>
                 In 50 words or more explain why you want to date my daughter
                 <br><br>
-                <textarea cols="50" rows="3" placeholder="Enter Text Here"></textarea>
+                <textarea cols="50" rows="3" name="reason" placeholder="Enter Text Here"></textarea>
                 <br>
                 Pleade upload contact details for 2 references
                 <br>
-                <textarea cols="50" rows="3" placeholder="Enter Text Here"></textarea>
+                <textarea cols="50" rows="3" name="contact" placeholder="Enter Text Here"></textarea>
                 <br><br>
                 Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:
-                <input type="file">
+                <input type="file" name="file">
             </fieldset>
         </form>
     </main>

@@ -18,14 +18,14 @@
             <fieldset>
                 <legend>Customer Info</legend>
                 <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Enter your name here" size="50" autofocus>
+                <input type="text" id="name" name="name" placeholder="Enter your name here" size="50" autofocus>
                 <br><br>
                 <label for="phone">Telephone:</label>
-                <input type="tel" id="phone" placeholder="Pattern: 1-234-567-8910" size="50"
+                <input type="tel" id="phone" name="phone" placeholder="Pattern: 1-234-567-8910" size="50"
                     pattern="\d-\d{3}-\d{3}-\d{4}">
                 <br><br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Enter your email address" size="50">
+                <input type="email" id="email" name="email" placeholder="Enter your email address" size="50">
                 <br><br>
                 <label>Gender:</label>
                 <input type="radio" id="male" name="gender" value="Male">
@@ -44,9 +44,9 @@
             <fieldset>
                 <legend>Books</legend>
                 <label for="bookname">Name:</label>
-                <input type="text" id="bookname" size="50">
+                <input type="text" id="bookname" name="bookname" size="50">
                 <label for="quantity">Quantity (Maximum 5:)</label>
-                <input type="number" id="quantity" min="1" max="5" style="width: 25px">
+                <input type="number" id="quantity" name="quantity" min="1" max="5" style="width: 25px">
             </fieldset>
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>

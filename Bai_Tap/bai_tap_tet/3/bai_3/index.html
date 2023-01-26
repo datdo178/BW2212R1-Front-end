@@ -17,26 +17,26 @@
         <form>
             <label for="fname">Full name*:</label>
             <br>
-            <input type="text" id="fname" placeholder="FirstName LastName" size="20" required>
+            <input type="text" id="fname" name="fname" placeholder="FirstName LastName" size="20" required>
             <br>
             <label for="email">Email address*:</label>
             <br>
-            <input type="email" id="email" size="20" required>
+            <input type="email" id="email" name="name" size="20" required>
             <br>
             <label for="package">Select Tour Package*:</label>
             <br>
-            <input list="package" value="Goa" size="10">
+            <input list="package" name="package" value="Goa" size="10">
             <br>
             <datalist id="package">
                 <option value="Goa"></option>
             </datalist>
             <label for="date">Arrive date*:</label>
             <br>
-            <input type="date" style="width: 140px" required>
+            <input type="date" name="date" style="width: 140px" required>
             <br>
             <label for="numofperson">Number of persons*:</label>
             <br>
-            <input type=" number" min="1" style="width: 140px" required>
+            <input type="number" id="numofperson" name="numofperson" min="1" style="width: 140px" required>
             <br>
             <label>What would you want to avail?*</label>
             <br>
