@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2.3</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1>Application for permission to date my daughter</h1>
+        <p><b>Note:</b> Form is to be completed at least 21 days prior to date</p>
+        <form>
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" placeholder="Enter name here">
+                <br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter address here">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter email here">
+                <br>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" placeholder="Enter 10 digit number" maxlength="10">
+                <br>
+                <label for=" iq">IQ:</label>
+                <input type="number" id="iq" placeholder="Enter IQ here">
+                <br>
+                Gender:
+                <br><br>
+                <input type="radio" id="gmale" name="gender" value="Male" checked>
+                <label for="gmale">Male</label><br>
+                <input type="radio" id="gfemale" name="gender" value="Female">
+                <label for="gfemale">Female</label><br>
+                <input type="radio" id="gother" name="gender" value="Other">
+                <label for="gother">Other</label>
+                <br><br>
+                <label for="bday">Date of Proposed Outing:</label>
+                <input type="date" id="bday" style="width:130px">
+            </fieldset>
+            <fieldset>
+                Check All That Apply
+                <br><br>
+                <input type="checkbox" name="describe" value="tattoo">I have tattoos and/or piercings<br>
+                <input type="checkbox" name="describe" value="older">I am more than 2 years older than my daughter<br>
+                <input type="checkbox" name="describe" value="vehicle">I own a panel van or V8 ute<br>
+                <input type="checkbox" name="describe" value="work" checked>I work full-time<br>
+                <input type="checkbox" name="describe" value="rich" checked>My parents are rich<br>
+                <input type="checkbox" name="describe" value="location" checked>Is the date at a well lit public
+                location<br>
+            </fieldset>
+            <fieldset>
+                Political Persuasion:
+                <input list="pp" value="Left Wing">
+                <datalist id="pp">
+                    <option value="Left Wing"></option>
+                    <option value="Right Wing"></option>
+                    <option value="Conservative"></option>
+                    <option value="Nazi"></option>
+                </datalist>
+                Education Level Compelted:
+                <input list="elc" value="University">
+                <datalist id="elc">
+                    <option value="University"></option>
+                    <option value="College"></option>
+                    <option value="High School"></option>
+                    <option value="None"></option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Essay Section</legend>
+                In 50 words or more explain why you want to date my daughter
+                <br><br>
+                <textarea cols="50" rows="3" placeholder="Enter Text Here"></textarea>
+                <br>
+                Pleade upload contact details for 2 references
+                <br>
+                <textarea cols="50" rows="3" placeholder="Enter Text Here"></textarea>
+                <br><br>
+                Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:
+                <input type="file">
+            </fieldset>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3.2</title>
+</head>
+
+<body>
+    <header>
+        <h1 style="color: purple">A Simple Form</h1>
+    </header>
+    <main>
+        <h2 style="color: #FF4E5D">Form fundamental</h2>
+        <form>
+            <fieldset>
+                <legend>Customer Info</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name here" size="50" autofocus>
+                <br><br>
+                <label for="phone">Telephone:</label>
+                <input type="tel" id="phone" placeholder="Pattern: 1-234-567-8910" size="50"
+                    pattern="\d-\d{3}-\d{3}-\d{4}">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email address" size="50">
+                <br><br>
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" checked>
+                <label for="female">Female</label>
+                <br><br>
+                <label>Hobbies:</label>
+                <input type="checkbox" id="basketball" name="hobbies" value="Basketball" checked>
+                <label for="basketball">Basketball</label>
+                <input type="checkbox" id="football" name="hobbies" value="Football" checked>
+                <label for="football">Football</label>
+                <input type="checkbox" id="badminton" name="hobbies" value="Badminton">
+                <label for="badminton">Badminton</label>
+            </fieldset>
+            <fieldset>
+                <legend>Books</legend>
+                <label for="bookname">Name:</label>
+                <input type="text" id="bookname" size="50">
+                <label for="quantity">Quantity (Maximum 5:)</label>
+                <input type="number" id="quantity" min="1" max="5" style="width: 25px">
+            </fieldset>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

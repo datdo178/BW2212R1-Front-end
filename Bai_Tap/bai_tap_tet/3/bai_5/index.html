@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3.5</title>
+    <style>
+        .databtn {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <b>Simple form with name and age</b>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" value="Albert" size="25">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age:</label>
+                    </td>
+                    <td>
+                        <input type="number" id="age" value="39" style="width: 172px">
+                        <button type="submit">Add</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <br>
+        <b>Current data in the system...</b>
+        <table border="1px">
+            <thead>
+                <th></th>
+                <th>Name</th>
+                <th>Age</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button class="databtn">Delete</button></td>
+                    <td>John</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td><button class="databtn">Delete</button></td>
+                    <td>Mike</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td><button class="databtn">Delete</button></td>
+                    <td>Albert</td>
+                    <td>39</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button class="databtn">Click here</button> to create a Table and some data using Javascript
+    </main>
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3.3</title>
+</head>
+
+<body>
+    <header>
+        <h1>Travel reservation form</h1>
+    </header>
+    <main>
+        <h2>* denotes mandatory</h2>
+        <form>
+            <label for="fname">Full name*:</label>
+            <br>
+            <input type="text" id="fname" placeholder="FirstName LastName" size="20" required>
+            <br>
+            <label for="email">Email address*:</label>
+            <br>
+            <input type="email" id="email" size="20" required>
+            <br>
+            <label for="package">Select Tour Package*:</label>
+            <br>
+            <input list="package" value="Goa" size="10">
+            <br>
+            <datalist id="package">
+                <option value="Goa"></option>
+            </datalist>
+            <label for="date">Arrive date*:</label>
+            <br>
+            <input type="date" style="width: 140px" required>
+            <br>
+            <label for="numofperson">Number of persons*:</label>
+            <br>
+            <input type=" number" min="1" style="width: 140px" required>
+            <br>
+            <label>What would you want to avail?*</label>
+            <br>
+            <label for="boarding">Boarding</label>
+            <input type="checkbox" id="boarding" name="travelitem">
+            <br>
+            <label for="fooding">Fooding</label>
+            <input type="checkbox" id="fooding" name="travelitem">
+            <br>
+            <label for="sightseeing">Sight seeing</label>
+            <input type="checkbox" id="sightseeing" name="travelitem">
+            <br>
+            <label for="coupon">Discount Coupon code:</label>
+            <br>
+            <input type="text" size="20">
+            <br>
+            <label>Terms and conditions*</label>
+            <br>
+            <input type="radio" id="agree" name="terms">
+            <label for="agree" checked>I agree</label>
+            <input type="radio" id="disagree" name="terms">
+            <label for="disagree">I disagree</label>
+            <br>
+            <button type="submit">Complete reservation</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

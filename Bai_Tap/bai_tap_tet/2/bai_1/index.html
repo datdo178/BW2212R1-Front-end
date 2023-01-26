@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2.1</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1>Thanh toán</h1>
+        <form>
+            <label for="fname">Tên đầy đủ</label>
+            <input type="text" id="fname" placeholder="Nhập tên đầy đủ người mua hàng" size="50" required>
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Nhập password" required>
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Nhập email" required>
+            <br>
+            <br>
+            <label for="bday">Ngày sinh</label>
+            <input type="date" id="bday" required>
+            <br>
+            <br>
+            <label for="product">Mặt hàng mua</label>
+            <input list="product">
+            <datalist id="product">
+                <option value="Shoes"></option>
+                <option value="Socks"></option>
+                <option value="Shirt"></option>
+                <option value="Sandals"></option>
+                <option value="Trousers"></option>
+            </datalist>
+            <br>
+            <br>
+            <label for="quantity">Số lượng mua</label>
+            <input type="number" id="quantity" min="1" max="5">
+            <br>
+            <br>
+            <label for="range">Bán kính vận chuyển</label>
+            <input type="range" id="range" min="10" max="20"><br><br>
+            <button>Đăng kí</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
+<!--Time format mm/dd/yyyy?-->
