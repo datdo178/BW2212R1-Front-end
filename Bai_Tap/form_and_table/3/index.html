@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Table 3</title>
+    <style>
+        select {
+            width: 400px;
+        }
+
+        #agreement-table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        #agreement-table th {
+            background-color: #E6E6E6;
+        }
+
+        #agreement-table td {
+            border: 0.5px solid #E6E6E6;
+            width: 15%
+        }
+
+        #agreement-table td:nth-child(1) {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #agreement-table td:nth-child(even) {
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <form action="#" method="post">
+            <hr>
+            <p>
+                <b style="font-size: 2em">Market Research Survey</b>
+                <br>
+                Please take a few moments to complete this satisfaction survey.
+            </p>
+            <hr style="border: 0.5px dotted">
+            <b>What is your age range?</b>
+            <br>
+            <select name="age" id="age" value="18-24">
+                <option value="1">18-24</option>
+                <option value="2">25-34</option>
+                <option value="3">35-50</option>
+                <option value="4">50+</option>
+            </select>
+            <br>
+            <br>
+            <b>What is your yearly income range?</b>
+            <br>
+            <select name="income" id="income" value="$0-$25,000">
+                <option value="1">$0-$25,000</option>
+                <option value="2">$25,001-$50,000</option>
+                <option value="3">$50,001-$100,000</option>
+                <option value="4">100.000+</option>
+            </select>
+            <br>
+            <br>
+            <b>Gender</b>
+            <br>
+            <input type="radio" id="male" name="gender" value="1">
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" id="female" name="gender" value="2">
+            <label for="female">Female</label>
+            <br>
+            <br>
+            <b>Which of the following products have your purchased in the last 2 months. Please check all that
+                apply.</b>
+            <br>
+            <input type="checkbox" id="p1" name="p1" value="1">
+            <label for="p1">Product 1</label>
+            <br>
+            <input type="checkbox" id="p2" name="p2" value="2">
+            <label for="p2">Product 2</label>
+            <br>
+            <input type="checkbox" id="p3" name="p3" value="3">
+            <label for="p3">Product 3</label>
+            <br>
+            <br>
+            <b>How often would you use our new product?</b>
+            <br>
+            <input type="radio" id="daily" name="frequent" value="1">
+            <label for="daily">Daily</label>
+            <br>
+            <input type="radio" id="weekly" name="frequent" value="2">
+            <label for="weekly">Weekly</label>
+            <br>
+            <input type="radio" id="monthly" name="frequent" value="3">
+            <label for="monthly">Monthly</label>
+            <br>
+            <br>
+            <b>What would you pay for the new product?</b>
+            <br>
+            <table>
+                <tr>
+                    <td>$</td>
+                    <td>
+                        <input type="number" style="width: 70px">
+                    </td>
+                    <td>.</td>
+                    <td>
+                        <input type="number" style="width: 25px">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Dollars</td>
+                    <td></td>
+                    <td>Cents</td>
+                </tr>
+            </table>
+            <br>
+            <b>What features would you like to see in the new product.</b>
+            <br>
+            <textarea name="feature" id="feature" rows="5" style="width: 100%"></textarea>
+            <br>
+            <br>
+            <label for="agreement"></label>
+            <table id="agreement-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%"></th>
+                        <th>Strongly Disagree</th>
+                        <th>Disagree</th>
+                        <th>Agree</th>
+                        <th>Strongly Agree</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Our products are priced fairly.</td>
+                        <td>
+                            <input type="radio" id="A1" name="agreementA" value="A1">
+                            <br>
+                            <label for="A1">1</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="A2" name="agreementA" value="A2">
+                            <br>
+                            <label for="A2">2</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="A3" name="agreementA" value="A3">
+                            <br>
+                            <label for="A3">3</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="A4" name="agreementA" value="A4">
+                            <br>
+                            <label for="A4">4</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Our products are high quality.</td>
+                        <td>
+                            <input type="radio" id="B1" name="agreementB" value="B1">
+                            <br>
+                            <label for="B1">1</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="B2" name="agreementB" value="B2">
+                            <br>
+                            <label for="B2">2</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="A3" name="agreementB" value="B3">
+                            <br>
+                            <label for="B3">3</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="B4" name="agreementB" value="B4">
+                            <br>
+                            <label for="B4">4</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>You would recommend our product to a friend or coworker.</td>
+                        <td>
+                            <input type="radio" id="C1" name="agreementC" value="C1">
+                            <br>
+                            <label for="C1">1</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="C2" name="agreementC" value="C2">
+                            <br>
+                            <label for="C2">2</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="A3" name="agreementC" value="C3">
+                            <br>
+                            <label for="C3">3</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="C4" name="agreementC" value="C4">
+                            <br>
+                            <label for="C4">4</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
