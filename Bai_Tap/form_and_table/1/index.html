@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Table 1</title>
+    <style>
+        #form1 th {
+            background-color: red;
+        }
+
+        #form1 .field-name {
+            text-align: right;
+            vertical-align: text-top;
+            color: blue;
+        }
+
+        #form1 .hobbies-label {
+            color: orange;
+        }
+
+        #form2 table {
+            background-color: #FFFDA8;
+        }
+
+        #form2 th {
+            background-color: #D4FDD6;
+            color: blue;
+            text-align: left;
+        }
+
+        #form2 td:nth-child(1) {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <form id="form1" action="#" method="POST">
+            <table width="50%">
+                <thead>
+                    <tr>
+                        <th colspan="2">SỞ THÍCH CỦA BẠN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="field-name">
+                            <label for="fname">Họ và tên</label>
+                        </td>
+                        <td>
+                            <input type="text" id="fname" name="fname" size="40">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">
+                            <label for="email">Email</label>
+                        </td>
+                        <td>
+                            <input type="email" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field-name">
+                            <label>Sở thích</label>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="sport" name="hobbies" value="1">
+                                        <label for="sport" class="hobbies-label">Thể thao</label>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" id="music" name="hobbies" value="2">
+                                        <label for="music" class="hobbies-label">Âm nhạc</label>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" id="book" name="hobbies" value="3">
+                                        <label for="book" class="hobbies-label">Đọc sách</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="web" name="hobbies" value="4">
+                                        <label for="web" class="hobbies-label">Lướt web</label>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" id="game" name="hobbies" value="5">
+                                        <label for="game" class="hobbies-label">Chơi game</label>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" id="movie" name="hobbies" value="6">
+                                        <label for="movie" class="hobbies-label">Điện ảnh</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="travel" name="hobbies" value="6">
+                                        <label for="travel" class="hobbies-label">Du lịch</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Gửi thông tin">
+                            <input type="reset" value="Nhập lại">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <hr>
+        <form id="form2" action="#" method="POST">
+            <table width="50%">
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            ĐĂNG KÝ HỌC VIÊN
+                        </th>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="fname">Họ và tên</label>
+                        </td>
+                        <td>
+                            <input type="text" id="fname" name="fname" size="40">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="bday">Ngày sinh</label>
+                        </td>
+                        <td>
+                            <input type="date" id="bday" name="bday">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Giới tính</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="male" name="gender" value="1">
+                            <label for="male">Nam</label>
+                            <input type="radio" id="female" name="gender" value="2">
+                            <label for="female">Nữ</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="address">Địa chỉ</label>
+                        </td>
+                        <td>
+                            <textarea name="address" id="address" cols="30" rows="3"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="class">Lớp</label>
+                        </td>
+                        <td>
+                            <select name="class" id="class" value="">
+                                <option value="">--Chọn lớp--</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email</label>
+                        </td>
+                        <td>
+                            <input type="email" id="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone">Điện thoại</label>
+                        </td>
+                        <td>
+                            <input type="tel" id="phone" name="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Gửi thông tin">
+                            <input type="reset" value="Nhập lại">
+                        </td>
+                    </tr>
+                </tbody>
+                </thead>
+            </table>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
