@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest Board</title>
+    <style>
+        body {
+            background-color: orange;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            background-color: white;
+        }
+
+        tr:nth-child(odd) td:nth-child(even) {
+            width: 60px;
+            height: 60px;
+            background-color: black;
+        }
+
+        tr:nth-child(even) td:nth-child(odd) {
+            width: 60px;
+            height: 60px;
+            background-color: black;
+        }
+
+        #row-name {
+            background-color: transparent;
+            text-align: right;
+        }
+
+        #column-order td {
+            background-color: transparent;
+            text-align: center;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <table id="board">
+            <tr id="column-order"></tr>
+        </table>
+    </main>
+    <footer></footer>
+
+    <script>
+        const BOARD_SIZE = 8;
+        const ROW_NAMES = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
+        function createHeader() {
+            const headerRow = document.getElementById("column-order");
+            let headerCell = document.createElement("td");
+            headerCell.setAttribute("id", "col-name");
+            headerRow.appendChild(headerCell);
+
+            for (let i = 0; i < BOARD_SIZE; i++) {
+                headerCell = document.createElement("td");
+                headerCell.innerHTML = i + 1;
+                headerRow.appendChild(headerCell);
+            }
+        }
+
+        function createRows() {
+            const table = document.getElementById("board");
+
+            for (let i = 0; i < BOARD_SIZE; i++) {
+                const row = document.createElement("tr");
+
+                const rowName = document.createElement("td");
+                rowName.innerHTML = ROW_NAMES[i];
+                rowName.setAttribute("id", "row-name");
+                row.appendChild(rowName);
+
+                for (let j = 0; j < BOARD_SIZE; j++) {
+                    const cell = document.createElement("td");
+                    row.appendChild(cell);
+                }
+
+                table.appendChild(row);
+            }
+        }
+
+        createHeader();
+        createRows();
+    </script>
+</body>
+
+</html>
