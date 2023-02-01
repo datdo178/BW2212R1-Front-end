@@ -7,13 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar 10/2009</title>
     <style>
-        #days-vn {
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #days_vn {
             background-color: orange;
             color: white;
         }
 
-        #days-en {
+        #days_en {
             text-align: center;
+        }
+
+        thead th:first-child {
+            background-color: red;
+        }
+
+        thead th:last-child {
+            background-color: blue;
         }
 
         tbody td {
@@ -21,12 +34,16 @@
             text-align: center;
         }
 
-        tbody td:first-child {
+        tbody td:first-child,
+        thead td:first-child {
             color: red;
         }
 
-        tbody td:last-child {
+        tbody td:last-child,
+        thead td:last-child,
+        h1 {
             color: blue;
+            text-align: center;
         }
 
         sub {
@@ -37,28 +54,28 @@
 
 <body>
     <header>
-        <h1 style="text-align: center; color:blue;">Tháng 10 - October</h1>
+        <h1>Tháng 10 - October</h1>
     </header>
     <main>
-        <table style="border-collapse: collapse; width: 100%">
+        <table>
             <thead>
-                <tr id="days-vn">
-                    <th style="background-color:red">C.Nhật</th>
+                <tr id="days_vn">
+                    <th>C.Nhật</th>
                     <th>T.Hai</th>
                     <th>T.Ba</th>
                     <th>T.Tư</th>
                     <th>T.Năm</th>
                     <th>T.Sáu</th>
-                    <th style="background-color: blue">T.Bảy</th>
+                    <th style="">T.Bảy</th>
                 </tr>
-                <tr id="days-en">
-                    <td style="color:red">Sun</td>
+                <tr id="days_en">
+                    <td>Sun</td>
                     <td>Mon</td>
                     <td>Tue</td>
                     <td>Wed</td>
                     <td>Thu</td>
                     <td>Fri</td>
-                    <td style="color:blue">Sat</td>
+                    <td>Sat</td>
                 </tr>
             </thead>
             <tbody>
