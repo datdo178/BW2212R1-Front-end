@@ -38,14 +38,34 @@
             border-collapse: collapse;
         }
 
-        #articles td {
-            width: 50%;
-        }
-
         #articles table {
             height: 350px;
             text-align: left;
             border: 1px solid gray;
+        }
+
+        #articles td {
+            width: 50%;
+        }
+
+        #articles ul {
+            align-self: left;
+            margin: 0;
+        }
+
+        #statistics {
+            border: 1px solid gray;
+            text-align: left;
+        }
+
+        #statistics td.count {
+            width: 15%;
+        }
+
+        #statistics td.count b {
+            width: 15%;
+            font-size: xx-large;
+            font-weight: bolder;
         }
     </style>
 </head>
@@ -136,13 +156,22 @@
                         <tr>
                             <td>[ <a href="#"><b>Đọc tiếp</b></a> ]</td>
                         </tr>
-                        <tr>
+                        <tr class="underline-row">
                             <td>
                                 <ul>
                                     <li>Mới chọn:</li>
                                     <li><a href="#">Rewrite</a></li>
                                     <li><a href="#">Vẻ đẹp Mỹ</a></li>
                                     <li><a href="#">HMS New Zealand</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><b>Lưu trữ</b></li>
+                                    <li><b>Thêm bài mới</b></li>
+                                    <li><b>Ứng cử viên</b></li>
                                 </ul>
                             </td>
                         </tr>
@@ -176,11 +205,17 @@
                                 </p>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="underline-row">
                             <td>Từ những <a href="#"><b>bài viết mới</b></a> của Wikipedia</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>
+                                <ul>
+                                    <li><b>Lưu trữ</b></li>
+                                    <li><b>Thêm bài mới</b></li>
+                                    <li><b>Ứng cử viên</b></li>
+                                </ul>
+                            </td>
                         </tr>
                     </table>
                 </td>
@@ -194,7 +229,7 @@
                                 Ngày này năm xưa
                             </th>
                         </tr>
-                        <tr>
+                        <tr class="underline-row">
                             <td>
                                 <p>
                                     1 tháng 2: Lễ hội Imbolc tại Ireland, Scotland và đảo Man.
@@ -216,10 +251,9 @@
                         <tr>
                             <td>
                                 <ul>
-                                    <li>Mới chọn:</li>
-                                    <li><a href="#">Rewrite</a></li>
-                                    <li><a href="#">Vẻ đẹp Mỹ</a></li>
-                                    <li><a href="#">HMS New Zealand</a></li>
+                                    <li><b>Lưu trữ</b></li>
+                                    <li><b>Thêm bài mới</b></li>
+                                    <li><b>Ứng cử viên</b></li>
                                 </ul>
                             </td>
                         </tr>
@@ -236,6 +270,7 @@
                         <tr>
                             <td>
                                 <b>Khoa học tự nhiên</b>
+                                <br>
                                 <ul>
                                     <li><a href="#">Địa chất học</a></li>
                                     <li><a href="#">Địa lý học</a></li>
@@ -251,6 +286,7 @@
                         <tr>
                             <td>
                                 <b>Khoa học xã hội</b>
+                                <br>
                                 <ul>
                                     <li><a href="#">Chính trị học</a></li>
                                     <li><a href="#">Giáo dục</a></li>
@@ -263,9 +299,10 @@
                                 </ul>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="underline-row">
                             <td>
                                 <b>Công nghiệp</b>
+                                <br>
                                 <ul>
                                     <li><a href="#">Cơ học</a></li>
                                     <li><a href="#">Giáo dục</a></li>
@@ -278,7 +315,97 @@
                                 </ul>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><b>Lưu trữ</b></li>
+                                    <li><b>Thêm bài mới</b></li>
+                                    <li><b>Ứng cử viên</b></li>
+                                </ul>
+                            </td>
+                        </tr>
                     </table>
+                </td>
+            </tr>
+        </table>
+        <table id="statistics">
+            <tr>
+                <th>
+                    <img src="./images/pen.png" width="44" height="44">
+                    Cải thiện nội dung
+                </th>
+            </tr>
+            <tr class="underline-row">
+                <td>
+                    <table>
+                        <tr>
+                            <td class="count">
+                                <b>1.305</b> bài
+                                <br> dịch chất lượng kém
+                            </td>
+                            <td class="count">
+                                <b>2.190</b> bài
+                                <br> cần biên tập lại
+                            </td>
+                            <td rowspan="4">
+                                <b>Tham gia Wikipedia</b>
+                                <br>
+                                <img src="./images/wikipedia_logo.png" width="115" height="100">
+                                <br>
+                                Wikipedia là dự án bách khoa toàn thư mở, đa ngôn ngữ mà mọi người đều có thể tham gia
+                                đóng
+                                góp. Mục tiêu của Wikipedia là xây dựng một bách khoa toàn thư hoàn chỉnh, chính xác và
+                                trung lập.
+                                <br>
+                                <br>
+                                Sự phát triển của Wikipedia tiếng Việt phụ thuộc vào sự tham gia của bạn. Dù là tạo một
+                                bài
+                                mới, thêm nội dung, sửa lỗi chính tả hay bổ sung hình ảnh minh họa, thì bạn cũng đã góp
+                                phần
+                                xây dựng để Wikipedia tiếng Việt ngày một phát triển.
+                                <br>
+                                <button>Tham gia</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="count">
+                                <b>6.024</b> bài
+                                <br> cần thêm nguồn
+                            </td>
+                            <td class="count">
+                                <b>384</b> bài
+                                <br> chưa rõ độ nổi bật
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="count">
+                                <b>382</b> bài
+                                <br> lỗi thời
+                            </td>
+                            <td class="count">
+                                <b>42.968</b> bài
+                                <br> hỏng liên kết
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="count">
+                                <b>67</b> bài
+                                <br> chất lượng kém
+                            </td>
+                            <td class="count">
+                                <b>42.968</b> bài
+                                <br> có đề mục cần mở rộng
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li><b>Quản lý Wikipedia</b></li>
+                        <li><b>Liên hệ bảo quản viên</b></li>
+                    </ul>
                 </td>
             </tr>
         </table>
