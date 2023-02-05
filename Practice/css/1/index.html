@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table CSS</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th {
+            background-color: #4CAF50;
+            height: 50px;
+            text-align: left;
+            padding: 15px;
+        }
+
+        td {
+            height: 50px;
+            vertical-align: bottom;
+            padding: 15px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Thực hành - CSS:</h2>
+
+    <table>
+        <tr>
+            <th>Họ đệm</th>
+            <th>Tên</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Khắc</td>
+            <td>Nhật</td>
+        </tr>
+        <tr>
+            <td>Nguyễn Thị</td>
+            <td>Phương</td>
+        </tr>
+    </table>
+</body>
+
+</html>
