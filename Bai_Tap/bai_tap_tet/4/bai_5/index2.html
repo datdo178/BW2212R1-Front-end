@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4.5</title>
+    <style>
+        body {
+            background-color: #f6f3e5;
+        }
+
+        .container {
+            background-color: white;
+            width: 85%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            border-bottom: 1px solid gray;
+        }
+
+        .last-container {
+            border-bottom: 0;
+        }
+
+        .article {
+            width: 70%;
+            float: left;
+            padding: 12px 5px;
+        }
+
+        .sidebar {
+            width: 30%;
+            float: left;
+            margin: 12px 7px;
+        }
+
+        .sidebar table {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .sidebar tr:first-child td {
+            border-bottom: 1px solid black;
+        }
+
+        .container:nth-child(1) .sidebar {
+            background-color: #ffffcc;
+        }
+
+        .container:nth-child(2) .sidebar {
+            background-color: #ffeeee;
+        }
+
+        .container:nth-child(3) .sidebar {
+            background-color: #CCFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="article">
+            <h2>Article 1</h2>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet</p>
+        </div>
+        <div class="sidebar">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Sidebar 1</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Item1</li>
+                            <li>Item2</li>
+                            <li>Item3</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="article">
+            <h2>Article 2</h2>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet</p>
+        </div>
+        <div class="sidebar">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Sidebar 2</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Item1</li>
+                            <li>Item2</li>
+                            <li>Item3</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container last-container">
+        <div class="article">
+            <h2>Article 3</h2>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet</p>
+        </div>
+        <div class="sidebar">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Sidebar 3</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Item1</li>
+                            <li>Item2</li>
+                            <li>Item3</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

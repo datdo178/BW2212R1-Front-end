@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bai 2.3</title>
+    <style>
+    </style>
 </head>
 
 <body>
@@ -17,7 +19,7 @@
             <fieldset>
                 <legend>Personal Details</legend>
                 <label for="fname">Name:</label>
-                <input type="text" id="fname" name="fname" placeholder="Enter name here">
+                <input type="text" id="fname" name="fname" minlength="3" maxlength="120" placeholder="Enter name here">
                 <br>
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" placeholder="Enter address here">
@@ -26,9 +28,10 @@
                 <input type="email" id="email" name="email" placeholder="Enter email here">
                 <br>
                 <label for="phone">Phone number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter 10 digit number" maxlength="10">
+                <input type="text" id="phone" name="phone" placeholder="Enter 10 digit number" maxlength="10"
+                    pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b">
                 <br>
-                <label for=" iq">IQ:</label>
+                <label for="iq">IQ:</label>
                 <input type="number" id="iq" name="iq" placeholder="Enter IQ here">
                 <br>
                 Gender:
@@ -41,7 +44,7 @@
                 <label for="gother">Other</label>
                 <br><br>
                 <label for="bday">Date of Proposed Outing:</label>
-                <input type="date" id="bday" name="bday" style="width:130px">
+                <input type="date" id="bday" name="bday">
             </fieldset>
             <fieldset>
                 Check All That Apply

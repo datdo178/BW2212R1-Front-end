@@ -28,7 +28,8 @@
                             <label for="fname">Họ và tên:</label>
                         </td>
                         <td>
-                            <input type="text" id="fname" name="fname" size="40" required>(*)
+                            <input type="text" id="fname" name="fname" size="40" minlength="3" maxlength="120"
+                                required>(*)
                         </td>
                     </tr>
                     <tr>
@@ -50,9 +51,9 @@
                     <tr>
                         <td class="field">Giới tính:</td>
                         <td>
-                            <input type="radio" id="male" name="gender">
+                            <input type="radio" id="male" name="gender" value="name">
                             <label for="male">Nam</label>
-                            <input type="radio" id="female" name="gender">
+                            <input type="radio" id="female" name="gender" value="female">
                             <label for="female">Nữ</label>
                         </td>
                     </tr>
@@ -61,7 +62,7 @@
                             <label for="age">Tuổi:</label>
                         </td>
                         <td>
-                            <input type="number" id="age" name="age" size="15" style="width: 40px;" required>(*)
+                            <input type="number" id="age" name="age" size="15" min="15" max="35" required>(*)
                         </td>
                     </tr>
                     <tr>
@@ -69,19 +70,19 @@
                             <label for="hobby">Sở thích:</label>
                         </td>
                         <td>
-                            <input type="checkbox" id="sport" name="sport">
+                            <input type="checkbox" id="sport" name="hobbies" value="sport">
                             <label for="sport">Thể thao</label>
                             <br>
-                            <input type="checkbox" id="literature" name="literature">
+                            <input type="checkbox" id="literature" name="hobbies" value="literature">
                             <label for="literature">Văn học</label>
                             <br>
-                            <input type="checkbox" id="it" name="it">
+                            <input type="checkbox" id="it" name="hobbies" value="it">
                             <label for="it">Công nghệ thông tin</label>
                             <br>
-                            <input type="checkbox" id="history" name="history">
+                            <input type="checkbox" id="history" name="hobbies" value="history">
                             <label for="history">Lịch sử</label>
                             <br>
-                            <input type="checkbox" id="game" name="game">
+                            <input type="checkbox" id="game" name="hobbies" value="game">
                             <label for="game">Game</label>
                         </td>
                     </tr>
@@ -91,9 +92,9 @@
                         </td>
                         <td>
                             <select name="major">
-                                <option value="1" selected>Công nghệ web</option>
-                                <option value="2">Đồ hoạ</option>
-                                <option value="3">Kỹ thuật máy tính</option>
+                                <option value="Web tech" selected>Công nghệ web</option>
+                                <option value="Graphic">Đồ hoạ</option>
+                                <option value="Computor tech">Kỹ thuật máy tính</option>
                             </select>
                         </td>
                     </tr>
@@ -116,8 +117,8 @@
                     <tr>
                         <td></td>
                         <td>
-                            <button type="submit">Gởi thông tin</button>
-                            <button type="reset">Nhập lại</button>
+                            <input type="submit">Gởi thông tin</input>
+                            <input type="reset">Nhập lại</input>
                         </td>
                     </tr>
                 </tbody>
