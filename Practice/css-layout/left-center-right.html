@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        div {
+            border: 1px solid black;
+            text-align: center;
+            box-sizing: border-box;
+            margin: 2px;
+        }
+
+        .content {
+            color: red;
+            font-weight: bold;
+        }
+
+        .head,
+        .head-link,
+        .footer {
+            height: 50px;
+        }
+
+        #body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            border: 0;
+            margin: 0;
+        }
+
+        #body .content {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .body-left {
+            width: 10%;
+        }
+
+        .body-content {
+            width: 70%;
+        }
+
+        .body-right {
+            width: 20%;
+        }
+
+        .footer {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="head">
+            <p class="content">head</p>
+        </div>
+
+        <div class="head-link">
+            <p class="content">head-link</p>
+        </div>
+
+        <div id="body">
+            <div class="body body-left">
+                <p class="content">left</p>
+            </div>
+            <div class="body body-content">
+                <p class="content">content</p>
+            </div>
+            <div class="body body-right">
+                <p class="content">right</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="footer">
+            <p class="content">footer</p>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

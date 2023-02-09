@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout 2</title>
+    <style>
+        body {
+            margin: 20px;
+            background-color: lightgrey;
+        }
+
+        .border-block {
+            background-color: white;
+            height: 100px;
+            margin-top: 2px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .left {
+            flex-basis: 50%;
+        }
+
+        .aside {
+            flex-basis: 50%;
+            margin-left: 2px;
+            height: 202px;
+        }
+
+        .content {
+            position: relative;
+        }
+
+        span {
+            position: absolute;
+            top: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="head border-block content">
+                <span>header</span>
+            </div>
+            <div class="nav border-block">
+                <span>nav</span>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="section border-block content">
+                        <span>section</span>
+                    </div>
+                    <div class="article border-block content">
+                        <span>article</span>
+                    </div>
+                </div>
+                <div class="aside border-block content">
+                    <span>aside</span>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer border-block content">
+                <span>footer</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

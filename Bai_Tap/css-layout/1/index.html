@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            margin: 0 50px;
+        }
+
+        #header {
+            background-color: #4766B0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #searchbox {
+            flex-basis: 80%;
+            border: 1px solid #35518A;
+            background-color: #35518A;
+            border-radius: 8px;
+            margin: 5px 10px;
+            display: flex;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        #searchbox div {
+            margin-top: 5px;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        #post-wrapper {
+            width: 100%;
+            background-color: white;
+        }
+
+        #post table {
+            width: 100%;
+        }
+
+        .post-avatar {
+            width: 60px;
+            height: 60px;
+            margin: 20px;
+            margin-bottom: 10px;
+        }
+
+        .author-info {
+            width: 80%;
+        }
+
+        .post-content {
+            padding-left: 30px;
+        }
+
+        .date-time {
+            color: gray;
+        }
+
+        .post-img {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        table {
+            margin-top: 10px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comment td {
+            width: 30%;
+            border-top: 1px solid gray;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="logo-box">
+                <img class="logo" src="./images/header/paper_plane.png">
+            </div>
+            <div id="searchbox">
+                <img class="logo" src="./images/header/search.png">
+                <div>Search</div>
+            </div>
+            <div class="logo-box">
+                <img class="logo" src="./images/header/messenger.png">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="post-wrapper">
+            <div class="post">
+                <table>
+                    <tr>
+                        <td>
+                            <img class="post-avatar" src="./images/logo/circle_blue.png">
+                        </td>
+                        <td class="author-info">
+                            <b>My user name</b>
+                            <br>
+                            <span class="date-time">Monday at 11:00 AM</span>
+                        </td>
+                        <td>
+                            <img class="logo" src="./images/side/3dot.png" alt="">
+                        </td>
+                    </tr>
+                </table>
+                <p class="post-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+            <div>
+                <img class="post-img" src="./images/logo/rectangle.jpeg">
+            </div>
+            <div class="react">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <img class="logo" src="./images/reaction/heart.png">
+                            <img class="logo" src="./images/reaction/thumb_up.png">
+                            <img class="logo" src="./images/reaction/surprise.png">
+                            <b>Lorem ipsum and 291 others</b>
+                        </td>
+                        <td>55 comments</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="comment">
+                <table>
+                    <tr>
+                        <td>
+                            <img class="logo" src="./images/header/like_white.png">
+                            <span>Like</span>
+                        </td>
+                        <td>
+                            <img class="logo" src="./images/header/comment.png">
+                            <span>Comment</span>
+                        </td>
+                        <td>
+                            <img class="logo" src="./images/header/arrow.png">
+                            <span>Share</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
