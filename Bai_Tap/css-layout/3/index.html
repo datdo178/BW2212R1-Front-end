@@ -6,12 +6,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Layout 3</title>
+    <style>
+        /* layout */
+        * {
+            margin: 0;
+        }
+
+        .head {
+            background-color: #F5F5F5;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0;
+        }
+
+        .head-link {
+            background-color: #F5F5F5;
+            width: 100%;
+            height: 40px;
+            position: fixed;
+            top: 60px;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 800px;
+            position: fixed;
+            top: 110px;
+            display: flex;
+            margin-bottom: 10px;
+            overflow: auto;
+        }
+
+        .aside {
+            background-color: #F5F5F5;
+            flex-basis: 30%;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .content {
+            background-color: #F5F5F5;
+            flex-basis: 70%;
+            margin-left: 5px;
+        }
+
+        .footer {
+            background-color: #F5F5F5;
+            width: 100%;
+            height: 40px;
+            position: fixed;
+            bottom: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* header */
+        #header-logo {
+            height: 40px;
+            margin: 5px;
+        }
+
+        /* head link */
+        .head-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .head-link li {
+            display: inline;
+            padding: 0px 10px;
+            font-weight: bold;
+        }
+
+        .head-link li:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* aside left */
+        .aside-block {
+            height: 500px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .aside-block:hover {
+            background-color: lightgray;
+        }
+
+        .aside-block img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* content block */
+        .content-block {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content-block iframe {
+            width: 100%;
+            height: 500px;
+        }
+
+        /* common */
+        .b-left {
+            border-left: 1px solid black;
+        }
+    </style>
+
 </head>
 
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div class="container">
+        <header>
+            <div class="head">
+                <img src="./images/logo.png" id="header-logo">
+            </div>
+            <div class="head-link">
+                <ul>
+                    <li>Phim hoạt hình</li>
+                    <li class="b-left">Phim hoạt hình yêu thích</li>
+                    <li class="b-left">Nhân vật hoạt hình</li>
+                    <li class="b-left">Góp ý</li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="aside">
+                    <div class="aside-block" onclick="openVideo()">
+                        <div>
+                            <img src="./images/khach_san_nobi.jpeg" class="aside-image">
+                        </div>
+                        <div>
+                            <span><b>Welcome đến với khách sạn nobi -</b> 5,147,528 lượt xem</span>
+                            <br>
+                            <span>Channel Fun</span>
+                        </div>
+                    </div>
+                    <div class="aside-block">
+                        <div>
+                            <img src="./images/suneo_khong_lo.jpeg">
+                        </div>
+                        <div>
+                            <span><b>Suneo khổng lồ -</b> 5,147,528 lượt xem</span>
+                            <br>
+                            <span>Doraemon Vietsub</span>
+                        </div>
+                    </div>
+                    <div class="aside-block">
+                        <div>
+                            <img src="./images/gay_chom_do.jpeg">
+                        </div>
+                        <div>
+                            <span><b>Gậy chôm đồ trong TV -</b> 5,147,528 lượt xem</span>
+                            <br>
+                            <span>Doraemon Vietsub</span>
+                        </div>
+                    </div>
+                    <div class="aside-block">
+                        <div>
+                            <img src="./images/ma.png">
+                        </div>
+                        <div>
+                            <span><b>Người bạn cõi âm -</b> 5,147,528 lượt xem</span>
+                            <br>
+                            <span>Doraemon Vietsub</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content-block">
+                        <div>
+                            <iframe src="https://www.youtube.com/embed/rH7RrjmA0HQ" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div>
+                            <span><b>Welcome đến với khách sạn nobi -</b> 5,147,528 lượt xem</span>
+                            <br>
+                            <span>Channel Fun</span>
+                            <br>
+                            <span>Tác giả</span>
+                        </div>
+                        <div>
+                            <p>
+                                <br>
+                                Trong tập phim này, vẫn như thường lệ suneo và nobita vẫn bị chaian bắt nạt, cậu ta
+                                đã lấy mất truyện tranh mới mua của 2 đứa. Để trả thù chaian và lấy lại truyện. Thì
+                                suneo và nobita đã liên kết với nhau hành động. Vậy thì họ sẽ dùng cách gì hay bảo
+                                bối gì để chống lại chaian, các em hãy cùng theo dõi tập phim hôm nay nhé.
+                                <br>
+                                <br>
+                                Trong tập phim này, vẫn như thường lệ suneo và nobita vẫn bị chaian bắt nạt, cậu ta
+                                đã lấy mất truyện tranh mới mua của 2 đứa. Để trả thù chaian và lấy lại truyện. Thì
+                                suneo và nobita đã liên kết với nhau hành động. Vậy thì họ sẽ dùng cách gì hay bảo
+                                bối gì để chống lại chaian, các em hãy cùng theo dõi tập phim hôm nay nhé.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <span>
+                    &#169; 2017 - Thiết kế web bởi trang hoathinhvn.net
+                </span>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
