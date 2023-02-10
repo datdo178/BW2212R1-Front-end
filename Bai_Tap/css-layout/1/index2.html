@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout 1B</title>
+    <style>
+        /* header */
+        .head {
+            background-color: #4766B0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #searchbox {
+            color: gray;
+            background-color: white;
+            border: 1px solid #35518A;
+            border-radius: 8px;
+            padding: 0 5px;
+            margin: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 45%;
+        }
+
+        .head-menu {
+            flex-basis: 40%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .head-menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* wrapper */
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .left {
+            flex-basis: 23%;
+            max-width: 300px;
+        }
+
+        .content {
+            flex-basis: 50%;
+        }
+
+        .right {
+            flex-basis: 23%;
+            max-width: 300px;
+        }
+
+        /* left aside */
+        .inner-left-block {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .inner-left-block div {
+            display: flex;
+            align-items: center;
+            padding: 3px;
+        }
+
+        .left-menu {
+            clear: both;
+        }
+
+        .left-menu a {
+            text-decoration: none;
+            padding-left: 5px;
+        }
+
+        /* center content */
+        .post-wrapper {
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .post-new-head {
+            display: flex;
+        }
+
+        .post-new-head div {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .post-new-area {
+            padding: 30px;
+        }
+
+        .post-new-area span {
+            color: gray;
+            margin-left: 10px;
+        }
+
+        #post table {
+            width: 100%;
+        }
+
+        .post-avatar {
+            width: 60px;
+            height: 60px;
+            margin: 20px;
+            margin-bottom: 10px;
+        }
+
+        .author-info {
+            width: 80%;
+        }
+
+        .post-content {
+            padding-left: 30px;
+        }
+
+        .date-time {
+            color: gray;
+        }
+
+        .post-img {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        table {
+            margin-top: 10px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comment td {
+            width: 30%;
+            border-top: 1px solid gray;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* right aside */
+        .inner-right-block {
+            background-color: white;
+            margin-top: 50px;
+            margin-left: 20px;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .right-block-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .like-views-post {
+            display: flex;
+        }
+
+        .like-views-post td {
+            flex-basis: 30%;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        button {
+            color: white;
+            background-color: #4766B0;
+            border: 0;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        /* common */
+        body {
+            background-color: rgb(229, 229, 229);
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        .small-logo {
+            width: 10px;
+            height: 10px;
+        }
+
+        .b-bottom {
+            border-bottom: 1px solid gray;
+        }
+
+        .border-left {
+            border-left: 2px solid gray;
+            padding-left: 3px;
+        }
+
+        .no-margin-top {
+            margin-top: 0;
+        }
+
+        .text-align-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="head">
+                <div>
+                    <img src="./images/logo/circle_white.png" class="logo">
+                </div>
+                <div id="searchbox">
+                    <div>Search</div>
+                    <img src="./images/header/search.png" class="logo">
+                </div>
+                <div class="head-menu">
+                    <img src="./images/content/avatar.png" class="logo">
+                    <a href="#">Name</a>
+                    <a href="#" class="border-left">Home</a>
+                    <a href="#" class="border-left">Find Friends</a>
+                    <img src="./images/header/friends.png" class="logo">
+                    <img src="./images/header/messenger.png" class="logo">
+                    <img src="./images/header/bell.png" class="logo">
+                    <img src="./images/header/question.png" class="logo">
+                    <img src="./images/header/caret-down.png" class="small-logo  class=" border-left"">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="inner-left-block no-margin-top">
+                        <div>
+                            <img src="./images/content/avatar.png" class="logo">
+                            <span>Name Surname</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/messenger.png" class="logo">
+                            <span>New Feed</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/marketplace.png" class="logo">
+                            <span>Marketplace</span>
+                        </div>
+                    </div>
+                    <div class="inner-left-block">
+                        <div>
+                            <img src="./images/side/group.png" class="logo">
+                            <span>Lorem Ipsum</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/group.png" class="logo">
+                            <span>Lorem Ipsum</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/group.png" class="logo">
+                            <span>Lorem Ipsum</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/group.png" class="logo">
+                            <span>Lorem Ipsum</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/group.png" class="logo">
+                            <span>Lorem Ipsum</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/group.png" class="logo">
+                            <span>Lorem Ipsum</span>
+                        </div>
+                    </div>
+                    <div class="inner-left-block">
+                        <div>
+                            <img src="./images/side/event.png" class="logo">
+                            <span>Events</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/page.png" class="logo">
+                            <span>Pages</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/friends.png" class="logo">
+                            <span>Groups</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/group.png" class="logo">
+                            <span>Friend Lists</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/clock.png" class="logo">
+                            <span>On This Day</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/page.png" class="logo">
+                            <span>Pages Feed</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/friends.png" class="logo">
+                            <span>Find friends</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/photo.png" class="logo">
+                            <span>Photos</span>
+                        </div>
+                        <div>
+                            <img src="./images/side/game.png" class="logo">
+                            <span>Games</span>
+                        </div>
+                        <div class="left-menu">
+                            <img src="./images/header/caret-down.png" class="small-logo">
+                            <a href="#">See more...</a>
+                        </div>
+                        <div>Create</div>
+                        <div class="left-menu">
+                            <a href="#">Ad</a>
+                            <a href="#">Page</a>
+                            <a href="#">Group</a>
+                            <a href="#">Event</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="post-wrapper">
+                        <div class="post-new-head b-bottom">
+                            <div>
+                                <img src="./images/content/pen.png" class="logo">
+                                <span>Make Post</span>
+                            </div>
+                            <div>
+                                <img src="./images/content/camera.png" class="logo">
+                                <span>Photo/Video Album</span>
+                            </div>
+                            <div>
+                                <img src="./images/content/live.png" class="logo">
+                                <span>Live video</span>
+                            </div>
+                        </div>
+                        <div class="post-new-area b-bottom">
+                            <img src="./images/content/avatar.png" class="logo">
+                            <span>What's on your mind, Name Surname?</span>
+                        </div>
+                        <div class="post-new-head">
+                            <div>
+                                <img class="logo" src="./images/content/camera_color.png">
+                                <span>Photos/Videos</span>
+                            </div>
+                            <div>
+                                <img class="logo" src="./images/content/laughing.png">
+                                <span>Feeling/Activity</span>
+                            </div>
+                            <div>
+                                <img class="logo" src="./images/side/3dot.png">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-wrapper">
+                        <div class="post">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="post-avatar" src="./images/logo/circle_blue.png">
+                                    </td>
+                                    <td class="author-info">
+                                        <b>My user name</b>
+                                        <br>
+                                        <span class="date-time">Monday at 11:00 AM</span>
+                                    </td>
+                                    <td>
+                                        <img class="logo" src="./images/side/3dot.png" alt="">
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="post-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
+                        <div>
+                            <img class="post-img" src="./images/logo/rectangle.jpeg">
+                        </div>
+                        <div class="react">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <img class="logo" src="./images/reaction/heart.png">
+                                        <img class="logo" src="./images/reaction/thumb_up.png">
+                                        <img class="logo" src="./images/reaction/surprise.png">
+                                        <b>Lorem ipsum and 291 others</b>
+                                    </td>
+                                    <td>55 comments</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="comment">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="logo" src="./images/header/like_white.png">
+                                        <span>Like</span>
+                                    </td>
+                                    <td>
+                                        <img class="logo" src="./images/header/comment.png">
+                                        <span>Comment</span>
+                                    </td>
+                                    <td>
+                                        <img class="logo" src="./images/header/arrow.png">
+                                        <span>Share</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="inner-right-block no-margin-top">
+                        <div class="right-block-header">
+                            <span>Stories</span>
+                            <img src="./images/side/3dot.png" class="small-logo">
+                        </div>
+                        <div>
+                            <img src="./images/content/avatar.png" class="logo">
+                            <span>Name Surname</span>
+                        </div>
+                        <div>
+                            <img src="./images/content/avatar.png" class="logo">
+                            <span>Name Surname</span>
+                        </div>
+                        <div>
+                            <img src="./images/content/avatar.png" class="logo">
+                            <span>Name Surname</span>
+                        </div>
+                        <div>
+                            <img src="./images/header/caret-down.png" class="small-logo">
+                            <a href="#">See more...</a>
+                        </div>
+                    </div>
+                    <div class="inner-right-block">
+                        <div class="right-block-header b-bottom">
+                            <span>Your page</span>
+                            <img src="./images/side/3dot.png" class="small-logo">
+                        </div>
+                        <div class="b-bottom">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="./images/content/blue.jpeg" class="post-avatar">
+                                    </td>
+                                    <td>
+                                        Site name
+                                        <br>
+                                        Messages
+                                        <br>
+                                        Notifications
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="b-bottom">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="./images/side/edit.png" class="logo">
+                                        <br>
+                                        Publish
+                                    </td>
+                                    <td>
+                                        <img src="./images/side/camera.png" class="logo">
+                                        <br>
+                                        Photo
+                                    </td>
+                                    <td>
+                                        <img src="./images/side/video-camera.png" class="logo">
+                                        <br>
+                                        Live
+                                    </td>
+                                    <td>
+                                        <img src="./images/side/add-user.png" class="logo">
+                                        <br>
+                                        Invite
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="b-bottom">
+                            <table>
+                                <tr class="like-views-post">
+                                    <td>Like</td>
+                                    <td>Views</td>
+                                    <td>Post</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-align-center">
+                                        <h2>350</h2>
+                                        160 likes this week
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            Recent Posts
+                            <table>
+                                <tr class="b-bottom">
+                                    <td>
+                                        <img src="./images/content/blue.jpeg" class="post-avatar">
+                                    </td>
+                                    <td>
+                                        <b>work</b>
+                                        <br>
+                                        <br>
+                                        Lorem ipsum
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <img src="./images/reaction/thumb_up.png" class="logo">
+                                        <img src="./images/reaction/heart.png" class="logo">
+                                        66
+                                    </td>
+                                    <td>
+                                        <button>Boost post</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer"></div>
+        </footer>
+    </div>
+</body>
+
+</html>
