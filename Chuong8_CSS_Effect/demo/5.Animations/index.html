@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        #div0 {
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            background-color: red;
+            background-color: green;
+            /* animation-name: shake; */
+            animation-duration: 3s;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
+
+        /* CSS Animations */
+        @keyframes shake {
+            0% {
+                rotate: 0deg;
+                width: 100px;
+            }
+
+            25% {
+                rotate: 30deg;
+                width: 200px;
+            }
+
+            25% {
+                rotate: 20deg;
+                width: 300px;
+            }
+
+            100% {
+                rotate: 0deg;
+                width: 400px;
+            }
+        }
+
+        /*
+        - hinh vuong mau do
+        - cay: tren --> duoi (do --> xanh)
+          --> phai + vang
+          --> top + do
+          --> ban dau + xanh
+        */
+    </style>
+</head>
+
+<body>
+    <div id="div0"></div>
+</body>
+
+</html>

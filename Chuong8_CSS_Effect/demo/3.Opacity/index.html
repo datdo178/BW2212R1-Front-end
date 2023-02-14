@@ -17,25 +17,41 @@
             padding: 45px;
             display: inline-block;
             margin: 5px;
-            background-color: green;
             text-align: center;
             align-items: center;
             font-size: 40px;
+            background-color: red;
         }
 
         /* CSS Opacity */
+        .img1 {
+            opacity: 0.2;
+        }
+
+        .img2 {
+            opacity: 0.5;
+        }
+
+        .img3 {
+            opacity: 0.9;
+        }
+
+        .block1 {
+            background-color: rgba(0, 255, 0, 0.6);
+            color: rgba(0, 0, 0, 0.6);
+        }
     </style>
 </head>
 
 <body>
-    <img src="./image/flower.webp">
-    <img src="./image/flower.webp">
-    <img src="./image/flower.webp">
+    <img src="./image/flower.webp" class="img1">
+    <img src="./image/flower.webp" class="img2">
+    <img src="./image/flower.webp" class="img3">
 
     <div class="blocks">
-        <div>Block 1</div>
-        <div>Block 2</div>
-        <div>Block 3</div>
+        <div class="block1">Block 1</div>
+        <div class="block2">Block 2</div>
+        <div class="block3">Block 3</div>
     </div>
 </body>
 

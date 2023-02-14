@@ -14,14 +14,26 @@
             margin: 20px;
             text-align: center;
             font-size: 40px;
+            transition-property: background-color width;
+            transition-duration: 4s;
+            transition-delay: 0s;
         }
 
         /* CSS Transitions */
+        .div0 {
+            transition-timing-function: cubic-bezier(.08, .85, .93, .15);
+        }
+
+        .abc:hover~div {
+            background-color: red;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
-    <div id="div0">Content</div>
+    <div class="abc"></div>
+    <div class="div0">Ease</div>
 </body>
 
 </html>

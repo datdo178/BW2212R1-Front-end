@@ -14,12 +14,50 @@
         }
 
         /* CSS Pseudo Elements 🔗 */
+        p::first-line {
+            color: blue;
+        }
+
+        p::first-letter {
+            font-size: 60px;
+        }
+
+        /* marker sử dụng cho toàn cục */
+        /* ::marker {
+            color: red;
+        } */
+
+        /* li::marker {
+            color: red;
+        }
+
+        ul li::marker {
+            color: red;
+            font-size: 1.5em;
+        } */
+
+        .menu1 li::marker {
+            color: red;
+        }
+
+        .p1::before {
+            content: "Paragraph 1: ";
+            font-size: 60px;
+            color: red;
+        }
+
+        .p1::after {
+            content: "End paragraph 1.";
+            font-size: 60px;
+            color: red;
+            display: inline-block;
+        }
     </style>
 </head>
 
 <body>
     <h1>PARAGRAPH</h1>
-    <p>
+    <p class="p1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium quas, voluptatibus, eligendi
         ratione
         porro eius quisquam delectus nulla minima obcaecati possimus rem perspiciatis quod, tempora ab nobis
@@ -34,12 +72,12 @@
         porro eius quisquam delectus nulla minima obcaecati possimus rem perspiciatis quod, tempora ab nobis asperiores
         recusandae!
     </p>
-    <ul>
+    <ul class="menu1">
         <li>1</li>
         <li>2</li>
         <li>3</li>
     </ul>
-    <ol>
+    <ol class="menu2">
         <li>A</li>
         <li>B</li>
         <li>C</li>

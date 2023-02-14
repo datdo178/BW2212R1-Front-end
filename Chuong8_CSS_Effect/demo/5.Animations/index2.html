@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: move;
+            animation-duration: 4s;
+            position: relative;
+        }
+
+        /*
+        - hinh vuong mau do
+        - cay: tren --> duoi (do --> xanh)
+          --> phai + vang
+          --> top + xanh
+          --> ban dau + do
+        */
+
+        @keyframes move {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: green;
+
+                left: 0px;
+                top: 800px;
+            }
+
+            50% {
+                background-color: yellow;
+
+                left: 800px;
+                top: 800px;
+            }
+
+            75% {
+                background-color: blue;
+
+                left: 800px;
+                top: 0px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
