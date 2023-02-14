@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Site</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        .mt-10 {
+            margin-top: 10px;
+        }
+
+        .head {
+            padding: 20px;
+            background-color: lightgray;
+            /* margin-left: -20px; */
+        }
+
+        .menuitem {
+            padding: 10px 20px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .right {
+            background-color: lightblue;
+        }
+
+        .footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Cinque Terre</h1>
+            <h3>Resize the browser window</h3>
+        </div>
+
+        <div class="row mt-10">
+            <div class="menu col-2 col-s-3">
+                <div class="menuitem">The Walk</div>
+                <div class="menuitem">Transport</div>
+                <div class="menuitem">History</div>
+                <div class="menuitem">Gallery</div>
+            </div>
+
+            <div class="main col-8 col-s-9">
+                <h2>The Walk</h2>
+                <p>
+                    The walk from Monterosso to Riomaggiore will take you approximately two hours, give or take an hour
+                    depending on the weather conditions and your physical shape.
+                </p>
+                <img src="./landscape.jpeg" style="width:100%">
+            </div>
+
+            <div class="right col-2 col-s-12">
+                <h2>What?</h2>
+                <p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+                <h2>Where?</h2>
+                <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
+                <h2>Price?</h2>
+                <p>The Walk is free!</p>
+            </div>
+        </div>
+
+        <div class="footer mt-10">
+            This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser
+            window to see the content respond to the resizing.
+        </div>
+    </div>
+</body>
+
+</html>
