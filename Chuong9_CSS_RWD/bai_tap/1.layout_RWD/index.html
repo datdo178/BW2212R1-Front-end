@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        /* Header */
+        .head {
+            height: 60px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        .head-link {
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            height: 40px;
+            margin: 10px;
+        }
+
+        .head a {
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .head a:hover {
+            background-color: black;
+        }
+
+        #logout-icon {
+            height: 10px;
+        }
+
+        /* Body */
+        .left {
+            background-color: #dddddd;
+            text-align: center;
+        }
+
+        .left nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left a {
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .left a:hover {
+            background-color: #cccccc;
+        }
+
+        .right {
+            background-color: #dddddd;
+        }
+
+        .content {
+            height: 600px;
+            padding: 0 14px;
+        }
+
+        .ad-block img {
+            width: 100%;
+            padding: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            height: 40px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container limit-width">
+
+        <head>
+            <div class="head row">
+                <div class="head-link">
+                    <img id="logo" src="./images/logo.jpeg">
+                    <nav>
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Project</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                </div>
+                <div class="head-login">
+                    <a href="#">
+                        <img id="logout-icon" src="./images/exit.png">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </head>
+        <main class="row">
+            <div class="left col-2 col-s-3">
+                <nav>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                </nav>
+            </div>
+            <div class="content col-8 col-s-9">
+                <h1>Welcome</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
+                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
+                    imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+                    rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+                    Maecenas nec odio et ante tincidunt tempus.
+                </p>
+                <hr>
+                <h3>Test</h3>
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="right col-2 col-s-12">
+                <div class="ad-block">
+                    <img src="./images/burger_king.webp">
+                </div>
+                <div class="ad-block">
+                    <img src="./images/burger_king.webp">
+                </div>
+            </div>
+        </main>
+        <footer class="row">
+            <div class="footer col-12">Footer text</div>
+        </footer>
+    </div>
+</body>
+
+</html>

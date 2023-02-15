@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Site</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        * {
+            color: #bbbbbb;
+        }
+
+        .mt-10 {
+            margin-top: 10px;
+        }
+
+        .head,
+        .menuitem,
+        .right,
+        .footer {
+            background-color: #eeeeee;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menuitem {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Hello World</h1>
+        </div>
+
+        <div class="row mt-10">
+            <div class="menu col-2 col-s-3">
+                <div class="menuitem"><a href="#1">Link 1</a></div>
+                <div class="menuitem"><a href="#2">Link 2</a></div>
+                <div class="menuitem"><a href="#3">Link 3</a></div>
+                <div class="menuitem"><a href="#4">Link 4</a></div>
+            </div>
+
+            <div class="main col-8 col-s-9">
+                <h2>Lorum Ipsum</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+
+            <div class="right col-2 col-s-12">
+                <h2>About</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer mt-10">
+            © copyright w3schools.com
+        </div>
+    </div>
+</body>
+
+</html>

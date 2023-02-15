@@ -6,6 +6,7 @@
     width: 100%;
     display: block;
     padding: 0;
+    position: relative;
 }
 
 .limit-width {
@@ -26,6 +27,7 @@
 }
 
 
+/* PC */
 .col-1 {
     width: 8.33%;
 }
@@ -131,6 +133,10 @@
     .col-s-12 {
         width: 100%;
     }
+
+    .right {
+        display: flex;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -140,6 +146,10 @@
 
     .col-m-0 {
         display: 0;
+    }
+
+    .right {
+        display: block;
     }
 
     [class*='col-'] {
