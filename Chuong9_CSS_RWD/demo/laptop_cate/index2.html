@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Cate</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bgc-white {
+            background-color: white;
+        }
+
+        .color-title {
+            color: #0975F5;
+        }
+
+        .br-10 {
+            border-radius: 10px;
+        }
+
+        /* Articles */
+        .main {
+            margin-right: 14px;
+        }
+
+        .article {
+            display: flex;
+            padding: 10px;
+        }
+
+        .article .picture {
+            flex-basis: 30%;
+            margin-right: 14px;
+        }
+
+        .article .content {
+            flex-basis: 70%;
+        }
+
+        .article .picture img {
+            width: 100%;
+        }
+
+        .article .content>* {
+            padding-bottom: 15px;
+        }
+
+        .article .author {
+            color: gray;
+            font-weight: normal;
+        }
+
+        .main-header {
+            padding: 20px 14px;
+        }
+
+        /* Aside */
+        .aside-header {
+            padding: 20px 0px;
+            margin: auto 14px;
+            text-align: center;
+            border-bottom: 2px solid gray;
+        }
+
+        .aside-mb {
+            margin-bottom: 32px;
+        }
+
+        .menu li {
+            list-style-type: none;
+            border-bottom: 1px solid lightgray;
+            margin: 0 14px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu li:hover {
+            background-color: #e5e5e5;
+        }
+
+        .menu a:last-child li {
+            margin-bottom: 25px;
+            border: 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .menu .icon {
+            width: 10px;
+            height: 10px;
+            margin-right: 15px;
+        }
+
+        /* Layout */
+        .container {
+            background-color: #e5e5e5;
+            padding: 14px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        @media only screen and (min-width: 991px) {
+            .col-md-9 {
+                flex-basis: 75.01%;
+            }
+
+            .col-md-3 {
+                flex-basis: 24.99%;
+            }
+        }
+
+        @media only screen and (min-width: 769px) and (max-width: 990px) {
+            .main .article {
+                flex-direction: column;
+            }
+
+            .col-td-8 {
+                flex-basis: 66.67%;
+            }
+
+            .col-td-4 {
+                flex-basis: 33.33%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .row {
+                flex-direction: column-reverse;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+            .main .article {
+                display: block;
+                border: 1px solid lightgray;
+            }
+
+            .aside-mb {
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+        <main>
+            <div class="row">
+                <div class="main articles bgc-white br-10 col-12 col-td-8 col-md-9">
+                    <h2 class="main-header color-title">Tin tức</h2>
+                    <div class="article">
+                        <div class="picture">
+                            <img src="./images/img1.png">
+                        </div>
+                        <div class="content">
+                            <h4 class="title color-title">Apple có thể sớm tung ra siêu phẩm Iphone giá rẻ mới</h4>
+                            <h4 class="author">Người viết: TechHouse TechHouse / 19.03.2020</h4>
+                            <p class="summary">Apple có thể sẽ cho ra mắt một dòng máy iPhone mới với mức giá “bình dân”
+                                trong sự kiện dự kiến diễn ra vào cuối tháng.</p>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="picture">
+                            <img src="./images/img2.png">
+                        </div>
+                        <div class="content">
+                            <h4 class="title color-title">Apple Store toàn thế giới đóng cửa vì dịch COVID-19, riêng
+                                Trung Quốc vẫn
+                                mở</h4>
+                            <h4 class="author">Người viết: TechHouse TechHouse / 19.03.2020</h4>
+                            <p class="summary">Từ nay đến ngày 27/3, Apple Store trên toàn thế giới (ngoại trừ Trung
+                                Quốc) sẽ bị đóng cửa nhằm phòng tránh sự lây lan...</p>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="picture">
+                            <img src="./images/img3.png">
+                        </div>
+                        <div class="content">
+                            <h4 class="title color-title">Nếu Apple ra mắt một chiếc khẩu trang sang, xịn với giá 399USD
+                                như thế
+                                này, bạn có sẵn sàng chi tiền mua?</h4>
+                            <h4 class="author">Người viết: TechHouse TechHouse / 19.03.2020</h4>
+                            <p class="summary">Ý tưởng thiết kế những chiếc khẩu trang đậm chất của Apple của một nhà
+                                thiết kế đồ họa đã khiến nhiều người thích thú.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside col-12 col-td-4 col-md-3">
+                    <div class="articles bgc-white br-10 aside-mb">
+                        <h3 class="aside-header color-title">BÀI VIẾT MỚI NHẤT</h3>
+                        <div class="article">
+                            <div class="picture">
+                                <img src="./images/img1.png">
+                            </div>
+                            <div class="content">
+                                <h4 class="title color-title">Apple có thể sớm tung ra siêu phẩm Iphone giá rẻ mới</h4>
+                                <h4 class="author">TechHouse TechHouse / 19.03.2020</h4>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <div class="picture">
+                                <img src="./images/img2.png">
+                            </div>
+                            <div class="content">
+                                <h4 class="title color-title">Apple Store toàn thế giới đóng cửa vì dịch COVID-19, riêng
+                                    Trung Quốc vẫn
+                                    mở</h4>
+                                <h4 class="author">TechHouse TechHouse / 19.03.2020</h4>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <div class="picture">
+                                <img src="./images/img3.png">
+                            </div>
+                            <div class="content">
+                                <h4 class="title color-title">Nếu Apple ra mắt một chiếc khẩu trang sang, xịn với giá
+                                    399USD
+                                    như thế
+                                    này, bạn có sẵn sàng chi tiền mua?</h4>
+                                <h4 class="author">TechHouse TechHouse / 19.03.2020</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu bgc-white br-10 aside-mb">
+                        <h3 class="aside-header color-title">DANH MỤC BLOG</h3>
+                        <ul>
+                            <a href="#">
+                                <li>
+                                    Trang chủ
+                                    <img class="icon" src="./images/icon_add.png">
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    Sản phẩm
+                                    <img class="icon" src="./images/icon_add.png">
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>
+                                    Product view
+                                    <img class="icon" src="./images/icon_add.png">
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>Blog</li>
+                            </a>
+                            <a href="#">
+                                <li>Giới thiệu</li>
+                            </a>
+                            <a href="#">
+                                <li>Liên hệ</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

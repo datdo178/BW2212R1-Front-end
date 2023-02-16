@@ -6,8 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="grid.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
         /* Header */
         .head {
             height: 60px;
@@ -64,11 +71,13 @@
 
         .right {
             background-color: #dddddd;
+            display: flex;
+            flex-direction: column;
         }
 
         .content {
             height: 600px;
-            padding: 0 14px;
+            padding: 0 24px;
         }
 
         .ad-block img {
@@ -84,11 +93,77 @@
             height: 40px;
             padding-top: 10px;
         }
+
+        /* Layout */
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .limit-width {
+                max-width: 900px;
+            }
+
+            .col-td-3 {
+                width: 25%;
+            }
+
+            .col-td-9 {
+                width: 75%;
+            }
+
+            .col-td-12 {
+                width: 100%;
+            }
+
+            .right {
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .limit-width {
+                max-width: 644px;
+            }
+
+            .col-md-12 {
+                flex-basis: 100%;
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .head a {
+                padding: 20px 14px;
+            }
+
+            .ad-block {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="container limit-width">
+    <div class="container">
 
         <head>
             <div class="head row">
@@ -110,14 +185,14 @@
             </div>
         </head>
         <main class="row">
-            <div class="left col-2 col-s-3">
+            <div class="left col-2 col-td-3 col-md-12">
                 <nav>
                     <a href="#">Link</a>
                     <a href="#">Link</a>
                     <a href="#">Link</a>
                 </nav>
             </div>
-            <div class="content col-8 col-s-9">
+            <div class="content col-8 col-td-9 col-md-12">
                 <h1>Welcome</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
@@ -137,7 +212,7 @@
                 <h3>Test</h3>
                 <p>Lorem ipsum...</p>
             </div>
-            <div class="right col-2 col-s-12">
+            <div class="right col-2 col-td-12 col-md-12">
                 <div class="ad-block">
                     <img src="./images/burger_king.webp">
                 </div>

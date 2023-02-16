@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <link rel="stylesheet" href="grid.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         .col img {
             width: 100%;
         }
@@ -24,6 +27,34 @@
         .gallery .gallery-descr {
             text-align: center;
             padding: 14px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            width: 25%;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .col {
+                width: 50%;
+                padding-left: 8px;
+                padding-right: 8px;
+                margin-bottom: 8px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .col {
+                width: 100%;
+                padding-left: 6px;
+                padding-right: 6px;
+            }
         }
     </style>
 </head>
