@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo CSS Drid</title>
+    <style>
+        * {
+            box-sizing: border;
+        }
+
+        :root {
+            --bg-color: #e5e5e5e5;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+            grid-template-areas: 'c1 c1 c1 c1 c1'
+                'c2 c3 c3 c3 c4'
+                'c5 c5 c5 c5 c5';
+            color: gray;
+        }
+
+        .container>div {
+            margin-bottom: 10px;
+        }
+
+        .item1 {
+            grid-area: c1;
+            background-color: var(--bg-color);
+            text-align: center;
+        }
+
+        .item2 {
+            grid-area: c2;
+        }
+
+        .item2 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .item2 li {
+            margin-bottom: 10px;
+            padding: 15px 0;
+            color: black;
+            background-color: var(--bg-color);
+        }
+
+        .item3 {
+            grid-area: c3;
+            padding: 0 10px;
+            color: black;
+        }
+
+        .item4 {
+            grid-area: c4;
+            background-color: var(--bg-color);
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .item5 {
+            grid-area: c5;
+            background-color: var(--bg-color);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: 100vw;
+                grid-template-areas: 'c1' 'c2' 'c3' 'c4' 'c5';
+            }
+        }
+
+        @media only screen and (min-width: 769px) and (max-width: 978px) {
+            .container {
+                grid-template-columns: 30vw 70vw;
+                grid-template-areas: 'c1 c1' 'c2 c3' 'c4 c3' 'c5 c5';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">
+            <h1>Hello World</h1>
+        </div>
+        <div class="item2">
+            <ul>
+                <a href="#">
+                    <li>Link 1</li>
+                </a>
+                <a href="#">
+                    <li>Link 2</li>
+                </a>
+                <a href="#">
+                    <li>Link 3</li>
+                </a>
+                <a href="#">
+                    <li>Link 4</li>
+                </a>
+            </ul>
+        </div>
+        <div class="item3">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat.</p>
+        </div>
+        <div class="item4">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </div>
+        <div class="item5">© copyright w3schools.com</div>
+    </div>
+</body>
+
+</html>

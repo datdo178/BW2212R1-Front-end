@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEX</title>
+    <style>
+        .container {
+            display: flex;
+            height: 800px;
+        }
+
+        .item1 {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 400px;
+            background-color: aqua;
+        }
+
+        .item2 {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 400px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+    </div>
+</body>
+
+</html>
