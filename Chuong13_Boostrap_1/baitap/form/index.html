@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .bg-gray {
+            background-color: #F2F3F5;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container my-5">
+            <div class="row text-center">
+                <h1>Need Help? Sure we are Online!</h1>
+                <p class="text-muted">Let us give you more details about the special offer website you want us. Please
+                    fill out the form
+                    below.
+                    We have million of website owners who happy to work with us!</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form action="#" class="container bg-gray" method="POST">
+            <div class="row flex-wrap px-3">
+                <div class="col-12 col-md-6">
+                    <input type="text" class="form-control form-control-lg col-md-6 mt-4" id="firstName"
+                        name="first-name" placeholder="First Name" minlength="2" maxlength="120">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" class="form-control form-control-lg form-control-lg mt-4" id="lastName"
+                        name="last-name" placeholder="Last Name" minlength="2" maxlength="120">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="email" class="form-control form-control-lg mt-4" id="email" name="email"
+                        placeholder="Email">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="tel" class="form-control form-control-lg mt-4" id="phone" name="phone"
+                        placeholder="Your Phone" pattern="(84|[3|5|7|8|9])+([0-9]{8})\b">
+                </div>
+                <div class="col-12 col-md-6">
+                    <select name="country" id="country" class="form-select form-select-lg mt-4">
+                        <option value="" selected>Select Country</option>
+                        <option value="cn">Chinese</option>
+                        <option value="jp">Japanese</option>
+                        <option value="vn">Vietnam</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6">
+                    <select name="course" id="course" class="form-select form-select-lg mt-4">
+                        <option value="" selected>Select Course</option>
+                        <option value="1">Course 1</option>
+                        <option value="2">Course 2</option>
+                        <option value="3">Course 3</option>
+                    </select>
+                </div>
+                <div>
+                    <textarea name="content" id="content" rows="8" placeholder="Content"
+                        class="border-light mt-4 w-100 p-3"></textarea>
+                </div>
+                <div>
+                    <button type="btn" class="btn btn-lg btn-dark w-100 my-4">Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
