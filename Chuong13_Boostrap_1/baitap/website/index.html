@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../Others/assets/fontawesome-free-6.3.0-web/css/all.min.css">
+    <script src="../../../Others/assets/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif, FontAwesome;
+            z-index: -1;
+        }
+
+        /* dropdown hover: https://mdbootstrap.com/docs/standard/extended/dropdown-hover/ */
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+
+        #registerBtn {
+            height: 2rem;
+            margin-top: 3px;
+            margin-right: 18px;
+        }
+
+        .bg-light-dark {
+            background-color: #424242;
+        }
+
+        .footer-icon {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluild">
+        <div class="d-flex justify-content-between bg-dark text-white">
+            <a class="text-decoration-none text-white" href="#">
+                <i class="fa-solid fa-chevron-left"></i>
+                Quay về xem chi tiết
+            </a>
+            <div class="p-2">
+                <a class="text-decoration-none text-white pe-2" href="#">
+                    <i class="fa-solid fa-desktop"></i>
+                    Desktop
+                </a>
+                <a class="text-decoration-none text-white" href="#">
+                    <i class="fa-solid fa-mobile-button"></i>
+                    Mobile
+                </a>
+            </div>
+            <div>
+                <button class="btn btn-info text-white">Mua ngay</button>
+                <a class="text-white" href="#">
+                    <i class="fa-solid fa-circle-xmark white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="bg-primary d-none d-lg-grid">
+            <div class="container">
+                <nav class="navbar navbar-expand justify-content-end p-0">
+                    <ul class="navbar-nav float-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white py-0" href="#" data-bs-toggle="dropdown"
+                                data-bs-target="#productDropdown">
+                                Sản phẩm
+                            </a>
+                            <ul class="dropdown-menu" id="productDropdown">
+                                <li class="dropdown-item d-flex flex-column">
+                                    <a class="text-decoration-none text-dark py-2" href="#">TIVI</a>
+                                    <a class="text-decoration-none text-dark py-2" href="#">TỦ LẠNH</a>
+                                    <a class="text-decoration-none text-dark  py-2" href="#">MÁY LẠNH</a>
+                                    <a class="text-decoration-none text-dark  py-2" href="#">GIA DỤNG</a>
+                                    <a class="text-decoration-none text-dark  py-2" href="#">MÁY GIẶT</a>
+                                    <a class="text-decoration-none text-dark  py-2" href="#">MÁY NƯỚC NÓNG</a>
+                                    <a class="text-decoration-none text-dark  py-2" href="#">ĐIỆN THOẠI</a>
+                                    <a class="text-decoration-none text-dark  py-2" href="#">MÁY TÍNH BẢNG</a>
+                                    <a class="text-decoration-none text-dark  py-2" href="#">LAPTOP</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white py-0" href="#">Đăng nhập/Đăng ký</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row bg-light flex-row-reverse flex-lg-column">
+            <div class="col-11 col-lg-12 px-0">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between m-0">
+                        <div class="col-4 col-md-2">
+                            <img src="assets/images/logo.png" class="img-fluid">
+                        </div>
+                        <div class="row justify-content-end align-items-center col col-xl-10 m-0">
+                            <div class="d-none d-md-grid col-md-1 col-lg-2 col-xl-2">
+                                <a class="nav-link d-flex align-items-center text-black-50" href="#">
+                                    <i class="fa-solid fa-phone fa-xl"></i>
+                                    <span class="d-none d-lg-grid text-nowrap">
+                                        Điện thoại
+                                        <br>
+                                        <b class="d-none d-xl-grid ">19001267</b>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="d-none d-md-grid col-md-1 col-lg-2 col-xl-3">
+                                <a class="nav-link d-flex align-items-center text-black-50" href="#">
+                                    <i class="fa-solid fa-envelope fa-xl"></i>
+                                    <span class="d-none d-lg-grid">
+                                        Email
+                                        <br>
+                                        <b class="d-none d-xl-grid">hello@egany.com</b>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col col-md-6 col-lg-4 col-xl-4">
+                                <input type="text" class="form-control" placeholder="&#xf002; Bạn muốn tìm gì...">
+                            </div>
+                            <div class="col-1 col-md-2 col-xl-1 text-center text-black-50 px-2">
+                                <span>
+                                    <i class="fa-solid fa-location-dot fa-lg"></i>
+                                    <br>
+                                    <small class="d-none d-lg-grid text-nowrap">CHI NHÁNH</small>
+                                </span>
+                            </div>
+                            <div class="col-1 col-md-1 col-xl-1 text-center text-black-50">
+                                <span>
+                                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                    <br>
+                                    <small class="d-none d-lg-grid text-nowrap">GIỎ HÀNG</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="headerNav" class="col-1 col-lg-12 navbar navbar-expand-lg bg-primary nav-light p-0 mx-0">
+                <div class="container-lg">
+                    <button class="navbar-toggler m-0 p-0 w-100 h-100" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#headerMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div id="headerMenu" class="collapse navbar-collapse">
+                        <ul class="navbar-nav bg-primary me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-0 px-xl-3">
+                                <div class="dropdown">
+                                    <a class="nav-link text-white text-nowrap dropdown-toggle"
+                                        data-mdb-toogle="dropdown" href="#">TIVI</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Sony</a></li>
+                                        <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                        <li><a class="dropdown-item" href="#">TLC</a></li>
+                                        <li><a class="dropdown-item" href="#">LG</a></li>
+                                        <li><a class="dropdown-item" href="#">Toshiba</a></li>
+                                        <li><a class="dropdown-item" href="#">SkyWorth</a></li>
+                                        <li><a class="dropdown-item" href="#">Panasonic</a></li>
+                                        <li><a class="dropdown-item" href="#">VTB</a></li>
+                                        <li><a class="dropdown-item" href="#">Sharp</a></li>
+                                        <li><a class="dropdown-item" href="#">Asanzo</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+                                <div class="dropdown">
+                                    <a class="nav-link text-white text-nowrap dropdown-toggle"
+                                        data-mdb-toogle="dropdown" href="#">TỦ LẠNH</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Sanyo</a></li>
+                                        <li><a class="dropdown-item" href="#">Panasonic</a></li>
+                                        <li><a class="dropdown-item" href="#">Sharp</a></li>
+                                        <li><a class="dropdown-item" href="#">Toshiba</a></li>
+                                        <li><a class="dropdown-item" href="#">Hitachi</a></li>
+                                        <li><a class="dropdown-item" href="#">Mitsubishi Electric</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+                                <div class="dropdown">
+                                    <a class="nav-link text-white text-nowrap dropdown-toggle"
+                                        data-mdb-toogle="dropdown" href="#">MÁY LẠNH</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Panasonic</a></li>
+                                        <li><a class="dropdown-item" href="#">Daikin</a></li>
+                                        <li><a class="dropdown-item" href="#">LG</a></li>
+                                        <li><a class="dropdown-item" href="#">Sharp</a></li>
+                                        <li><a class="dropdown-item" href="#">Mitsubishi</a></li>
+                                        <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                        <li><a class="dropdown-item" href="#">Sanyo</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+
+                                <div class="dropdown">
+                                    <a class="nav-link text-white text-nowrap dropdown-toggle"
+                                        data-mdb-toogle="dropdown" href="#">GIA DỤNG</a>
+                                    <div class="dropdown-menu">
+                                        <div class="d-flex">
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">Bàn ủi</a></li>
+                                                <li><a class="dropdown-item" href="#">Bếp điện</a></li>
+                                                <li><a class="dropdown-item" href="#">Bếp gas</a></li>
+                                                <li><a class="dropdown-item" href="#">Bình đun siêu tốc</a></li>
+                                                <li><a class="dropdown-item" href="#">Bình đun thuỷ điện</a></li>
+                                                <li><a class="dropdown-item" href="#">Bộ nồi</a></li>
+                                                <li><a class="dropdown-item" href="#">Lẩu điện</a></li>
+                                                <li><a class="dropdown-item" href="#">Lò nướng</a></li>
+                                                <li><a class="dropdown-item" href="#">Lò vi sóng</a></li>
+                                                <li><a class="dropdown-item" href="#">Máy đánh trứng</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="#">Máy làm sữa đậu nành</a></li>
+                                                <li><a class="dropdown-item" href="#">Máy hút bụi</a></li>
+                                                <li><a class="dropdown-item" href="#">Máy ép trái cây</a></li>
+                                                <li><a class="dropdown-item" href="#">Máy sấy tóc</a></li>
+                                                <li><a class="dropdown-item" href="#">Máy tạo kiểu tóc</a></li>
+                                                <li><a class="dropdown-item" href="#">Máy xay sinh tố</a></li>
+                                                <li><a class="dropdown-item" href="#">Nồi áp suất</a></li>
+                                                <li><a class="dropdown-item" href="#">Nồi cơm điện</a></li>
+                                                <li><a class="dropdown-item" href="#">Quạt</a></li>
+                                                <li><a class="dropdown-item" href="#">Quạt sưởi</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+                                <a class="nav-link text-white text-nowrap" href="#">MÁY GIẶT</a>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+                                <a class="nav-link text-white text-nowrap" href="#">MÁY NƯỚC NÓNG</a>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+                                <a class="nav-link text-white text-nowrap" href="#">ĐIỆN THOẠI</a>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+                                <a class="nav-link text-white text-nowrap" href="#">MÁY TÍNH BẢNG</a>
+                            </li>
+                            <li class="nav-item px-0  px-xl-3">
+                                <a class="nav-link text-white text-nowrap" href="#">LAPTOP</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div id="salePromote" class="carousel col-12 col-md-8 col-lg-8 justify-content-between px-0 mx-0"
+                    data-bs-ride="carousel">
+                    <div class="carousel-inner w-100 h-100">
+                        <div class="carousel-item active  w-100 h-100">
+                            <img class="d-block w-100 h-100" src="assets/images/slideshow/slideshow_1.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 h-100" src="assets/images/slideshow/slideshow_2.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block  w-100 h-100" src="assets/images/slideshow/slideshow_3.jpg">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#salePromote"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-secondary  position-absolute start-0"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#salePromote"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-next-icon bg-secondary position-absolute end-0"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 px-0 mx-0">
+                    <a href="#">
+                        <img src="assets/images/banner_top_1.jpg" class="w-100 h-100">
+                    </a>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="btn-group d-lg-none">
+                    <button type="button" class="btn btn-info dropdown-toggle text-white" data-bs-toggle="dropdown">
+                        <b>TIVI</b>
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                        <li><a class="dropdown-item" href="#">TIVI SONY</a></li>
+                        <li><a class="dropdown-item" href="#">TIVI SAMSUNG</a></li>
+                        <li><a class="dropdown-item" href="#">TIVI TCL</a></li>
+                        <li><a class="dropdown-item" href="#">TIVI LG</a></li>
+                        <li><a class="dropdown-item" href="#">TIVI TOSHIBA</a></li>
+                        <li><a class="dropdown-item" href="#">TIVI SKYWORTH</a></li>
+                        <li><a class="dropdown-item" href="#">TIVI PANASONIC</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-grid p-0">
+                    <ul
+                        class=" list-unstyled d-flex flex-row text-center align-items-center border-bottom border-info border-2">
+                        <li><a class="nav-link text-info text-white bg-info" href="#">TIVI</a></li>
+                        <li><a class="nav-link text-info" href="#">TIVI SONY</a></li>
+                        <li><a class="nav-link text-info" href="#">TIVI SAMSUNG</a></li>
+                        <li><a class="nav-link text-info" href="#">TIVI TCL</a></li>
+                        <li><a class="nav-link text-info" href="#">TIVI LG</a></li>
+                        <li><a class="nav-link text-info" href="#">TIVI TOSHIBA</a></li>
+                        <li><a class="nav-link text-info" href="#">TIVI SKYWORTH</a></li>
+                        <li><a class="nav-link text-info" href="#">TIVI PANASONIC</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-led-samsung-ua40j5100-1.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led Samsung UA40J5100</b>
+                        <br>EGA-SKU-27
+                        <br><b class="text-danger">13,900,000đ</b>
+                        <br><del class="text-muted">14,500,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-led-sony-kdl-40w700c-7.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led SONY KLD-40W700C-7</b>
+                        <br>EGA-SKU-26
+                        <br><b class="text-danger">10,400,000đ</b>
+                        <br><del class="text-muted">11,000,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-samsung-ua32k5500ak-2.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led Sony KLD-40W700C</b>
+                        <br>EGA-SKU-28
+                        <br><b class="text-danger">11,400,000đ</b>
+                        <br><del class="text-muted">12,000,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-sony-kdl-32r300c-4.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led Sony KLD-40W700C</b>
+                        <br>EGA-SKU-28
+                        <br><b class="text-danger">11,400,000đ</b>
+                        <br><del class="text-muted">12,000,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-led-samsung-ua40j5100-1.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led Samsung UA40J5100</b>
+                        <br>EGA-SKU-27
+                        <br><b class="text-danger">13,900,000đ</b>
+                        <br><del class="text-muted">14,500,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-led-sony-kdl-40w700c-7.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led SONY KLD-40W700C-7</b>
+                        <br>EGA-SKU-26
+                        <br><b class="text-danger">10,400,000đ</b>
+                        <br><del class="text-muted">11,000,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-samsung-ua32k5500ak-2.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led Sony KLD-40W700C</b>
+                        <br>EGA-SKU-28
+                        <br><b class="text-danger">11,400,000đ</b>
+                        <br><del class="text-muted">12,000,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 card text-start border-0 px-2">
+                    <div class="card-body position-relative">
+                        <span class="position-absolute text-white bg-primary rounded">&nbsp;- 4%&nbsp;</span>
+                        <img src="assets/images/products/tivi-sony-kdl-32r300c-4.jpg"
+                            class="img-thumbnail card-img mb-3" height="150px">
+                        <b>Tivi Led Sony KLD-40W700C</b>
+                        <br>EGA-SKU-28
+                        <br><b class="text-danger">11,400,000đ</b>
+                        <br><del class="text-muted">12,000,000đ</del>
+                        <br><button class="btn btn-success mt-2">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row bg-secondary text-white p-2">
+            <div class="col-12 col-lg-4">
+                <i class="fa-solid fa-envelope"></i>
+                <b>ĐĂNG KÝ EMAIL ĐỂ NHẬN NGAY VOUCHER</b>
+            </div>
+            <div class="col-12 col-lg-4 position-relative">
+                <input type="email" class="form-control pe-5" placeholder="Nhập email của bạn">
+                <button type="button" id="registerBtn" class="btn btn-dark position-absolute top-0 end-0">Đăng
+                    ký</button>
+            </div>
+            <div class="col-12 col-lg-4 mt-2 mt-lg-0">
+                <div class="text-center">
+                    <img src="assets/images/footer_icons/icon1.png" class="footer-icon rounded">
+                    <img src="assets/images/footer_icons/icon2.png" class="footer-icon rounded">
+                    <img src="assets/images/footer_icons/icon3.png" class="footer-icon rounded">
+                    <img src="assets/images/footer_icons/icon4.png" class="footer-icon rounded">
+                    <img src="assets/images/footer_icons/icon5.png" class="footer-icon rounded">
+                    <img src="assets/images/footer_icons/icon6.png" class="footer-icon rounded">
+                </div>
+            </div>
+        </div>
+        <div class="row text-white bg-light-dark p-2">
+            <div class="col">
+                <img src="assets/images/logo.png" class="img-fluid">
+                <br>
+                Chúng tôi tin chất lượng là dịch vụ tốt nhất
+            </div>
+            <div class="col-4 col-xl-2">
+                <ul>
+                    <b>GIỚI THIỆU</b>
+                    <li>Trang chủ</li>
+                    <li>Sản phẩm</li>
+                    <li>Giới thiệu</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div class="col-4 col-xl-2">
+                <ul>
+                    <b>HỖ TRỢ KHÁCH HÀNG</b>
+                    <li>Tìm kiếm</li>
+                    <li>Giới thiệu</li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3 mt-3 mt-xl-0">
+                <b>LIÊN HỆ</b>
+                <br>Kênh mua sắm trực tuyến giá tốt hàng đầu Việt Nam
+                <br>
+                <span class="me-2">
+                    <i class="fa-solid fa-location-dot fa-xl"></i>
+                </span>
+                61/2 Quang Trung, P.10, Q.Gò Vấp, Tp.HCM
+                <br>
+                <span class="me-2">
+                    <i class="fa-solid fa-phone"></i>
+                </span>
+                <a href="#">(91) 8547 632512</a>
+                <br>
+                <span class="me-2">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+                <a href="#">hello@egany.com</a>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3 mt-3 mt-xl-0 text-center">
+                <b>ĐƯỢC CHỨNG NHẬN</b>
+                <br>
+                <img src="assets/images/register.webp" class="img-fluid">
+                <br>
+                <b>HÌNH THỨC THANH TOÁN</b>
+                <br>
+                <img src="assets/images/payment.webp" class="img-fluid">
+            </div>
+        </div>
+        <div class="row bg-dark text-white justify-content-between">
+            <div class="col-12 col-lg-6 text-center text-lg-start">
+                <span>
+                    &copy; Bản quyền thuộc về
+                    <a class="text-decoration-none" href="#">EGANY</a>
+                    . Cung cấp bởi
+                    <a class="text-decoration-none" href="#">Haravan</a>
+                </span>
+                <ul class="d-flex flex-row list-unstyled justify-content-center justify-content-lg-start">
+                    <li><a class="text-decoration-none text-muted mx-2" href="#">Trang chủ</a></li>/
+                    <li><a class="text-decoration-none text-muted mx-2" href="#">Sản phẩm</a></li>/
+                    <li><a class="text-decoration-none text-muted mx-2" href="#">Giới thiệu</a></li>/
+                    <li><a class="text-decoration-none text-muted mx-2" href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-6 text-center text-lg-end">
+                <span>EGANY Co.Ltd - 61/2 Quang Trung, Q.Gò Vấp, Tp.HCM | Email: hello@egany.com | Hotline:
+                    1900.636.009</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
