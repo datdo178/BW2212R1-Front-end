@@ -31,7 +31,9 @@
             class="row bg-white border-bottom border-3 justify-content-between align-items-center text-color-kidbook p-1 mx-0 justify-content-lg-around">
             <div class="col-2 col-sm-7 col-lg-5 col-xl-3 d-flex align-items-center">
                 <div>
-                    <img src="assets/images/icons/kb-logo.png" class="header-logo w-100" alt="Kidbooks logo">
+                    <a href="index.html">
+                        <img src="assets/images/icons/kb-logo.png" class="header-logo w-100" alt="Kidbooks logo">
+                    </a>
                 </div>
                 <span class="d-none d-sm-block fs-5 text-black fw-bold ps-3">
                     Big adventures. Small prices.
@@ -691,9 +693,10 @@
                     <input type="checkbox" class="form-check-input ms-0 me-2" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
                 </div>
-                <button type="submit" class="btn btn-dark rounded-pill px-5 py-3 mb-3 align-self-center">
-                    <span class="px-4">Sign in</span>
-                </button>
+                <a href="index.html"
+                    class="text-center text-decoration-none bg-dark text-white w-50 align-self-center rounded-pill py-3 mb-3">
+                    <b>Sign in</b>
+                </a>
                 <div class="d-flex align-items-center w-100 mb-3">
                     <div class="flex-fill border-bottom border-2"></div>
                     <span class="px-3 text-black-50 fs-4">or</span>
@@ -718,7 +721,7 @@
             </form>
         </div>
     </main>
-    <footer class="mb-5 mb-lg-0 d-lg-flex flex-row-reverse justify-content-center">
+    <footer class="mb-5 mb-lg-0 d-md-flex flex-row-reverse justify-content-center">
         <div class="ms-xl-5 px-lg-3">
             <div class="bg-dark text-white text-center px-3 mb-5 mb-lg-0 mw-520px">
                 <h4 class="pt-5">Sign up for our newsletter</h4>
@@ -791,27 +794,27 @@
             </div>
         </div>
         <div class="me-xl-5">
-            <div class="d-none d-lg-block border-top border-2 border-dark mb-5 mx-1"></div>
+            <div class="d-none d-md-block border-top border-2 border-dark mb-5 mx-1"></div>
             <div class="mw-520px d-none d-md-flex justify-content-around mb-3">
                 <ul class="navbar-nav">
                     <h4>Who we are</h4>
+                    <li><a href="#" class="nav-link hover-underline">About Us</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Our Pricing</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Our Location</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <h4>Help</h4>
                     <li><a href="#" class="nav-link hover-underline">Help Center</a></li>
                     <li><a href="#" class="nav-link hover-underline">Shipping</a></li>
                     <li><a href="#" class="nav-link hover-underline">Returns</a></li>
                     <li><a href="#" class="nav-link hover-underline">Contact Us</a></li>
                 </ul>
                 <ul class="navbar-nav">
-                    <h4>Help</h4>
+                    <h4>My Account</h4>
                     <li><a href="#" class="nav-link hover-underline">Account Details</a></li>
                     <li><a href="#" class="nav-link hover-underline">My Orders</a></li>
                     <li><a href="#" class="nav-link hover-underline">Gift Cards</a></li>
                     <li><a href="#" class="nav-link hover-underline">Wishlist</a></li>
-                </ul>
-                <ul class="navbar-nav">
-                    <h4>My Account</h4>
-                    <li><a href="#" class="nav-link hover-underline">About Us</a></li>
-                    <li><a href="#" class="nav-link hover-underline">Our Pricing</a></li>
-                    <li><a href="#" class="nav-link hover-underline">Our Location</a></li>
                 </ul>
             </div>
             <ul class="navbar-nav flex-row small fw-bold justify-content-center">
@@ -825,17 +828,6 @@
     </footer>
 
     <script>
-        const SEARCH_BOX_STATUS = document.getElementById("searchBox").classList;
-
-        function openSearchBox() {
-            if (SEARCH_BOX_STATUS.contains("d-none")) {
-                SEARCH_BOX_STATUS.remove("d-none");
-                SEARCH_BOX_STATUS.add("d-flex");
-            } else {
-                SEARCH_BOX_STATUS.remove("d-flex");
-                SEARCH_BOX_STATUS.add("d-none");
-            }
-        }
     </script>
 
 </body>
