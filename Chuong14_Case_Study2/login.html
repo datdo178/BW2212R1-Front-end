@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidbooks</title>
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+    <link rel="stylesheet" href="assets/libs/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/fontawesome-free-6.3.0-web/css/all.min.css">
+    <script src="assets/libs/pooper.min.js"></script>
+    <script src="assets/libs/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="assets/libs/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+    <style>
+        :root {
+            --kidbook-color: #6AC9C8;
+        }
+
+        .header-logo {
+            max-width: 76px;
+            max-height: 76px;
+        }
+
+        #helpButton {
+            bottom: 40px;
+            right: 32px;
+            border-radius: 20px;
+            border-top-right-radius: 4px !important;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+
+        /* New Classes */
+        .mw-520px {
+            max-width: 520px;
+            margin: auto;
+        }
+
+        .hover-bg-grey:hover {
+            background-color: #F2F2F2;
+        }
+
+        .hover-underline:hover {
+            text-decoration: underline;
+        }
+
+        .hover-border-bottom-kidbook:hover {
+            border-bottom: 3px solid var(--kidbook-color) !important;
+        }
+
+        .text-color-kidbook {
+            color: var(--kidbook-color);
+        }
+
+        .bg-color-kidbook {
+            background-color: var(--kidbook-color);
+        }
+
+        .border-color-kidbook {
+            border-bottom-color: var(--kidbook-color) !important;
+        }
+
+        .translate-left-25 {
+            transform: translateX(-25%);
+        }
+
+        .translate-left-85 {
+            transform: translateX(-85%);
+        }
+
+        /* Customized Classes */
+        .accordion-item {
+            border-right: none;
+            border-left: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: black;
+            background-color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0;
+        }
+
+        .form-floating .form-control {
+            padding: 6px 12px;
+            height: inherit;
+            line-height: inherit;
+        }
+
+        .form-floating .form-control:focus {
+            padding: 6px 12px;
+            height: inherit;
+            line-height: inherit;
+            box-shadow: none;
+        }
+
+        .form-floating label {
+            top: -10px;
+        }
+
+        .form-floating .form-control:focus+label {
+            top: -15px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <button id="helpButton" class="btn bg-color-kidbook fw-bold small position-fixed z-3">
+            <i class="fa-regular fa-question-circle"></i>
+            Help
+        </button>
+        <div class="bg-dark text-center">
+            <div class="py-2"><a href="#" class="text-decoration-none text-white hover-underline">Buy 5 Books, Get 1
+                    Free</a></div>
+        </div>
+    </section>
+    <header class="sticky-top">
+        <div id="headerNavbar"
+            class="row bg-white border-bottom border-3 justify-content-between align-items-center text-color-kidbook p-1 mx-0 justify-content-lg-around">
+            <div class="col-2 col-sm-7 col-lg-5 col-xl-3 d-flex align-items-center">
+                <div>
+                    <img src="assets/images/icons/kb-logo.png" class="header-logo w-100" alt="Kidbooks logo">
+                </div>
+                <span class="d-none d-sm-block fs-5 text-black fw-bold ps-3">
+                    Big adventures. Small prices.
+                </span>
+            </div>
+            <div class="col-5 col-sm-4 col-md-3 col-lg-6 col-xl-5 col-xxl-4 d-flex px-0 me-md-3">
+                <input type="text" class="d-none d-lg-block form-control border-1 rounded-start-pill"
+                    placeholder="Search">
+                <button type="button" class="d-none d-lg-block border-0 rounded-end-pill bg-color-kidbook text-white">
+                    <i class="fa-solid fa-magnifying-glass px-1"></i>
+                </button>
+                <i id="openSearchBox" class="fa-solid fa-magnifying-glass fa-xl hover-bg-grey d-lg-none p-2"
+                    onclick="openSearchBox()"></i>
+                <a href="login.html" class="text-color-kidbook"><i
+                        class="fa-regular fa-user fa-xl hover-bg-grey p-2"></i></a>
+                <i class="fa-regular fa-heart fa-xl hover-bg-grey p-2"></i>
+                <i class="fa fa-cart-shopping fa-xl hover-bg-grey p-2"></i>
+                <div class="d-none d-lg-flex hover-bg-grey align-items-center">
+                    <img src="assets/images/icons/us_flag.png" alt="US flag">
+                    <span class="text-black fw-bold px-1">USD</span>
+                </div>
+                <i class="d-lg-none fa-solid fa-bars fa-xl text-dark hover-bg-grey p-2" data-bs-toggle="offcanvas"
+                    data-bs-target="#headerMenu" aria-controls="headerMenu"></i>
+
+                <div class="offcanvas offcanvas-start border-1 w-75" tabindex="-1" id="headerMenu"
+                    aria-labelledby="headerMenu">
+                    <div class="offcanvas-header border-bottom">
+                        <div class="offcanvas-title">
+                            Welcome!
+                            <a href="#" class="text-decoration-none text-dark"><b class="hover-underline">Log
+                                    In</b></a> or <a href="#" class="text-decoration-none text-dark hover-underline"><b
+                                    class="hover-underline">Sign Up</b></a>
+                        </div>
+                        <div>
+                            <img src="assets/images/icons/us_flag.png" alt="US flag">
+                            <b>USD</b>
+                            <button type="button" class="btn-close text-dark" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="accordion">
+                            <div class="accordion-item border-top-0">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuFeatured" aria-expanded="false">
+                                        <b>Featured</b>
+                                    </button>
+                                </h2>
+                                <div id="menuFeatured" class="accordion-collapse collapse justify-content-center">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuFeaturedFeatured"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Featured</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuFeaturedFeatured" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Easter</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Comics and Graphic
+                                                        Novels</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Baby's First
+                                                        Library</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Bedtime Stories</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Black Voices</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Inspiring Stories</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Nursery Rhymes</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Kids' Classics</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">STEM/STEAM</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Leveled Readers</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuFeaturedPopular"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Popular Characters</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuFeaturedPopular" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Star Wars</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">PJ Masks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Easter</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Curious George</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Daniel Tiger</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Paw Patrol</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Marvel</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Winnie-the-Pooh</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Disney</a></li>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuFeaturedPrice"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Shop By Price</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuFeaturedPrice" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Under $5</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">$5 - $10</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">$10 - $25</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuFeaturedFormat"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Shop By Format</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuFeaturedFormat" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Board Books</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Picture Books</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Boxed Sets</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Hardcover</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Paperback</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Popup Books</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <button class="btn bg-body-secondary fw-bold align-self-center px-5 my-2">Shop
+                                            All Books ></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuAge" aria-expanded="false">
+                                        <b>Shop by Age</b>
+                                    </button>
+                                </h2>
+                                <div id="menuAge" class="accordion-collapse collapse justify-content-center">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuAgeRangeOne"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Ages up to 2</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuAgeRangeOne" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Bedtime Stories</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Baby's First
+                                                        Library</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">ABC's & 123's</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Shapes & Colors</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Animals</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Imagination & Play</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Nursery Rhymes</a></li>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop all</a>
+                                                </li>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuAgeRangeTwo"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Ages 3-5</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuAgeRangeTwo" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Early Learning</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Social Situations</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Friendship</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">People & Places</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Animals</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Emotions & Feelings</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Action &
+                                                        Adventure</a>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuAgeRangeThree"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Ages 6-8</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuAgeRangeThree" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Early Learning</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Social Situations</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Friendship</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Classics</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Education</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Stem/Steam</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Kindness</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Action &
+                                                        Adventure</a>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuAgeRangeFour"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Ages 6-8</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuAgeRangeFour" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Workbooks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Social Situations</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">People & Places</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Emotion & Feelings</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Action &
+                                                        Adventure</a>
+                                                <li><a href="#" class="nav-link hover-underline">Mystery</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <button class="btn bg-body-secondary fw-bold align-self-center px-5 my-2">Shop
+                                            All Books ></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuToyActivity" aria-expanded="false">
+                                        <b>Toys and Activities</b>
+                                    </button>
+                                </h2>
+                                <div id="menuToyActivity" class="accordion-collapse collapse justify-content-center">
+                                    <ul class="navbar-nav ps-5">
+                                        <li><a href="#" class="nav-link hover-underline">Toys and Games</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Activity Sets</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Jigsaw Puzzles</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Coloring & Activity Books</a>
+                                        </li>
+                                        <li><a href="#" class="nav-link hover-underline fw-bold">Shop all</a>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuGift" aria-expanded="false">
+                                        <b>Gifts</b>
+                                    </button>
+                                </h2>
+                                <div id="menuGift" class="accordion-collapse collapse justify-content-center">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuGiftFeatured"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Featured</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuGiftFeatured" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Baby's First
+                                                        Library</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Kids' Bestsellers</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Kids' Classics</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Picture Books</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuGiftAge"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Shop By Age</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuGiftAge" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Ages up to 2</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Ages 3 to 5</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Ages 6 to 8</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Ages 9 to 12</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuFeaturedPrice"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Shop By Price</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuFeaturedPrice" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Under $5</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">$5 - $10</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">$10 - $25</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuGiftToyActivity"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Toys & Activities</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuGiftToyActivity" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Activity Sets</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Puzzles</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Toys and Games</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Coloring and Activity
+                                                        Books</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#menuGiftCard"
+                                                aria-expanded="false">
+                                                <b class="ps-3">Gift Cards</b>
+                                            </button>
+                                        </h2>
+                                        <div id="menuGiftCard" class="accordion-collapse collapse">
+                                            <ul class="navbar-nav ps-5">
+                                                <li><a href="#" class="nav-link hover-underline">Shop Gift Cards</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Check Balance</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <button class="btn bg-body-secondary fw-bold align-self-center px-5 my-2">Shop
+                                            All Gifts ></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header border-top border-2 border-dark border-bottom-0">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuAccount" aria-expanded="false">
+                                        <b>My Account</b>
+                                    </button>
+                                </h2>
+                                <div id="menuAccount" class="accordion-collapse collapse justify-content-center">
+                                    <ul class="navbar-nav ps-5">
+                                        <li><a href="login.html" class="nav-link hover-underline">Login</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Create an account</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-bottom-0">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#menuHelp" aria-expanded="false">
+                                        <b>Help</b>
+                                    </button>
+                                </h2>
+                                <div id="menuHelp" class="accordion-collapse collapse justify-content-center">
+                                    <ul class="navbar-nav ps-5">
+                                        <li><a href="#" class="nav-link hover-underline">Orders</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Account</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Product</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Delivery</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Returns</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">Gift Cards</a></li>
+                                        <li><a href="#" class="nav-link hover-underline">About us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border-top border-2 border-dark border-bottom-0 ps-5 pt-2">
+                                <a href="#" class="nav-link fw-bold hover-underline"><small>Contact us</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="searchBox" class="d-none d-lg-none w-75 mx-auto">
+                <input type="text" class="form-control border-1 rounded-start-pill" placeholder="Search">
+                <button type="button" class="border-0 rounded-end-pill bg-color-kidbook text-white px-3">
+                    <i class="fa-solid fa-magnifying-glass px-1"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="mb-5">
+        <div class="d-none d-lg-flex justify-content-evenly border-bottom">
+            <div class="dropdown">
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                    data-mdb-toogle="dropdown" href="#">Featured</a>
+                <ul class="dropdown-menu pb-0">
+                    <div class="d-flex">
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Featured</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Featured</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Bestsellers</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">New Arrivals</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Easter</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Comics and Graphic Novels</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Baby's First Library</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Bedtime Stories</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Black Voices</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Inspiring Stories</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Nursery Rhymes</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Kids' Classics</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">STEM/STEAM</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Leveled Readers</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Popular Characters</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Star Wars</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">PJ Masks</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Curious George</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Daniel Tiger</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Paw Patrol</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Marvel</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Winnie-the-Pooh</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Disney</a></li>
+                            <li><a class="dropdown-item hover-underline fw-bold" href="#">Shop All</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Shop by Price</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Under $5</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">$5 - $10</a></li>
+                            <li class="mb-3"><a class="dropdown-item hover-underline" href="#">$10 - $25</a></li>
+                            <li class="dropdown-item fw-bold">Shop by Format</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Board Books</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Picture Books</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Boxed Sets</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Hardcover</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Paperback</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Popup Books</a></li>
+                        </ul>
+                    </div>
+                    <div class="bg-light py-2 mt-3 mb-0">
+                        <a href="#" class="nav-link fw-bold hover-underline ps-4">Shop All Books ></a>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                    data-mdb-toogle="dropdown" href="#">Shop
+                    by Age</a>
+                <ul class="dropdown-menu pb-0 translate-left-25">
+                    <div class="d-flex">
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Ages up to 2</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Bestsellers</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">New Arrivals</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Staff Picks</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Baby's First Library</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">ABCs and 123s</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Bedtime Stories</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Shapes and Colors</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Animals</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Imagination and Play</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Nursery Rhymes</a></li>
+                            <li><a class="dropdown-item hover-underline fw-bold" href="#">Shop All</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Ages 3-5</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Bestsellers</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">New Arrivals</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Social Situations</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Early Learning</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Friendship</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">People and Places</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Animals</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Emotions</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Action and Adventure</a></li>
+                            <li><a class="dropdown-item hover-underline fw-bold" href="#">Shop All</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Ages 6-8</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Bestsellers</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">New Arrivals</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Staff Picks</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Social Situations</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Education</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Classics</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Friendship</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">STEM/STEAM</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Kindness</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Action and Adventure</a></li>
+                            <li><a class="dropdown-item hover-underline fw-bold" href="#">Shop All</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Ages 9-12</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Bestsellers</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">New Arrivals</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Staff Picks</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Social Situations</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Workbooks</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Classics</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">People and Places</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Mystery</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Emotions</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Action and Adventure</a></li>
+                            <li><a class="dropdown-item hover-underline fw-bold" href="#">Shop All</a></li>
+                        </ul>
+                    </div>
+                    <div class="bg-light py-2 mt-3 mb-0">
+                        <a href="#" class="nav-link fw-bold hover-underline ps-4">Shop All ></a>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                    data-mdb-toogle="dropdown" href="#">Toys
+                    and Activities</a>
+                <ul class="dropdown-menu pb-0">
+                    <div class="d-flex">
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Toys and Games</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Toys and Games</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Activity Sets</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Jigsaw Puzzles</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Coloring and Activity Books</a></li>
+                        </ul>
+                    </div>
+                    <div class="bg-light py-2 mt-3 mb-0">
+                        <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2">Shop All Toys and
+                            Activities
+                            ></a>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                    data-mdb-toogle="dropdown" href="#">Gifts</a>
+                <ul class="dropdown-menu pb-0 translate-left-85">
+                    <div class="d-flex">
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Featured</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Baby's First Library</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Kids' Bestsellers</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Kids' Classics</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Picture Books</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Gifts By Age</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Ages up to 2</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Ages 3 - 5</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Ages 6 - 8</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Ages 9 - 12</a></li>
+                            <li class="dropdown-item fw-bold mt-3">Gifts By Price</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Under $5</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">$5 - $10</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">$10 - $25</a></li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li class="dropdown-item fw-bold">Toys and Activities</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Activity Sets</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Puzzles</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Toys and Games</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Coloring and Activity Books</a></li>
+                            <li class="dropdown-item fw-bold mt-3">Gift Cards</li>
+                            <li><a class="dropdown-item hover-underline" href="#">Shop Gift Cards</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Check Balance</a></li>
+                        </ul>
+                    </div>
+                    <div class="bg-light py-2 mt-3 mb-0">
+                        <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2">Shop All ></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5 m-2">
+            <div class="mw-520px d-flex shadow justify-content-center px-0">
+                <button
+                    class="w-50 border-0 border-bottom border-2 border-color-kidbook fw-bold text-color-kidbook bg-light m-0 py-2 px-0">
+                    <small>SIGN IN</small>
+                </button>
+                <button class="w-50 border-0 py-2 fw-bold text-black-50 m-0 py-2 px-0"><small>CREATE AN
+                        ACCOUNT</small></button>
+            </div>
+            <h4 class="text-center py-5">Sign In</h4>
+            <form class="mw-520px d-flex flex-column" action="#" method="POST">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control border-dark rounded-pill" id="email" placeholder="a">
+                    <label for="email" class="text-black-50"><span class="bg-white px-1">Email: *</span></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control border-dark rounded-pill" id="password" placeholder="a">
+                    <label for="password" class="text-black-50"><span class="bg-white px-1">Password: *</span></label>
+                </div>
+                <a href="#" class="text-decoration-none mb-3 ps-2">Forgot password?</a>
+                <div class="ps-2 mb-3 form-check">
+                    <input type="checkbox" class="form-check-input ms-0 me-2" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-dark rounded-pill px-5 py-3 mb-3 align-self-center">
+                    <span class="px-4">Sign in</span>
+                </button>
+                <div class="d-flex align-items-center w-100 mb-3">
+                    <div class="flex-fill border-bottom border-2"></div>
+                    <span class="px-3 text-black-50 fs-4">or</span>
+                    <div class="flex-fill border-bottom border-2"></div>
+                </div>
+                <div class="d-sm-flex align-self-center">
+                    <button
+                        class="btn shadow-sm border-light rounded-0 px-0 mx-2 mb-3 mb-sm-0 h-100 align-self-center hover-bg-grey">
+                        <img class="img-fluid px-3 py-2" src="assets/images/icons/google.png" alt="Google icon">
+                        <span class="text-black-50 ps-0 pe-4 fw-bold">
+                            <small>Sign in with Google</small>
+                        </span>
+                    </button>
+                    <button
+                        class="btn btn-primary rounded-0 shadow-sm px-0 mx-2 align-self-center d-flex align-items-center">
+                        <i class="fa-brands fa-square-facebook fa-2x px-2 py-1"></i>
+                        <span class="text-white ps-0 pe-3 fw-bold">
+                            <small>Sign in with Facebook</small>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="mb-5 mb-lg-0 d-lg-flex flex-row-reverse justify-content-center">
+        <div class="ms-xl-5 px-lg-3">
+            <div class="bg-dark text-white text-center px-3 mb-5 mb-lg-0 mw-520px">
+                <h4 class="pt-5">Sign up for our newsletter</h4>
+                <p class="small">The best of KidsBooks, straight to your inbox. Sign up to get $5 off your next
+                    purchase,
+                    plus, be the
+                    first to know about sales, new arrivals and more.</p>
+                <div class="d-flex py-3">
+                    <input type="email" class="form-control rounded-start-pill" placeholder="Enter email address">
+                    <button class="btn bg-color-kidbook rounded-end-pill px-4">Subscribe</button>
+                </div>
+                <p class="small">
+                    <small>*Offer applicable to new subscribers only. By submitting my email I consent to receiving
+                        marketing emails from Kidsbooks.com. I understand that I can unsubscribe at any time.</small>
+                </p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <span>Follow us on social</span>
+                    <i class="fa-brands fa-square-facebook text-color-kidbook fa-2x px-2 py-2"></i>
+                    <i class="fa-brands fa-instagram text-color-kidbook fa-2x px-2 py-2"></i>
+                </div>
+            </div>
+            <div class="accordion d-md-none mw-520px px-3 mb-3">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#footerHelp" aria-expanded="false">
+                            <b class="ps-3">Help</b>
+                        </button>
+                    </h2>
+                    <div id="footerHelp" class="accordion-collapse collapse">
+                        <ul class="navbar-nav ps-5">
+                            <li><a href="#" class="nav-link hover-underline">Help Center</a></li>
+                            <li><a href="#" class="nav-link hover-underline">Shipping</a></li>
+                            <li><a href="#" class="nav-link hover-underline">Returns</a></li>
+                            <li><a href="#" class="nav-link hover-underline">Contact Us</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#footerAccount" aria-expanded="false">
+                            <b class="ps-3">My Account</b>
+                        </button>
+                    </h2>
+                    <div id="footerAccount" class="accordion-collapse collapse">
+                        <ul class="navbar-nav ps-5">
+                            <li><a href="#" class="nav-link hover-underline">Account Details</a></li>
+                            <li><a href="#" class="nav-link hover-underline">My Orders</a></li>
+                            <li><a href="#" class="nav-link hover-underline">Gift Cards</a></li>
+                            <li><a href="#" class="nav-link hover-underline">Wishlist</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#footerIntro" aria-expanded="false">
+                            <b class="ps-3">Who We Are</b>
+                        </button>
+                    </h2>
+                    <div id="footerIntro" class="accordion-collapse collapse">
+                        <ul class="navbar-nav ps-5">
+                            <li><a href="#" class="nav-link hover-underline">About Us</a></li>
+                            <li><a href="#" class="nav-link hover-underline">Our Pricing</a></li>
+                            <li><a href="#" class="nav-link hover-underline">Our Location</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="me-xl-5">
+            <div class="d-none d-lg-block border-top border-2 border-dark mb-5 mx-1"></div>
+            <div class="mw-520px d-none d-md-flex justify-content-around mb-3">
+                <ul class="navbar-nav">
+                    <h4>Who we are</h4>
+                    <li><a href="#" class="nav-link hover-underline">Help Center</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Shipping</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Returns</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Contact Us</a></li>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <h4>Help</h4>
+                    <li><a href="#" class="nav-link hover-underline">Account Details</a></li>
+                    <li><a href="#" class="nav-link hover-underline">My Orders</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Gift Cards</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Wishlist</a></li>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <h4>My Account</h4>
+                    <li><a href="#" class="nav-link hover-underline">About Us</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Our Pricing</a></li>
+                    <li><a href="#" class="nav-link hover-underline">Our Location</a></li>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav flex-row small fw-bold justify-content-center">
+                <li><a href="#" class="nav-link hover-underline px-3">Privacy Policy</a></li>
+                <li><a href="#" class="nav-link hover-underline px-3">Terms of Use</a></li>
+                <li><a href="#" class="nav-link hover-underline px-3">Sitemap</a></li>
+                </li>
+            </ul>
+            <p class="px-3 text-center small pb-3">KidsBooks is owned and operated &copy; Book Depot, Inc. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const OPEN_SEARCH_BOX_ICON = document.getElementById("openSearchBox");
+        const SEARCH_BOX_STATUS = document.getElementById("searchBox").classList;
+
+        function openSearchBox() {
+            if (SEARCH_BOX_STATUS.contains("d-none")) {
+                SEARCH_BOX_STATUS.remove("d-none");
+                SEARCH_BOX_STATUS.add("d-flex");
+            } else {
+                SEARCH_BOX_STATUS.remove("d-flex");
+                SEARCH_BOX_STATUS.add("d-none");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
