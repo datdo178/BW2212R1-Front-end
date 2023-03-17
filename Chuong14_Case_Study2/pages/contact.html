@@ -1,0 +1,63 @@
+<h3 class="text-center my-5">Create A Support Request</h3>
+<p class="bg-warning-subtle rounded-3 p-3">
+    Please note: responses may take 1-2 business days, excluding weekends and holidays. To
+    maintain your place in our queue, please do not submit more than one inquiry as this will delay response times. We
+    appreciate your patience and understanding, and we look forward to assisting you as soon as possible.
+</p>
+<p class="">
+    Contact our customer service team with any questions or concerns you may have. Be sure to also check <a
+        href="#">Help Center</a> for
+    answers to our frequently asked questions, or visit <a href="#">your account</a> for information on order status,
+    tracking a
+    package, updating your profile and changing your password.
+</p>
+<p class="fw-bold">For quality assurance purposes, if you are reporting damaged book(s), please be sure to attach photos
+    of the damages
+    to your support request.</p>
+<form class="d-flex flex-column" action="#" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control border-dark rounded-pill py-3 ps-4" id="name" placeholder="a"
+            minlength="2" maxlength="125">
+        <label for="name" class="text-black-50 translate-bottom-10">
+            <span class="bg-white rounded-pill px-2">Name *</span>
+        </label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control border-dark rounded-pill py-3 ps-4" id="email" placeholder="a">
+        <label for="email" class="text-black-50 translate-bottom-10">
+            <span class="bg-white rounded-pill px-2">Email *</span>
+        </label>
+    </div>
+    <div class="form-floating mb-3">
+        <select class="form-select border-dark rounded-pill py-3 ps-4" id="supportType" aria-label="Type of supports">
+            <option value="account">Account Issue</option>
+            <option value="order">Order Issue</option>
+            <option value="website">Website Issue</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="supportType" class="text-black-50 translate-bottom-10">
+            <span class="bg-white rounded-pill px-2">Select support type *</span>
+        </label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control border-dark rounded-pill py-3 ps-4" id="subject" placeholder="a"
+            minlength="2" maxlength="250">
+        <label for="subject" class="text-black-50 translate-bottom-10">
+            <span class="bg-white rounded-pill px-2">Subject *</span>
+        </label>
+    </div>
+    <div class="form-floating mb-3">
+        <textarea type="text" rows="5" class="form-control border-dark rounded-5 ps-4" id="description" placeholder="a"
+            minlength="2" maxlength="250"></textarea>
+        <label for="description" class="text-black-50 translate-bottom-10">
+            <span class="bg-white rounded-pill px-2">Description</span>
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control form-control-lg rounded-pill border-dark" id="formFileLg" type="file" multiple>
+    </div>
+    <a href="#"
+        class="text-center text-decoration-none bg-dark text-white w-50 align-self-center rounded-pill py-3 mb-3">
+        <b>Contact support</b>
+    </a>
+</form>

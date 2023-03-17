@@ -19,7 +19,7 @@ body {
     border-top-right-radius: 4px !important;
 }
 
-#subHeader .dropdown:hover>.dropdown-menu {
+#menuHeader .dropdown:hover>.dropdown-menu {
     display: block;
 }
 
@@ -57,8 +57,8 @@ body {
     background-color: var(--kidbook-color);
 }
 
-.bg-pink {
-    background-color: #FA3792;
+.bg-blue {
+    background-color: #0773BF;
 }
 
 .border-color-kidbook {
@@ -71,6 +71,10 @@ body {
 
 .translate-left-85 {
     transform: translateX(-85%);
+}
+
+.translate-bottom-10 {
+    transform: translateY(10%);
 }
 
 .top-10 {

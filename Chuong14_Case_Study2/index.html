@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="assets/libs/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/libs/fontawesome-free-6.3.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/carousel.css">
     <script src="assets/libs/pooper.min.js"></script>
     <script src="assets/libs/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
     <script src="assets/libs/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+    <script src="assets/libs/jquery.js"></script>
 </head>
 
 <body>
-    <section>
-        <button id="helpButton" class="btn bg-color-kidbook fw-bold small position-fixed z-3">
+    <section id="promoteHeader">
+        <button id="helpButton" class="btn bg-blue fw-bold small position-fixed z-3">
             <i class="fa-regular fa-question-circle"></i>
             Help
         </button>
@@ -27,12 +27,12 @@
                     Free</a></div>
         </div>
     </section>
-    <header class="sticky-top">
-        <div id="headerNavbar"
+    <section id="mainHeader" class="sticky-top">
+        <div
             class="row bg-white border-bottom border-3 justify-content-between align-items-center text-color-kidbook p-1 mx-0 justify-content-lg-around">
             <div class="col-2 col-sm-7 col-lg-5 col-xl-3 d-flex align-items-center">
                 <div>
-                    <a href="index.html">
+                    <a onclick="reload('home')">
                         <img src="assets/images/icons/kb-logo.png" class="header-logo w-100" alt="Kidbooks logo">
                     </a>
                 </div>
@@ -59,7 +59,7 @@
                         <li><a class="dropdown-item hover-underline" href="#">Wishlist</a></li>
                         <li><a class="dropdown-item hover-underline" href="#">Support Request</a></li>
                         <li><a class="dropdown-item hover-underline fw-bold text-decoration-underline"
-                                href="pages/login.html">Sign out</a></li>
+                                onclick="reload('login')">Sign out</a></li>
                     </ul>
                 </div>
                 <i class="fa-regular fa-heart fa-xl hover-bg-grey p-2"></i>
@@ -74,12 +74,7 @@
                 <div class="offcanvas offcanvas-start border-1 w-75" tabindex="-1" id="headerMenu"
                     aria-labelledby="headerMenu">
                     <div class="offcanvas-header border-bottom">
-                        <div class="offcanvas-title">
-                            Welcome!
-                            <a href="pages/login.html" class="text-decoration-none text-dark"><b
-                                    class="hover-underline">Sign
-                                    out</b></a>
-                        </div>
+                        <div class="offcanvas-title fw-bold text-color-kidbook">Welcome!</div>
                         <div>
                             <img src="assets/images/icons/us_flag.png" alt="US flag">
                             <b>USD</b>
@@ -107,8 +102,10 @@
                                         </h2>
                                         <div id="menuFeaturedFeatured" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a>
+                                                </li>
                                                 <li><a href="#" class="nav-link hover-underline">Easter</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">Comics and Graphic
                                                         Novels</a></li>
@@ -116,11 +113,15 @@
                                                         Library</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">Bedtime Stories</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Black Voices</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Inspiring Stories</a>
+                                                <li><a href="#" class="nav-link hover-underline">Black Voices</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Nursery Rhymes</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Kids' Classics</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Inspiring
+                                                        Stories</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Nursery Rhymes</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Kids' Classics</a>
+                                                </li>
                                                 <li><a href="#" class="nav-link hover-underline">STEM/STEAM</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">Leveled Readers</a>
                                                 </li>
@@ -140,15 +141,18 @@
                                                 <li><a href="#" class="nav-link hover-underline">Star Wars</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">PJ Masks</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">Easter</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Curious George</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Daniel Tiger</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Curious George</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Daniel Tiger</a>
+                                                </li>
                                                 <li><a href="#" class="nav-link hover-underline">Paw Patrol</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Marvel</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">Winnie-the-Pooh</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Disney</a></li>
-                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop
+                                                        All</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -179,12 +183,15 @@
                                         </h2>
                                         <div id="menuFeaturedFormat" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Board Books</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Picture Books</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Board Books</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Picture Books</a>
+                                                </li>
                                                 <li><a href="#" class="nav-link hover-underline">Boxed Sets</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">Hardcover</a></li>
                                                 <li><a href="#" class="nav-link hover-underline">Paperback</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Popup Books</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Popup Books</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -212,9 +219,12 @@
                                         </h2>
                                         <div id="menuAgeRangeOne" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a>
+                                                </li>
                                                 <li><a href="#" class="nav-link hover-underline">Bedtime Stories</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Baby's First
@@ -225,10 +235,13 @@
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Animals</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Imagination & Play</a>
+                                                <li><a href="#" class="nav-link hover-underline">Imagination &
+                                                        Play</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Nursery Rhymes</a></li>
-                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop all</a>
+                                                <li><a href="#" class="nav-link hover-underline">Nursery Rhymes</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop
+                                                        all</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -243,11 +256,16 @@
                                         </h2>
                                         <div id="menuAgeRangeTwo" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Early Learning</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Social Situations</a>
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Early Learning</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Social
+                                                        Situations</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Friendship</a>
                                                 </li>
@@ -255,11 +273,13 @@
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Animals</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Emotions & Feelings</a>
+                                                <li><a href="#" class="nav-link hover-underline">Emotions &
+                                                        Feelings</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Action &
                                                         Adventure</a>
-                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop
+                                                        All</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -274,11 +294,16 @@
                                         </h2>
                                         <div id="menuAgeRangeThree" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Early Learning</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Social Situations</a>
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Early Learning</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Social
+                                                        Situations</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Friendship</a>
                                                 </li>
@@ -292,7 +317,8 @@
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Action &
                                                         Adventure</a>
-                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop
+                                                        All</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -307,21 +333,27 @@
                                         </h2>
                                         <div id="menuAgeRangeFour" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Bestsellers</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">New Arrivals</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Staff Picks</a>
+                                                </li>
                                                 <li><a href="#" class="nav-link hover-underline">Workbooks</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Social Situations</a>
+                                                <li><a href="#" class="nav-link hover-underline">Social
+                                                        Situations</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">People & Places</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Emotion & Feelings</a>
+                                                <li><a href="#" class="nav-link hover-underline">Emotion &
+                                                        Feelings</a>
                                                 </li>
                                                 <li><a href="#" class="nav-link hover-underline">Action &
                                                         Adventure</a>
                                                 <li><a href="#" class="nav-link hover-underline">Mystery</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop All</a>
+                                                <li><a href="#" class="nav-link hover-underline fw-bold">Shop
+                                                        All</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -344,7 +376,8 @@
                                         <li><a href="#" class="nav-link hover-underline">Toys and Games</a></li>
                                         <li><a href="#" class="nav-link hover-underline">Activity Sets</a></li>
                                         <li><a href="#" class="nav-link hover-underline">Jigsaw Puzzles</a></li>
-                                        <li><a href="#" class="nav-link hover-underline">Coloring & Activity Books</a>
+                                        <li><a href="#" class="nav-link hover-underline">Coloring & Activity
+                                                Books</a>
                                         </li>
                                         <li><a href="#" class="nav-link hover-underline fw-bold">Shop all</a>
                                         </li>
@@ -371,10 +404,13 @@
                                             <ul class="navbar-nav ps-5">
                                                 <li><a href="#" class="nav-link hover-underline">Baby's First
                                                         Library</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Kids' Bestsellers</a>
+                                                <li><a href="#" class="nav-link hover-underline">Kids'
+                                                        Bestsellers</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Kids' Classics</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Picture Books</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Kids' Classics</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Picture Books</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -388,10 +424,14 @@
                                         </h2>
                                         <div id="menuGiftAge" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Ages up to 2</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Ages 3 to 5</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Ages 6 to 8</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Ages 9 to 12</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Ages up to 2</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Ages 3 to 5</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Ages 6 to 8</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Ages 9 to 12</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -421,10 +461,13 @@
                                         </h2>
                                         <div id="menuGiftToyActivity" class="accordion-collapse collapse">
                                             <ul class="navbar-nav ps-5">
-                                                <li><a href="#" class="nav-link hover-underline">Activity Sets</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Activity Sets</a>
+                                                </li>
                                                 <li><a href="#" class="nav-link hover-underline">Puzzles</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Toys and Games</a></li>
-                                                <li><a href="#" class="nav-link hover-underline">Coloring and Activity
+                                                <li><a href="#" class="nav-link hover-underline">Toys and Games</a>
+                                                </li>
+                                                <li><a href="#" class="nav-link hover-underline">Coloring and
+                                                        Activity
                                                         Books</a></li>
                                             </ul>
                                         </div>
@@ -441,7 +484,8 @@
                                             <ul class="navbar-nav ps-5">
                                                 <li><a href="#" class="nav-link hover-underline">Shop Gift Cards</a>
                                                 </li>
-                                                <li><a href="#" class="nav-link hover-underline">Check Balance</a></li>
+                                                <li><a href="#" class="nav-link hover-underline">Check Balance</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -460,7 +504,8 @@
                                 </h2>
                                 <div id="menuAccount" class="accordion-collapse collapse justify-content-center">
                                     <ul class="navbar-nav ps-5">
-                                        <li><a href="pages/login.html" class="nav-link hover-underline">Login</a></li>
+                                        <li><a href="pages/login.html" class="nav-link hover-underline">Login</a>
+                                        </li>
                                         <li><a href="#" class="nav-link hover-underline">Create an account</a>
                                         </li>
                                     </ul>
@@ -468,8 +513,8 @@
                             </div>
                             <div class="accordion-item border-bottom-0">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#menuHelp" aria-expanded="false">
+                                    <button class="accordion-button collapsed hover-bg-dark" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#menuHelp" aria-expanded="false">
                                         <b>Help</b>
                                     </button>
                                 </h2>
@@ -486,7 +531,8 @@
                                 </div>
                             </div>
                             <div class="border-top border-2 border-dark border-bottom-0 ps-5 pt-2">
-                                <a href="#" class="nav-link fw-bold hover-underline"><small>Contact us</small></a>
+                                <a onclick="reload('contact')" class="nav-link fw-bold hover-underline"><small>Contact
+                                        us</small></a>
                             </div>
                         </div>
                     </div>
@@ -499,8 +545,8 @@
                 </button>
             </div>
         </div>
-    </header>
-    <section id="subHeader" class="bg-white">
+    </section>
+    <section id="menuHeader" class="bg-white">
         <div class="d-none d-lg-flex justify-content-evenly border-bottom">
             <div class="dropdown">
                 <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
@@ -636,7 +682,8 @@
                             <li><a class="dropdown-item hover-underline" href="#">Toys and Games</a></li>
                             <li><a class="dropdown-item hover-underline" href="#">Activity Sets</a></li>
                             <li><a class="dropdown-item hover-underline" href="#">Jigsaw Puzzles</a></li>
-                            <li><a class="dropdown-item hover-underline" href="#">Coloring and Activity Books</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Coloring and Activity Books</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
@@ -676,7 +723,8 @@
                             <li><a class="dropdown-item hover-underline" href="#">Activity Sets</a></li>
                             <li><a class="dropdown-item hover-underline" href="#">Puzzles</a></li>
                             <li><a class="dropdown-item hover-underline" href="#">Toys and Games</a></li>
-                            <li><a class="dropdown-item hover-underline" href="#">Coloring and Activity Books</a></li>
+                            <li><a class="dropdown-item hover-underline" href="#">Coloring and Activity Books</a>
+                            </li>
                             <li class="dropdown-item fw-bold mt-3">Gift Cards</li>
                             <li><a class="dropdown-item hover-underline" href="#">Shop Gift Cards</a></li>
                             <li><a class="dropdown-item hover-underline" href="#">Check Balance</a></li>
@@ -689,331 +737,7 @@
             </div>
         </div>
     </section>
-    <main class="mb-5 container">
-        <!-- Promote tags -->
-        <div class="row d-none d-md-flex my-4 text-center align-items-center">
-            <a
-                class="col nav-link px-2 d-flex justify-content-center align-items-center bg-white border border-dark-subtle align-self-stretch my-2">
-                <i class="fa-solid fa-truck fa-xl text-color-kidbook"></i>
-                <span class="ps-2 hover-underline fw-bold">Free shipping on orders $35+</span>
-            </a>
-            <a
-                class="col nav-link px-2 d-flex justify-content-center align-items-center bg-white border border-dark-subtle py-3">
-                <i class="fa-solid fa-tag fa-2xl text-color-kidbook"></i>
-                <span class="ps-2 hover-underline fw-bold">100 of new titles added daily</span>
-            </a>
-            <a
-                class="col nav-link px-2 d-flex justify-content-center align-items-center bg-white border border-dark-subtle align-self-stretch my-2 ">
-                <i class="fa-solid fa-envelope fa-2xl text-color-kidbook"></i>
-                <span class="ps-2 hover-underline fw-bold">Sign up for email</span>
-            </a>
-        </div>
-        <!-- Sale Banner -->
-        <div class="d-flex flex-column flex-md-row bg-pink text-white position-relative justify-content-center my-4">
-            <div class="d-flex flex-column col-md-6 text-center justify-content-center">
-                <div class="p-3">
-                    <h1>Buy 5 books get 1 free</h1>
-                    <p class="mb-1"><small>Our books are already super affordable, but this bonus offer will make you
-                            want
-                            to do a happy dance.</small></p>
-                    <br>
-                    <button class="border-0 rounded-pill bg-white px-5 py-2 align-self-center">Browse All</button>
-                </div>
-            </div>
-            <div class="col-md-6 bg-pink">
-                <img class="w-100" src="assets/images/banner_top.png" alt="Buy 5 get 1 free">
-            </div>
-        </div>
-        <!-- New Books -->
-        <section class="bg-white rounded-3 mt-5">
-            <h1 class="text-center pt-3 pb-0">NEW BOOKS</h1>
-            <h6 class="text-center pt-0"><a href="#" class="nav-link text-black-50 text-decoration-underline fw-light">
-                    <span class="badge rounded-pill bg-secondary">view all</span>
-                </a></h6>
-            <div class="row mx-auto my-auto text-center justify-content-center">
-                <div id="newBookCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/block.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$1.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small class="hover-text">Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/boys.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$2.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/cupcake.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$3.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/dinosaurs.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$4.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/dog_heaven.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$5.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/fox.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$6.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/girls.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$7.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev position-absolute top-50 start-0 translate-middle w-aut"
-                        href="#newBookCarousel" role="button" data-bs-slide="prev">
-                        <p class="carousel-control-prev-icon bg-dark rounded-3 py-5 px-4" aria-hidden="true"></p>
-                    </a>
-                    <a class="carousel-control-next position-absolute top-50 start-100 translate-middle w-aut"
-                        href="#newBookCarousel" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon bg-dark rounded-3 py-5 px-4" aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- Top Books Today -->
-        <section class="bg-white rounded-3 mt-5">
-            <h1 class="text-center pt-3 pb-0">TOP BOOKS TODAY</h1>
-            <h6 class="text-center pt-0"><a href="#" class="nav-link text-black-50 text-decoration-underline fw-light">
-                    <span class="badge rounded-pill bg-secondary">view all</span>
-                </a></h6>
-            <div class="row mx-auto my-auto text-center justify-content-center">
-                <div id="topBookCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/home.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$1.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/laura_line.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$2.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/messy_life.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$3.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/night_bus.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$4.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/pick_litter.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$5.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/retake.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$6.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-6 col-md-3 col-lg-2">
-                                <div class="card p-2 border-0">
-                                    <div class="card-body h-50 p-0">
-                                        <img src="assets/images/books/rillia.png" class="w-100">
-                                        <p class="text-color-kidbook py-2 m-0"><b>$7.29</b></p>
-                                        <button
-                                            class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                            <small>Add to Cart</small>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev position-absolute top-50 start-0 translate-middle w-aut"
-                        href="#topBookCarousel" role="button" data-bs-slide="prev">
-                        <p class="carousel-control-prev-icon bg-dark rounded-3 py-5 px-4" aria-hidden="true"></p>
-                    </a>
-                    <a class="carousel-control-next position-absolute top-50 start-100 translate-middle w-aut"
-                        href="#topBookCarousel" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon bg-dark rounded-3 py-5 px-4" aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- Top categories -->
-        <section class="bg-pink rounded-3 mt-5 px-4 px-md-2 py-lg-4">
-            <div class="d-flex flex-column flex-lg-row justify-content-center">
-                <span class="fs-1 text-center text-white flex-fill">Top Categories</span>
-                <div class="d-flex flex-column flex-md-row flex-fill justify-content-evenly text-center my-3">
-                    <div class="mx-5 mx-md-1 mb-2 py-2 px-5 bg-white rounded-pill">
-                        <a href="#" class="nav-link hover-underline"><b>Animal</b></a>
-                    </div>
-                    <div class="mx-5 mx-md-1 mb-2 py-2 px-5 bg-white rounded-pill">
-                        <a href="#" class="nav-link hover-underline"><b>Natuals</b></a>
-                    </div>
-                    <div class="mx-5 mx-md-1 mb-2 py-2 px-5 bg-white rounded-pill">
-                        <a href="#" class="nav-link hover-underline"><b>Concepts</b></a>
-                    </div>
-                    <div class="mx-5 mx-md-1 mb-2 py-2 px-5 bg-white rounded-pill">
-                        <a href="#" class="nav-link hover-underline"><b>Comics</b></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Book sets -->
-        <section class="bg-white rounded-3 mt-5">
-            <h1 class="text-center pt-3 pb-0">BOOK SETS</h1>
-            <h6 class="text-center pt-0"><a href="#" class="nav-link text-black-50 text-decoration-underline fw-light">
-                    <span class="badge rounded-pill bg-secondary">view all</span>
-                </a></h6>
-            <div class="d-flex flex-column flex-md-row justify-content-evenly text-center">
-                <div class="card border-0 p-0">
-                    <div class="card-body">
-                        <div class="bg-pink text-white position-absolute rounded-end-pill top-10 py-2 px-3 px-lg-4">
-                            <b class="small">Staring at $2.29</b>
-                        </div>
-                        <img src="assets/images/book_sets/bookset_1.png" class="w-100" alt="Book set">
-                        <h3 class="mt-2">Boxed Sets</h3>
-                        <p>Get the set once, for up to 85% off list prices.</p>
-                        <button class="btn bg-color-kidbook rounded-pill">Shop now</button>
-                    </div>
-                </div>
-                <div class="card border-0 p-0">
-                    <div class="card-body">
-                        <div class="bg-pink text-white position-absolute rounded-end-pill top-10 py-2 px-3 px-lg-4">
-                            <b class="small">Staring at $4.49</b>
-                        </div>
-                        <img src="assets/images/book_sets/bookset_2.png" class="w-100" alt="Book set">
-                        <h3 class="mt-2">Easter Books</h3>
-                        <p>Save on basket-ready kods' books with spring stories.</p>
-                        <button class="btn bg-color-kidbook rounded-pill">Shop now</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <main class="mb-5 container" id="includedContent" name="home"></main>
     <footer class="mb-5 mb-lg-0 d-md-flex flex-row-reverse justify-content-center">
         <div class="ms-xl-5 px-lg-3">
             <div class="bg-dark text-white text-center px-3 mb-5 mb-lg-0 mw-520px">
@@ -1049,7 +773,7 @@
                             <li><a href="#" class="nav-link hover-underline">Help Center</a></li>
                             <li><a href="#" class="nav-link hover-underline">Shipping</a></li>
                             <li><a href="#" class="nav-link hover-underline">Returns</a></li>
-                            <li><a href="#" class="nav-link hover-underline">Contact Us</a></li>
+                            <li><a onclick="reload('contact')" class="nav-link hover-underline">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1100,7 +824,7 @@
                     <li><a href="#" class="nav-link hover-underline">Help Center</a></li>
                     <li><a href="#" class="nav-link hover-underline">Shipping</a></li>
                     <li><a href="#" class="nav-link hover-underline">Returns</a></li>
-                    <li><a href="#" class="nav-link hover-underline">Contact Us</a></li>
+                    <li><a onclick="reload('contact')" class="nav-link hover-underline">Contact Us</a></li>
                 </ul>
                 <ul class="navbar-nav">
                     <h4>My Account</h4>
@@ -1119,9 +843,7 @@
                 Reserved.</p>
         </div>
     </footer>
-
     <script src="assets/js/script.js"></script>
-
 </body>
 
 </html>
