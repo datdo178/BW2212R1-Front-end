@@ -1,5 +1,10 @@
 :root {
     --kidbook-color: #6AC9C8;
+    --kidbook-color-50: #6ac9c785;
+}
+
+body {
+    background-color: var(--kidbook-color-50);
 }
 
 .header-logo {
@@ -14,7 +19,7 @@
     border-top-right-radius: 4px !important;
 }
 
-.dropdown:hover>.dropdown-menu {
+#subHeader .dropdown:hover>.dropdown-menu {
     display: block;
 }
 
@@ -26,6 +31,14 @@
 
 .hover-bg-grey:hover {
     background-color: #F2F2F2;
+}
+
+.hover-bg-dark:hover {
+    background-color: black;
+}
+
+.hover-text-white:hover {
+    color: white;
 }
 
 .hover-underline:hover {
@@ -44,6 +57,10 @@
     background-color: var(--kidbook-color);
 }
 
+.bg-pink {
+    background-color: #FA3792;
+}
+
 .border-color-kidbook {
     border-bottom-color: var(--kidbook-color) !important;
 }
@@ -54,6 +71,10 @@
 
 .translate-left-85 {
     transform: translateX(-85%);
+}
+
+.top-10 {
+    top: 10%;
 }
 
 /* Customized Classes */
