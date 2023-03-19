@@ -1,0 +1,1314 @@
+<!-- BANNER -->
+<div class="bg-blue text-white text-center py-2">
+    <h1>By 5 books get 1 free</h1>
+</div>
+<div class="text-end">
+    <a href="#" class="nav-link text-decoration-underline"><small>See sale details*</small></a>
+</div>
+<!-- MAIN PAGE-->
+<div id="bookList" class="row mx-0 pb-5">
+    <!-- Header: Breadcrumb, Title, Display Adjust in small screen -->
+    <div class="col-12 text-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none"><small>Home</small></a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-decoration-none"><small>Categories</small></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"><small>New Arrivals</small></li>
+            </ol>
+        </nav>
+        <div class="bg-white rounded-pill p-1">
+            <h1 class="border border-dashed border-primary bg-white text-primary rounded-pill mb-0">New Arrivals</h1>
+        </div>
+        <p><small>Page 1 of 56 - 1,322 Results</small></p>
+        <div class="d-flex d-lg-none justify-content-between w-100">
+            <div class="dropdown flex-fill mx-2">
+                <button class="btn btn-dark border-dark border-1 rounded-pill py-1 w-100" id="itemPerPageDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <small class="hover-text px-1">View</small>
+                </button>
+                <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                    <label for="itemPerPage" class="form-label"><b>Items / page</b></label>
+                    <input type="range" class="form-range h-75" min="0" max="3" step="25%" id="itemPerPage">
+                    <div class="d-flex justify-content-between">
+                        <span>12</span>
+                        <span>24</span>
+                        <span>36</span>
+                        <span>48</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown flex-fill mx-2">
+                <button class="btn btn-dark border-dark border-1 rounded-pill py-1 w-100" id="itemPerPageDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <small class="hover-text">Sort By</small>
+                </button>
+                <ul class="dropdown-menu border-0 shadow py-1" aria-labelledby="itemPerPageDropdown">
+                    <li><a class="dropdown-item active" href="#">Popularity</a></li>
+                    <li><a class="dropdown-item" href="#">Title A-Z</a></li>
+                    <li><a class="dropdown-item" href="#">Title Z-A</a></li>
+                    <li><a class="dropdown-item" href="#">Author A-Z</a></li>
+                    <li><a class="dropdown-item" href="#">Author Z-A</a></li>
+                    <li><a class="dropdown-item" href="#">Price Asc</a></li>
+                    <li><a class="dropdown-item" href="#">Price Desc</a></li>
+                    <li><a class="dropdown-item" href="#">Arrival Date</a></li>
+                    <li><a class="dropdown-item" href="#">Publish Date</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-dark flex-fill border-dark border-1 rounded-pill py-1 mx-2"
+                data-bs-toggle="offcanvas" data-bs-target="#filterMenu" aria-controls="filterMenu">
+                <small class="hover-text">Filter By</small>
+            </button>
+            <div class="offcanvas offcanvas-start border-1 w-75" tabindex="-1" id="filterMenu"
+                aria-labelledby="filterMenu">
+                <div class="offcanvas-header border-bottom border-dark border-2">
+                    <div class="offcanvas-title fw-bold">Filters</div>
+                    <button type="button" class="btn-close text-dark" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body p-0">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filterSubject" aria-expanded="false">
+                                    <b>Category / Subject</b>
+                                </button>
+                            </h2>
+                            <div id="filterSubject" class="accordion-collapse collapse justify-content-center">
+                                <ul class="navbar-nav px-2">
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="subject-fiction" id="subjectFiction">
+                                            <label for="subjectFiction">Children Fiction</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">841</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="subject-nonfiction" id="subjectNonfiction">
+                                            <label for="subjectNonfiction">Children Nonfiction</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">160</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="subject-game" id="subjectGame">
+                                            <label for="subjectGame">Games</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">1</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="subject-religion" id="subjectReligion">
+                                            <label for="subjectReligion">Religion & Spirituality</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">1</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="subject-toy" id="subjectToy">
+                                            <label for="subjectToy">Toys & Activities</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">3</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="subject-tween-fic" id="subjectTweenFic">
+                                            <label for="subjectTweenFic">Tweens Fiction</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">149</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="subject-tween-nonfic" id="subjectTweenNonfic">
+                                            <label for="subjectTweenNonfic">Tweens Nonfiction</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">78</span>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filterProductType" aria-expanded="false">
+                                    <b>Product Type</b>
+                                </button>
+                            </h2>
+                            <div id="filterProductType" class="accordion-collapse collapse justify-content-center">
+                                <ul class="navbar-nav px-2">
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="type-bargain" id="typeBargain">
+                                            <label for="typeBargain">Bargain Books</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">1,205</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="type-special" id="typeSpecial">
+                                            <label for="typeSpecial">Specialty Product</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">16</span>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filterFormat" aria-expanded="false">
+                                    <b>Format</b>
+                                </button>
+                            </h2>
+                            <div id="filterFormat" class="accordion-collapse collapse justify-content-center">
+                                <ul class="navbar-nav px-2">
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="format-pocket" id="formatPocket">
+                                            <label for="formatPocket">Pocket Books</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">6</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="format-wire" id="formatWire">
+                                            <label for="formatWire">Wire Coil/Wire Combination</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">5</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="format-activity" id="formatActivity">
+                                            <label for="formatActivity">Activity Set</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">3</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="format-soundboard" id="formatSoundboard">
+                                            <label for="formatSoundboard">Soundboard</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">3</span>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filterLanguage" aria-expanded="false">
+                                    <b>Language</b>
+                                </button>
+                            </h2>
+                            <div id="filterLanguage" class="accordion-collapse collapse justify-content-center">
+                                <ul class="navbar-nav px-2">
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="language-english" id="languageEnglish">
+                                            <label for="languageEnglish">English</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">1,205</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="language-spanish" id="languageSpanish">
+                                            <label for="languageSpanish">Spanish</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">16</span>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filterAge" aria-expanded="false">
+                                    <b>Age Classification</b>
+                                </button>
+                            </h2>
+                            <div id="filterAge" class="accordion-collapse collapse justify-content-center">
+                                <ul class="navbar-nav px-2">
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark" name="age-0-2"
+                                                id="ageToTwo">
+                                            <label for="ageToTwo">Age 0 to 2</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">58</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark" name="age-3-5"
+                                                id="ageThreeFive">
+                                            <label for="ageThreeFive">Ages 3 to 5</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">418</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark" name="age-6-8"
+                                                id="ageSixEight">
+                                            <label for="ageSixEight">Ages 6 to 8</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">497</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark" name="age-9-12"
+                                                id="ageNineTwelve">
+                                            <label for="ageNineTwelve">Ages 9 to 12</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">240</span>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filterPrice" aria-expanded="false">
+                                    <b>Price</b>
+                                </button>
+                            </h2>
+                            <div id="filterPrice" class="accordion-collapse collapse justify-content-center">
+                                <ul class="navbar-nav px-2">
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark" name="price-one"
+                                                id="priceOne">
+                                            <label for="priceOne">Under $5</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">891</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark" name="price-two"
+                                                id="priceTwo">
+                                            <label for="priceTwo">$5 - $10</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">309</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="price-three" id="priceThree">
+                                            <label for="priceThree">$10 - $25</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">21</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="price-four" id="priceFour">
+                                            <label for="priceFour">Over $25</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">0</span>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#filterQuantity" aria-expanded="false">
+                                    <b>Quantity</b>
+                                </button>
+                            </h2>
+                            <div id="filterQuantity" class="accordion-collapse collapse justify-content-center">
+                                <ul class="navbar-nav px-2">
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="quantity-one" id="quantityOne">
+                                            <label for="quantityOne">Under 20</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">879</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="quantity-two" id="quantityTwo">
+                                            <label for="quantityTwo">20 -40</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">95</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="quantity-three" id="quantityThree">
+                                            <label for="quantityThree">40 - 60</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">52</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="quantity-four" id="quantityFour">
+                                            <label for="quantityFour">60 - 80</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">34</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="quantity-five" id="quantityFive">
+                                            <label for="quantityFive">80 - 100</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">29</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input border-dark"
+                                                name="quantity-six" id="quantitySix">
+                                            <label for="quantitySix">Over 100</label>
+                                        </div>
+                                        <span class="bg-color-kidbook rounded-pill px-1">132</span>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar: Display Adjust in large screen -->
+    <div class="d-none d-lg-block col-lg-4 col-xl-3">
+        <div class="d-flex mb-2">
+            <div class="dropdown">
+                <button class="btn btn-light rounded-end-0 border-dark-subtle border-1 py-1 dropdown-toggle"
+                    id="itemPerPageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <small class="hover-text px-1">View</small>
+                </button>
+                <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                    <label for="itemPerPage" class="form-label"><b>Items / page</b></label>
+                    <input type="range" class="form-range h-75" min="0" max="3" step="25%" id="itemPerPage">
+                    <div class="d-flex justify-content-between">
+                        <span>12</span>
+                        <span>24</span>
+                        <span>36</span>
+                        <span>48</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown flex-fill">
+                <button class="btn btn-light rounded-start-0 border-dark-subtle border-1 py-1 w-100 dropdown-toggle"
+                    id="itemPerPageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <small class="hover-text">Sort By</small>
+                </button>
+                <ul class="dropdown-menu border-0 shadow py-1" aria-labelledby="itemPerPageDropdown">
+                    <li><a class="dropdown-item active" href="#">Popularity</a></li>
+                    <li><a class="dropdown-item" href="#">Title A-Z</a></li>
+                    <li><a class="dropdown-item" href="#">Title Z-A</a></li>
+                    <li><a class="dropdown-item" href="#">Author A-Z</a></li>
+                    <li><a class="dropdown-item" href="#">Author Z-A</a></li>
+                    <li><a class="dropdown-item" href="#">Price Asc</a></li>
+                    <li><a class="dropdown-item" href="#">Price Desc</a></li>
+                    <li><a class="dropdown-item" href="#">Arrival Date</a></li>
+                    <li><a class="dropdown-item" href="#">Publish Date</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#filterSubjectLg" aria-expanded="false">
+                        <b>Category / Subject</b>
+                    </button>
+                </h2>
+                <div id="filterSubjectLg" class="accordion-collapse collapse justify-content-center">
+                    <ul class="navbar-nav px-2">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="subject-fiction-lg"
+                                    id="subjectFictionLg">
+                                <label for="subjectFictionLg">Children Fiction</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">841</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="subject-nonfiction-lg"
+                                    id="subjectNonfictionLg">
+                                <label for="subjectNonfictionLg">Children Nonfiction</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">160</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="subject-game-lg"
+                                    id="subjectGameLg">
+                                <label for="subjectGameLg">Games</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">1</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="subject-religion-lg"
+                                    id="subjectReligionLg">
+                                <label for="subjectReligionLg">Religion & Spirituality</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">1</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="subject-toy-lg"
+                                    id="subjectToyLg">
+                                <label for="subjectToyLg">Toys & Activities</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">3</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="subject-tween-fic-lg"
+                                    id="subjectTweenFicLg">
+                                <label for="subjectTweenFicLg">Tweens Fiction</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">149</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark"
+                                    name="subject-tween-nonfic-lg" id="subjectTweenNonficLg">
+                                <label for="subjectTweenNonficLg">Tweens Nonfiction</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">78</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#filterProductTypeLg" aria-expanded="false">
+                        <b>Product Type</b>
+                    </button>
+                </h2>
+                <div id="filterProductTypeLg" class="accordion-collapse collapse justify-content-center">
+                    <ul class="navbar-nav px-2">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="type-bargain-lg"
+                                    id="typeBargainLg">
+                                <label for="typeBargainLg">Bargain Books</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">1,205</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="type-special-lg"
+                                    id="typeSpecialLg">
+                                <label for="typeSpecialLg">Specialty Product</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">16</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#filterFormatLg" aria-expanded="false">
+                        <b>Format</b>
+                    </button>
+                </h2>
+                <div id="filterFormatLg" class="accordion-collapse collapse justify-content-center">
+                    <ul class="navbar-nav px-2">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="format-pocket-lg"
+                                    id="formatPocketLg">
+                                <label for="formatPocketLg">Pocket Books</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">6</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="format-wire-lg"
+                                    id="formatWireLg">
+                                <label for="formatWireLg">Wire Coil/Wire Combination</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">5</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="format-activity-lg"
+                                    id="formatActivityLg">
+                                <label for="formatActivityLg">Activity Set</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">3</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="format-soundboard-lg"
+                                    id="formatSoundboardLg">
+                                <label for="formatSoundboardLg">Soundboard</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">3</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#filterLanguageLg" aria-expanded="false">
+                        <b>Language</b>
+                    </button>
+                </h2>
+                <div id="filterLanguage" class="accordion-collapse collapse justify-content-center">
+                    <ul class="navbar-nav px-2">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="language-english-lg"
+                                    id="languageEnglishLg">
+                                <label for="languageEnglishLg">English</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">1,205</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="language-spanish-lg"
+                                    id="languageSpanishLg">
+                                <label for="languageSpanishLg">Spanish</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">16</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#filterAgeLg" aria-expanded="false">
+                        <b>Age Classification</b>
+                    </button>
+                </h2>
+                <div id="filterAgeLg" class="accordion-collapse collapse justify-content-center">
+                    <ul class="navbar-nav px-2">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="age-0-2-lg"
+                                    id="ageToTwoLg">
+                                <label for="ageToTwoLg">Age 0 to 2</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">58</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="age-3-5-lg"
+                                    id="ageThreeFiveLg">
+                                <label for="ageThreeFiveLg">Ages 3 to 5</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">418</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="age-6-8-lg"
+                                    id="ageSixEightLg">
+                                <label for="ageSixEightLg">Ages 6 to 8</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">497</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="age-9-12-lg"
+                                    id="ageNineTwelveLg">
+                                <label for="ageNineTwelveLg">Ages 9 to 12</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">240</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#filterPriceLg" aria-expanded="false">
+                        <b>Price</b>
+                    </button>
+                </h2>
+                <div id="filterPriceLg" class="accordion-collapse collapse justify-content-center">
+                    <ul class="navbar-nav px-2">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="price-one-lg"
+                                    id="priceOneLg">
+                                <label for="priceOneLg">Under $5</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">891</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="price-two-lg"
+                                    id="priceTwoLg">
+                                <label for="priceTwoLg">$5 - $10</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">309</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="price-three-lg"
+                                    id="priceThreeLg">
+                                <label for="priceThreeLg">$10 - $25</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">21</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="price-four-lg"
+                                    id="priceFourLg">
+                                <label for="priceFourLg">Over $25</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">0</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#filterQuantityLg" aria-expanded="false">
+                        <b>Quantity</b>
+                    </button>
+                </h2>
+                <div id="filterQuantityLg" class="accordion-collapse collapse justify-content-center">
+                    <ul class="navbar-nav px-2">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="quantity-one-lg"
+                                    id="quantityOneLg">
+                                <label for="quantityOneLg">Under 20</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">879</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="quantity-two-lg"
+                                    id="quantityTwoLg">
+                                <label for="quantityTwoLg">20 -40</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">95</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="quantity-three-lg"
+                                    id="quantityThreeLg">
+                                <label for="quantityThreeLg">40 - 60</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">52</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="quantity-four-lg"
+                                    id="quantityFourLg">
+                                <label for="quantityFourLg">60 - 80</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">34</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="quantity-five-lg"
+                                    id="quantityFiveLg">
+                                <label for="quantityFiveLg">80 - 100</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">29</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div>
+                                <input type="checkbox" class="form-check-input border-dark" name="quantity-six-lg"
+                                    id="quantitySixLg">
+                                <label for="quantitySixLg">Over 100</label>
+                            </div>
+                            <span class="bg-color-kidbook rounded-pill px-1">132</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Book list -->
+    <!-- <div
+        class="col-12 bg-white row row-cols-2 row-cols-sm-3 overflow-scroll text-center mx-0 my-3 h-75 rounded-2 justify-content-center"> -->
+    <div
+        class="col-12 col-lg-8 col-xl-9 bg-white row row-cols-3 row-cols-md-4 row-cols-xl-5 text-center mt-3 mt-lg-0 overflow-scroll mx-0 h-75 rounded-2">
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-10%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/block.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Block</a></h5>
+                <p class="text-start m-0 small">By: Chrystal D.Giles</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-4%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/boys.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">Boys
+                        back row</a></h5>
+                <p class="text-start m-0 small">By: Mike Jung</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Packet | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-7%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/yellow_bird.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Yellow bird</a></h5>
+                <p class="text-start m-0 small">By: Joyce Hansen</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Boardset | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-5%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/tornado.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">The
+                        Tornado</a></h5>
+                <p class="text-start m-0 small">By: Jade Burt</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-7%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/rillia.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Rilla of ingleside</a></h5>
+                <p class="text-start m-0 small">By: Montgomery</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-20%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/retake.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">The
+                        retake</a></h5>
+                <p class="text-start m-0 small">By: Jen Calonita</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-8%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/pick_litter.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">Pick
+                        of the litter</a></h5>
+                <p class="text-start m-0 small">By: Bill Wallace</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-15%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/night_bus.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">The
+                        night bus</a></h5>
+                <p class="text-start m-0 small">By: Onjali Q.Rauf</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-5%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/dinosaurs.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Dinosaurs atlas</a></h5>
+                <p class="text-start m-0 small">By: T-Rex</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-6%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/laura_line.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">The
+                        Laura line</a></h5>
+                <p class="text-start m-0 small">By: Crystal Allen</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-50%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/girls.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Goddess girsl</a></h5>
+                <p class="text-start m-0 small">By: Chrystal D.Giles</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-50%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/fox.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Scary stories</a></h5>
+                <p class="text-start m-0 small">By: Christian</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-10%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/block.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Block</a></h5>
+                <p class="text-start m-0 small">By: Chrystal D.Giles</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Hancover | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-4%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/boys.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">Boys
+                        back row</a></h5>
+                <p class="text-start m-0 small">By: Mike Jung</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Packet | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
+                <b class="text-white">-7%</b>
+            </div>
+            <div class="card-body shadow rounded-2 p-1">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/yellow_bird.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
+                        class="nav-link hover-underline">Yellow bird</a></h5>
+                <p class="text-start m-0 small">By: Joyce Hansen</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted small m-0">
+                        Boardset | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Paging -->
+    <nav class="d-flex justify-content-center w-100 mt-2" aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link text-dark" href="#">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
+            <li class="page-item" id="itemPerPageDropdown" data-bs-toggle="dropdown" aria-expanded="false"><a
+                    class="page-link text-dark" href="#">...</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">51</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a></li>
+            <li class="page-item"><a class="page-link text-dark" href="#">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a></li>
+            <div class="dropdown flex-fill mx-2">
+                <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="goToPage">
+                    <label for="pageNumber" class="form-label"><b>Page number:</b></label>
+                    <div class="d-flex">
+                        <input type="number" class="form-control" min="1" max="51" id="pageNumber">
+                        <button class="btn btn-dark">Go</button>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</div>

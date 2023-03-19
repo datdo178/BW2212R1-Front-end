@@ -17,19 +17,17 @@
 </head>
 
 <body>
-    <section id="promoteHeader">
-        <button id="helpButton" class="btn bg-blue fw-bold small position-fixed z-3">
+    <header class="sticky-top">
+        <button id="helpButton" class="btn bg-blue fw-bold small position-fixed hover-bg-grey z-3">
             <i class="fa-regular fa-question-circle"></i>
             Help
         </button>
-        <div class="bg-dark text-center">
+        <!-- <div class="bg-dark text-center">
             <div class="py-2"><a href="#" class="text-decoration-none text-white hover-underline">Buy 5 Books, Get 1
                     Free</a></div>
-        </div>
-    </section>
-    <section id="mainHeader" class="sticky-top">
+        </div> -->
         <div
-            class="row bg-white border-bottom border-3 justify-content-between align-items-center text-color-kidbook p-1 mx-0 justify-content-lg-around">
+            class="row bg-white border-bottom border-3 justify-content-between align-items-center text-color-kidbook mx-0 justify-content-lg-around">
             <div class="col-2 col-sm-7 col-lg-5 col-xl-3 d-flex align-items-center">
                 <div>
                     <a onclick="reload('home')">
@@ -545,11 +543,9 @@
                 </button>
             </div>
         </div>
-    </section>
-    <section id="menuHeader" class="bg-white">
-        <div class="d-none d-lg-flex justify-content-evenly border-bottom">
+        <div class="d-none d-lg-flex justify-content-evenly bg-white border-bottom">
             <div class="dropdown">
-                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-2"
                     data-mdb-toogle="dropdown" href="#">
                     <b>Featured</b>
                 </a>
@@ -603,7 +599,7 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-2"
                     data-mdb-toogle="dropdown" href="#">
                     <b>Shop by Age</b>
                 </a>
@@ -671,7 +667,7 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-2"
                     data-mdb-toogle="dropdown" href="#">
                     <b>Toys and Activities</b>
                 </a>
@@ -694,7 +690,7 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-3"
+                <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-2"
                     data-mdb-toogle="dropdown" href="#">
                     <b>Gifts</b>
                 </a>
@@ -736,8 +732,8 @@
                 </ul>
             </div>
         </div>
-    </section>
-    <main class="mb-5 container" id="includedContent" name="home"></main>
+    </header>
+    <main class="mb-5 container-fluid container-lg" id="includedContent" name="booklist"></main>
     <footer class="mb-5 mb-lg-0 d-md-flex flex-row-reverse justify-content-center">
         <div class="ms-xl-5 px-lg-3">
             <div class="bg-dark text-white text-center px-3 mb-5 mb-lg-0 mw-520px">
