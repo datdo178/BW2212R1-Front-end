@@ -5,7 +5,7 @@
 <div class="text-end">
     <a href="#" class="nav-link text-decoration-underline"><small>See sale details*</small></a>
 </div>
-<!-- MAIN PAGE-->
+<!-- BOOK LIST-->
 <div id="bookList" class="row mx-0 pb-5">
     <!-- Header: Breadcrumb, Title, Display Adjust in small screen -->
     <div class="col-12 text-center">
@@ -749,12 +749,12 @@
     <!-- <div
         class="col-12 bg-white row row-cols-2 row-cols-sm-3 overflow-scroll text-center mx-0 my-3 h-75 rounded-2 justify-content-center"> -->
     <div
-        class="col-12 col-lg-8 col-xl-9 bg-white row row-cols-3 row-cols-md-4 row-cols-xl-5 text-center mt-3 mt-lg-0 overflow-scroll mx-0 h-75 rounded-2">
+        class="col-12 col-lg-8 col-xl-9 bg-white row row-cols-2 row-cols-sm-3 row-cols-xl-4 text-center mt-3 mt-lg-0 overflow-scroll mx-0 h-75 rounded-2">
         <div class="card p-2 bg-none border-0">
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
                 <b class="text-white">-10%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/block.png" class="w-100">
                 </a>
@@ -762,15 +762,15 @@
                         class="nav-link hover-underline">Block</a></h5>
                 <p class="text-start m-0 small">By: Chrystal D.Giles</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -786,10 +786,7 @@
             </div>
         </div>
         <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-4%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/boys.png" class="w-100">
                 </a>
@@ -797,7 +794,7 @@
                         back row</a></h5>
                 <p class="text-start m-0 small">By: Mike Jung</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Packet | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
@@ -821,10 +818,7 @@
             </div>
         </div>
         <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-7%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/yellow_bird.png" class="w-100">
                 </a>
@@ -832,7 +826,7 @@
                         class="nav-link hover-underline">Yellow bird</a></h5>
                 <p class="text-start m-0 small">By: Joyce Hansen</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Boardset | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
@@ -856,10 +850,7 @@
             </div>
         </div>
         <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-5%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/tornado.png" class="w-100">
                 </a>
@@ -867,8 +858,8 @@
                         Tornado</a></h5>
                 <p class="text-start m-0 small">By: Jade Burt</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -892,9 +883,9 @@
         </div>
         <div class="card p-2 bg-none border-0">
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-7%</b>
+                <b class="text-white">-07%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/rillia.png" class="w-100">
                 </a>
@@ -902,8 +893,8 @@
                         class="nav-link hover-underline">Rilla of ingleside</a></h5>
                 <p class="text-start m-0 small">By: Montgomery</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Softcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -926,10 +917,7 @@
             </div>
         </div>
         <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-20%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/retake.png" class="w-100">
                 </a>
@@ -937,8 +925,8 @@
                         retake</a></h5>
                 <p class="text-start m-0 small">By: Jen Calonita</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -961,10 +949,7 @@
             </div>
         </div>
         <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-8%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
 
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/pick_litter.png" class="w-100">
@@ -973,8 +958,8 @@
                         of the litter</a></h5>
                 <p class="text-start m-0 small">By: Bill Wallace</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1000,7 +985,7 @@
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
                 <b class="text-white">-15%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/night_bus.png" class="w-100">
                 </a>
@@ -1008,8 +993,8 @@
                         night bus</a></h5>
                 <p class="text-start m-0 small">By: Onjali Q.Rauf</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1033,9 +1018,9 @@
         </div>
         <div class="card p-2 bg-none border-0">
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-5%</b>
+                <b class="text-white">-05%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/dinosaurs.png" class="w-100">
                 </a>
@@ -1043,8 +1028,8 @@
                         class="nav-link hover-underline">Dinosaurs atlas</a></h5>
                 <p class="text-start m-0 small">By: T-Rex</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1068,9 +1053,9 @@
         </div>
         <div class="card p-2 bg-none border-0">
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-6%</b>
+                <b class="text-white">-06%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/laura_line.png" class="w-100">
                 </a>
@@ -1078,8 +1063,8 @@
                         Laura line</a></h5>
                 <p class="text-start m-0 small">By: Crystal Allen</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1102,10 +1087,7 @@
             </div>
         </div>
         <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-50%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/girls.png" class="w-100">
                 </a>
@@ -1113,8 +1095,8 @@
                         class="nav-link hover-underline">Goddess girsl</a></h5>
                 <p class="text-start m-0 small">By: Chrystal D.Giles</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1140,7 +1122,7 @@
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
                 <b class="text-white">-50%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/fox.png" class="w-100">
                 </a>
@@ -1148,8 +1130,8 @@
                         class="nav-link hover-underline">Scary stories</a></h5>
                 <p class="text-start m-0 small">By: Christian</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1175,7 +1157,7 @@
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
                 <b class="text-white">-10%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/block.png" class="w-100">
                 </a>
@@ -1183,8 +1165,8 @@
                         class="nav-link hover-underline">Block</a></h5>
                 <p class="text-start m-0 small">By: Chrystal D.Giles</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
-                        Hancover | Listprice: $4
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1207,10 +1189,7 @@
             </div>
         </div>
         <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-4%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/boys.png" class="w-100">
                 </a>
@@ -1218,7 +1197,7 @@
                         back row</a></h5>
                 <p class="text-start m-0 small">By: Mike Jung</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Packet | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
@@ -1243,9 +1222,9 @@
         </div>
         <div class="card p-2 bg-none border-0">
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-7%</b>
+                <b class="text-white">-07%</b>
             </div>
-            <div class="card-body shadow rounded-2 p-1">
+            <div class="card-body shadow rounded-2 p-2">
                 <a href="#" onclick="loadBookAvatar(this)">
                     <img src="assets/images/books/yellow_bird.png" class="w-100">
                 </a>
@@ -1253,8 +1232,40 @@
                         class="nav-link hover-underline">Yellow bird</a></h5>
                 <p class="text-start m-0 small">By: Joyce Hansen</p>
                 <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted small m-0">
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Boardset | Listprice: $4
+                    </p>
+                    <div class="dropdown d-none d-md-inline-block lh-1">
+                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
+                        </button>
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
+                <button
+                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                    <small class="hover-text">Add to Cart</small>
+                </button>
+                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
+            </div>
+        </div>
+        <div class="card p-2 bg-none border-0">
+            <div class="card-body shadow rounded-2 p-2">
+                <a href="#" onclick="loadBookAvatar(this)">
+                    <img src="assets/images/books/tornado.png" class="w-100">
+                </a>
+                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">The
+                        Tornado</a></h5>
+                <p class="text-start m-0 small">By: Jade Burt</p>
+                <div class="d-flex small">
+                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
+                        Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
                         <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
@@ -1278,37 +1289,41 @@
         </div>
     </div>
     <!-- Paging -->
-    <nav class="d-flex justify-content-center w-100 mt-2" aria-label="Page navigation">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link text-dark" href="#">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">
-                    <i class="fa-solid fa-angles-left"></i>
-                </a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
-            <li class="page-item" id="itemPerPageDropdown" data-bs-toggle="dropdown" aria-expanded="false"><a
-                    class="page-link text-dark" href="#">...</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">51</a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a></li>
-            <li class="page-item"><a class="page-link text-dark" href="#">
-                    <i class="fa-solid fa-angles-right"></i>
-                </a></li>
-            <div class="dropdown flex-fill mx-2">
-                <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="goToPage">
-                    <label for="pageNumber" class="form-label"><b>Page number:</b></label>
-                    <div class="d-flex">
-                        <input type="number" class="form-control" min="1" max="51" id="pageNumber">
-                        <button class="btn btn-dark">Go</button>
+    <div class="d-none d-lg-block col-lg-4 col-xl-3"></div>
+    <div class="col-12 col-lg-8 col-xl-9">
+        <nav class="d-flex justify-content-center w-100 mt-2" aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link text-dark" href="#">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">
+                        <i class="fa-solid fa-angles-left"></i>
+                    </a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
+                <li class="page-item" id="itemPerPageDropdown" data-bs-toggle="dropdown" aria-expanded="false"><a
+                        class="page-link text-dark" href="#">...</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">51</a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a></li>
+                <li class="page-item"><a class="page-link text-dark" href="#">
+                        <i class="fa-solid fa-angles-right"></i>
+                    </a></li>
+                <div class="dropdown flex-fill mx-2">
+                    <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="goToPage">
+                        <label for="pageNumber" class="form-label"><b>Page number:</b></label>
+                        <div class="d-flex">
+                            <input type="number" class="form-control" min="1" max="51" id="pageNumber">
+                            <button class="btn btn-dark">Go</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </div>
+
 </div>

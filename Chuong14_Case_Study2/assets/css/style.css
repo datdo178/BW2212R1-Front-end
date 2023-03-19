@@ -3,13 +3,38 @@
     --kidbook-color-50: #6ac9c785;
 }
 
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--kidbook-color-50);
 }
 
-.header-logo {
-    max-width: 76px;
-    max-height: 76px;
+body::before {
+    content: "By 5 books get 1 free";
+    text-align: center;
+    background-color: black;
+    color: white;
+    display: block;
+    width: 100vw;
+    padding: 8px 0px;
+    animation: message 9s linear infinite;
+}
+
+@keyframes message {
+    0% {
+        content: "By 5 books get 1 free"
+    }
+
+    50% {
+        content: "Free shipping on orders $35+"
+    }
+
+    100% {
+        content: "15% off all books"
+    }
 }
 
 #helpButton {
@@ -19,8 +44,16 @@ body {
     border-top-right-radius: 4px !important;
 }
 
-#menuHeader .dropdown:hover>.dropdown-menu {
+header .dropdown:hover>.dropdown-menu {
     display: block;
+}
+
+.dropdown-menu {
+    min-width: 350px !important;
+}
+
+#bookList {
+    height: 100vh;
 }
 
 /* New Classes */
@@ -39,6 +72,10 @@ body {
 
 .hover-text-white:hover {
     color: white;
+}
+
+.hover-text-blue:hover {
+    color: #0773BF;
 }
 
 .hover-underline:hover {
@@ -65,6 +102,10 @@ body {
     border-bottom-color: var(--kidbook-color) !important;
 }
 
+.border-dashed {
+    border-style: dashed !important;
+}
+
 .translate-left-25 {
     transform: translateX(-25%);
 }
@@ -88,8 +129,13 @@ body {
 }
 
 .accordion-button:not(.collapsed) {
-    color: white;
-    background-color: var(--kidbook-color);
+    color: black;
+    background-color: var(--kidbook-color-50);
+}
+
+#bookList .accordion-button:not(.collapsed) {
+    color: black;
+    background-color: white;
 }
 
 .accordion-button:focus {
@@ -116,4 +162,16 @@ body {
 .form-floating .form-control:focus+label {
     top: -15px;
     opacity: 1;
+}
+
+.form-check-input:checked {
+    background-color: var(--kidbook-color);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: var(--kidbook-color-50);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background: var(--kidbook-color);
 }
