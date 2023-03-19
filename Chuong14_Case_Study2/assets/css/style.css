@@ -44,12 +44,12 @@ body::before {
     border-top-right-radius: 4px !important;
 }
 
-header .dropdown:hover>.dropdown-menu {
+#headerMenu .dropdown:hover>.dropdown-menu {
     display: block;
 }
 
 .dropdown-menu {
-    min-width: 350px !important;
+    min-width: 250px !important;
 }
 
 #bookList {

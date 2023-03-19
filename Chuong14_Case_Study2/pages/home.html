@@ -26,7 +26,8 @@
                     want to do a happy dance.</small>
             </p>
             <br>
-            <button class="border-0 rounded-pill bg-white px-5 py-2 align-self-center">Browse All</button>
+            <button class="border-0 rounded-pill bg-white px-5 py-2 align-self-center"
+                onclick="reload('booklist')">Browse All</button>
         </div>
     </div>
     <div class="col-md-6 bg-blue rounded-3">
@@ -37,7 +38,7 @@
 <section class="bg-white rounded-3 mt-5">
     <h1 class="text-center pt-3 pb-0">NEW BOOKS</h1>
     <h6 class="text-center pt-0"><a href="#" class="nav-link text-black-50 text-decoration-underline fw-light">
-            <span class="badge rounded-pill bg-secondary">view all</span>
+            <a href="#" class="badge rounded-pill bg-secondary" onclick="reload('booklist')">view all</a>
         </a></h6>
     <div class="row mx-auto my-auto text-center justify-content-center">
         <div id="newBookCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
@@ -46,7 +47,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/block.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/block.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$1.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -60,7 +62,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/boys.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/boys.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$2.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -74,7 +77,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/cupcake.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/cupcake.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$3.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -88,7 +92,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/dinosaurs.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/dinosaurs.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$4.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -102,7 +107,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/dog_heaven.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/dog_heaven.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$5.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -116,7 +122,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/fox.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/fox.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$6.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -130,7 +137,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/girls.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/girls.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$7.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -156,7 +164,7 @@
 <section class="bg-white rounded-3 mt-5">
     <h1 class="text-center pt-3 pb-0">TOP BOOKS TODAY</h1>
     <h6 class="text-center pt-0"><a href="#" class="nav-link text-black-50 text-decoration-underline fw-light">
-            <span class="badge rounded-pill bg-secondary">view all</span>
+            <a href="#" class="badge rounded-pill bg-secondary" onclick="reload('booklist')">view all</a>
         </a></h6>
     <div class="row mx-auto my-auto text-center justify-content-center">
         <div id="topBookCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
@@ -165,7 +173,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/home.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/home.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$1.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -179,7 +188,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/laura_line.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/laura_line.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$2.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -193,7 +203,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/messy_life.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/messy_life.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$3.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -207,7 +218,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/night_bus.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/night_bus.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$4.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -221,7 +233,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/pick_litter.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img
+                                        src="assets/images/books/pick_litter.png" class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$5.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -235,7 +248,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/retake.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/retake.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$6.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -249,7 +263,8 @@
                     <div class="col-6 col-md-3 col-lg-2">
                         <div class="card p-2 border-0">
                             <div class="card-body h-50 p-0">
-                                <img src="assets/images/books/rillia.png" class="w-100">
+                                <a href="#" onclick="loadBookAvatar(this)"><img src="assets/images/books/rillia.png"
+                                        class="w-100"></a>
                                 <p class="text-color-kidbook py-2 m-0"><b>$7.29</b></p>
                                 <button
                                     class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -295,7 +310,7 @@
 <section class="bg-white rounded-3 mt-5">
     <h1 class="text-center pt-3 pb-0">BOOK SETS</h1>
     <h6 class="text-center pt-0"><a href="#" class="nav-link text-black-50 text-decoration-underline fw-light">
-            <span class="badge rounded-pill bg-secondary">view all</span>
+            <a href="#" class="badge rounded-pill bg-secondary" onclick="reload('booklist')">view all</a>
         </a></h6>
     <div class="d-flex flex-column flex-md-row justify-content-evenly text-center">
         <div class="card border-0 p-0">

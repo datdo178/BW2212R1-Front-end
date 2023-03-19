@@ -18,14 +18,10 @@
 
 <body>
     <header class="sticky-top">
-        <button id="helpButton" class="btn bg-blue fw-bold small position-fixed hover-bg-grey z-3">
+        <button id="helpButton" class="btn bg-color-kidbook fw-bold small position-fixed hover-bg-grey z-3">
             <i class="fa-regular fa-question-circle"></i>
             Help
         </button>
-        <!-- <div class="bg-dark text-center">
-            <div class="py-2"><a href="#" class="text-decoration-none text-white hover-underline">Buy 5 Books, Get 1
-                    Free</a></div>
-        </div> -->
         <div
             class="row bg-white border-bottom border-3 justify-content-between align-items-center text-color-kidbook mx-0 justify-content-lg-around">
             <div class="col-2 col-sm-7 col-lg-5 col-xl-3 d-flex align-items-center">
@@ -61,7 +57,10 @@
                     </ul>
                 </div>
                 <i class="fa-regular fa-heart fa-xl hover-bg-grey p-2"></i>
-                <i class="fa fa-cart-shopping fa-xl hover-bg-grey p-2"></i>
+                <a href="#" class="position-relative text-color-kidbook" onclick="reload('cart')">
+                    <span class="position-absolute end-0 translate-middle-y badge rounded-pill bg-dark">3</span>
+                    <i class="fa fa-cart-shopping fa-xl hover-bg-grey p-2"></i>
+                </a>
                 <div class="d-none d-lg-flex hover-bg-grey align-items-center">
                     <img src="assets/images/icons/us_flag.png" alt="US flag">
                     <span class="text-black fw-bold px-1">USD</span>
@@ -543,7 +542,7 @@
                 </button>
             </div>
         </div>
-        <div class="d-none d-lg-flex justify-content-evenly bg-white border-bottom">
+        <div id="headerMenu" class="d-none d-lg-flex justify-content-evenly bg-white border-bottom">
             <div class="dropdown">
                 <a class="nav-link text-nowrap border-light border-bottom border-3 hover-border-bottom-kidbook p-2"
                     data-mdb-toogle="dropdown" href="#">
@@ -594,7 +593,8 @@
                         </ul>
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
-                        <a href="#" class="nav-link fw-bold hover-underline ps-4">Shop All Books ></a>
+                        <a href="#" class="nav-link fw-bold hover-underline ps-4" onclick="reload('booklist')">Shop All
+                            Books >></a>
                     </div>
                 </ul>
             </div>
@@ -662,7 +662,8 @@
                         </ul>
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
-                        <a href="#" class="nav-link fw-bold hover-underline ps-4">Shop All ></a>
+                        <a href="#" class="nav-link fw-bold hover-underline ps-4" onclick="reload('booklist')">Shop All
+                            >></a>
                     </div>
                 </ul>
             </div>
@@ -683,9 +684,9 @@
                         </ul>
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
-                        <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2">Shop All Toys and
-                            Activities
-                            ></a>
+                        <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2"
+                            onclick="reload('booklist')">Shop
+                            All Toys and Activities >></a>
                     </div>
                 </ul>
             </div>
@@ -727,13 +728,15 @@
                         </ul>
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
-                        <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2">Shop All ></a>
+                        <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2"
+                            onclick="reload('booklist')">Shop
+                            All >></a>
                     </div>
                 </ul>
             </div>
         </div>
     </header>
-    <main class="mb-5 container-fluid container-lg" id="includedContent" name="bookinfo"></main>
+    <main class="mb-5 container-fluid container-lg" id="includedContent" name="cart"></main>
     <footer class="mb-5 mb-lg-0 d-md-flex flex-row-reverse justify-content-center">
         <div class="ms-xl-5 px-lg-3">
             <div class="bg-dark text-white text-center px-3 mb-5 mb-lg-0 mw-520px">

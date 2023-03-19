@@ -1,7 +1,7 @@
-// JQUERY - LOAD PAGE
+// JQUERY - REDIRECT PAGE
 $(function () {
-    let page = $("#includedContent").attr("name");
-    $("#includedContent").load(`pages/${page}.html`);
+    // let page = $("#includedContent").attr("name");
+    $("#includedContent").load(`pages/home.html`);
 });
 
 function reload(page) {
@@ -13,7 +13,7 @@ function loadBookAvatar(bookElm) {
     const bookImgPath = $(bookElm).find("img").attr("src");
 
     $.get("pages/bookinfo.html", function (result) {
-        const newContent = result.replace("bookImgPath", bookImgPath);
+        const newContent = result.replaceAll("bookImgPath", bookImgPath);
         $("#includedContent").empty();
         $("#includedContent").append(newContent);
     });
