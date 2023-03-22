@@ -16,7 +16,7 @@
     <script src="assets/libs/jquery.js"></script>
 </head>
 
-<body>
+<body class="position-relative">
     <header class="sticky-top">
         <button id="helpButton" class="btn bg-color-kidbook fw-bold small position-fixed hover-bg-grey z-3">
             <i class="fa-regular fa-question-circle"></i>
@@ -53,7 +53,7 @@
                         <li><a class="dropdown-item hover-underline" href="#">Wishlist</a></li>
                         <li><a class="dropdown-item hover-underline" href="#">Support Request</a></li>
                         <li><a class="dropdown-item hover-underline fw-bold text-decoration-underline"
-                                onclick="reload('login')">Sign out</a></li>
+                                onclick="reload('login')">Login</a></li>
                     </ul>
                 </div>
                 <i class="fa-regular fa-heart fa-xl hover-bg-grey p-2"></i>
@@ -66,10 +66,10 @@
                     <span class="text-black fw-bold px-1">USD</span>
                 </div>
                 <i class="d-lg-none fa-solid fa-bars fa-xl text-dark hover-bg-grey p-2" data-bs-toggle="offcanvas"
-                    data-bs-target="#headerMenu" aria-controls="headerMenu"></i>
+                    data-bs-target="#headerMenuOffCanvas" aria-controls="headerMenuOffCanvas"></i>
 
-                <div class="offcanvas offcanvas-start border-1 w-75" tabindex="-1" id="headerMenu"
-                    aria-labelledby="headerMenu">
+                <div class="offcanvas offcanvas-start border-1 w-75" tabindex="-1" id="headerMenuOffCanvas"
+                    aria-labelledby="headerMenuOffCanvas">
                     <div class="offcanvas-header border-bottom">
                         <div class="offcanvas-title fw-bold text-color-kidbook">Welcome!</div>
                         <div>
@@ -736,7 +736,7 @@
             </div>
         </div>
     </header>
-    <main class="mb-5 container-fluid container-lg" id="includedContent" name="cart"></main>
+    <main class="mb-5 container-fluid container-lg" id="includedContent"></main>
     <footer class="mb-5 mb-lg-0 d-md-flex flex-row-reverse justify-content-center">
         <div class="ms-xl-5 px-lg-3">
             <div class="bg-dark text-white text-center px-3 mb-5 mb-lg-0 mw-520px">

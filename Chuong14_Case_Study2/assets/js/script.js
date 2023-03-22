@@ -1,6 +1,5 @@
 // JQUERY - REDIRECT PAGE
 $(function () {
-    // let page = $("#includedContent").attr("name");
     $("#includedContent").load(`pages/home.html`);
 });
 

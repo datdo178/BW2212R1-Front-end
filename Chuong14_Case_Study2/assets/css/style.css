@@ -8,10 +8,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--kidbook-color-50);
-}
-
 body::before {
     content: "By 5 books get 1 free";
     text-align: center;
@@ -52,8 +48,8 @@ body::before {
     min-width: 250px !important;
 }
 
-#bookList {
-    height: 100vh;
+#sideBar {
+    top: 120px;
 }
 
 /* New Classes */
@@ -122,7 +118,7 @@ body::before {
     top: 10%;
 }
 
-/* Customized Classes */
+/* Customized Boostrap's Classes */
 .accordion-item {
     border-right: none;
     border-left: none;
@@ -130,7 +126,7 @@ body::before {
 
 .accordion-button:not(.collapsed) {
     color: black;
-    background-color: var(--kidbook-color-50);
+    background-color: #E5E5E5;
 }
 
 #bookList .accordion-button:not(.collapsed) {
@@ -165,7 +161,7 @@ body::before {
 }
 
 .form-check-input:checked {
-    background-color: var(--kidbook-color);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 input[type=range]::-webkit-slider-runnable-track {

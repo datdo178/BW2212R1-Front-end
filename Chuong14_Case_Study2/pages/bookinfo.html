@@ -1,10 +1,3 @@
-<link rel="stylesheet" href="../assets/libs/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/libs/fontawesome-free-6.3.0-web/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="../assets/libs/pooper.min.js"></script>
-<script src="../assets/libs/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
-<script src="../assets/libs/fontawesome-free-6.3.0-web/js/all.min.js"></script>
-
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#" class="text-decoration-none" onclick="reload('home')">
@@ -22,248 +15,246 @@
     </ol>
 </nav>
 <div class="row bg-white">
-    <div class="col-12 col-lg-11 col-xl-9 row p-3 mx-0">
-        <div class="col-12 col-md-4 col-xl-4 text-center">
-            <img id="bookAvatar" src="bookImgPath" class="d-md-none border border-1 rounded-2" alt="Book Image"></img>
-            <img id="bookAvatar" src="bookImgPath" class="d-none d-md-block w-100 border border-1 rounded-2"
-                alt="Book Image"></img>
-        </div>
-        <div class="col-12 col-md-8 col-xl-8">
-            <h1 class="text-center py-3 pt-lg-0">Book title display here </h1>
-            <table class="w-100 table table-striped">
-                <tr>
-                    <td class="fw-bold py-md-2 w-10 ">By</td>
-                    <td>Author name</td>
-                </tr>
-                <tr>
-                    <td class="fw-bold py-md-2 w-10">Format</td>
-                    <td>Softcover</td>
-                </tr>
-                <tr>
-                    <td class="fw-bold py-md-2 w-10">Product Type</td>
-                    <td>Bargain Books&emsp;<a href="#" class="small text-decoration-none">What's this?</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="fw-bold py-md-2 w-10">Price</td>
-                    <td>
-                        <span class="fw-bold fs-3"><del>$2.29</del> <span class="text-color-kidbook">$1.94</span></span>
-                        <br>
-                        <span class="small fst-italic">List price is $3.99 | Save 51%</span>
-                        <span class="dropdown bg-none lh-1">
-                            <button class="border-0" id="listPrice" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
-                            </button>
-                            <div class="dropdown-menu border-0 mw-520px overflow-auto shadow p-3"
-                                aria-labelledby="listPrice">
-                                The price at which the manufacturer recommends that the retailer sell the
-                                product.
-                            </div>
-                        </span>
-                    </td>
-                </tr>
-            </table>
-            <div class="row mx-0 text-center">
-                <div class="col-12 d-flex align-items-center justify-content-center">
-                    <span class="fw-bold">Quantity:&nbsp;</span>
-                    <select>
-                        <option value="1" selected>1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                    <div class="d-flex align-items-center ms-4">
-                        <button class="btn btn-dark border-1 rounded-pill px-5 py-3 mb-1">
-                            <small class="hover-text">Add to Cart</small>
+    <div class="col-12 col-md-4 col-xl-4 text-center">
+        <img id="bookAvatar" src="bookImgPath" class="d-md-none border border-1 rounded-2" alt="Book Image"></img>
+        <img id="bookAvatar" src="bookImgPath" class="d-none d-md-block w-100 border border-1 rounded-2"
+            alt="Book Image"></img>
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+        <h1 class="text-center py-3 pt-lg-0">Book title display here </h1>
+        <table class="w-100 table table-striped">
+            <tr>
+                <td class="fw-bold py-md-2 w-10 ">By</td>
+                <td>Author name</td>
+            </tr>
+            <tr>
+                <td class="fw-bold py-md-2 w-10">Format</td>
+                <td>Softcover</td>
+            </tr>
+            <tr>
+                <td class="fw-bold py-md-2 w-10">Product Type</td>
+                <td>Bargain Books&emsp;<a href="#" class="small text-decoration-none">What's this?</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="fw-bold py-md-2 w-10">Price</td>
+                <td>
+                    <span class="fw-bold fs-3"><del>$2.29</del> <span class="text-color-kidbook">$1.94</span></span>
+                    <br>
+                    <span class="small fst-italic">List price is $3.99 | Save 51%</span>
+                    <span class="dropdown bg-none lh-1">
+                        <button class="border-0" id="listPrice" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-                    </div>
+                        <div class="dropdown-menu border-0 mw-520px overflow-auto shadow p-3"
+                            aria-labelledby="listPrice">
+                            The price at which the manufacturer recommends that the retailer sell the
+                            product.
+                        </div>
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <div class="row mx-0 text-center">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <span class="fw-bold">Quantity:&nbsp;</span>
+                <select>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <div class="d-flex align-items-center ms-4">
+                    <button class="btn btn-dark border-1 rounded-pill px-5 py-3 mb-1">
+                        <small class="hover-text">Add to Cart</small>
+                    </button>
+                    <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
                 </div>
             </div>
-            </table>
         </div>
-        <div class="col-12 mt-4">
-            <h4>About</h4>
-            <p>About
-                Millie is quiet. Millie is sweet. Millie is mild. But the kids at school don't listen to her. And she
-                never
-                gets a piece of birthday cake with a flower on it. And some girls from her class walk right on top of
-                her
-                chalk drawing and smudge it. And they don't even say they're sorry!
-                <br><br>
-                So that's when Millie decides she wants to be fierce! She frizzes out her hair, sharpens her nails and
-                runs
-                around like a wild thing. But she soon realizes that being fierce isn't the best way to get noticed
-                either,
-                especially when it makes you turn mean. So Millie decides to be nice--but to keep a little of that
-                fierce
-                backbone hidden inside her. In case she ever needs it again.
-            </p>
-        </div>
-        <div class="col-12 mb-3">
-            <div class="accordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#additionalInfo" aria-expanded="false">
-                            <b class="ps-3">Additional Info</b>
-                        </button>
-                    </h2>
-                    <div id="additionalInfo" class="accordion-collapse collapse p-3">
-                        <h5>Info</h5>
-                        <span>
-                            ISBN: 9780399256424
-                            <br>Published Date: August 16, 2012
-                            <br>Publisher: Philomel Books
-                            <br>Language: English
-                            <br>Size: 11.29" l x 9.04" w x 0.36" h
-                            <br>Age Classification: Ages 3 to 5
-                        </span>
-                        <h5 class="mt-3">Category</h5>
-                        <a href="#" class="text-decoration-none">Children Fiction</a>
-                        <h5 class="mt-3">Subject</h5>
-                        <a href="#" class="text-decoration-none">Social Situations</a>
-                    </div>
+        </table>
+    </div>
+    <div class="col-12 mt-4">
+        <h4>About</h4>
+        <p>About
+            Millie is quiet. Millie is sweet. Millie is mild. But the kids at school don't listen to her. And she
+            never
+            gets a piece of birthday cake with a flower on it. And some girls from her class walk right on top of
+            her
+            chalk drawing and smudge it. And they don't even say they're sorry!
+            <br><br>
+            So that's when Millie decides she wants to be fierce! She frizzes out her hair, sharpens her nails and
+            runs
+            around like a wild thing. But she soon realizes that being fierce isn't the best way to get noticed
+            either,
+            especially when it makes you turn mean. So Millie decides to be nice--but to keep a little of that
+            fierce
+            backbone hidden inside her. In case she ever needs it again.
+        </p>
+    </div>
+    <div class="col-12 mb-3">
+        <div class="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#additionalInfo" aria-expanded="false">
+                        <b class="ps-3">Additional Info</b>
+                    </button>
+                </h2>
+                <div id="additionalInfo" class="accordion-collapse collapse p-3">
+                    <h5>Info</h5>
+                    <span>
+                        ISBN: 9780399256424
+                        <br>Published Date: August 16, 2012
+                        <br>Publisher: Philomel Books
+                        <br>Language: English
+                        <br>Size: 11.29" l x 9.04" w x 0.36" h
+                        <br>Age Classification: Ages 3 to 5
+                    </span>
+                    <h5 class="mt-3">Category</h5>
+                    <a href="#" class="text-decoration-none">Children Fiction</a>
+                    <h5 class="mt-3">Subject</h5>
+                    <a href="#" class="text-decoration-none">Social Situations</a>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#similarItems" aria-expanded="true">
-                            <b class="ps-3">Similar Items</b>
-                        </button>
-                    </h2>
-                    <div id="similarItems" class="accordion-collapse collapse show">
-                        <div id="newBookCarousel" class="carousel slide" data-bs-ride="carousel"
-                            data-bs-interval="1500">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active">
-                                    <div class="col-6 col-md-3 col-lg-2">
-                                        <div class="card p-2 border-0">
-                                            <div class="card-body h-50 p-0">
-                                                <a href="#" onclick="loadBookAvatar(this)"><img
-                                                        src="assets/images/books/block.png" class="w-100"></a>
-                                                <p class="text-color-kidbook py-2 m-0"><b>$1.29</b></p>
-                                                <button
-                                                    class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                                    <small class="hover-text">Add to Cart</small>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-6 col-md-3 col-lg-2">
-                                        <div class="card p-2 border-0">
-                                            <div class="card-body h-50 p-0">
-                                                <a href="#" onclick="loadBookAvatar(this)"><img
-                                                        src="assets/images/books/boys.png" class="w-100"></a>
-                                                <p class="text-color-kidbook py-2 m-0"><b>$2.29</b></p>
-                                                <button
-                                                    class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                                    <small>Add to Cart</small>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-6 col-md-3 col-lg-2">
-                                        <div class="card p-2 border-0">
-                                            <div class="card-body h-50 p-0">
-                                                <a href="#" onclick="loadBookAvatar(this)"><img
-                                                        src="assets/images/books/cupcake.png" class="w-100"></a>
-                                                <p class="text-color-kidbook py-2 m-0"><b>$3.29</b></p>
-                                                <button
-                                                    class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                                    <small>Add to Cart</small>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-6 col-md-3 col-lg-2">
-                                        <div class="card p-2 border-0">
-                                            <div class="card-body h-50 p-0">
-                                                <a href="#" onclick="loadBookAvatar(this)"><img
-                                                        src="assets/images/books/dinosaurs.png" class="w-100"></a>
-                                                <p class="text-color-kidbook py-2 m-0"><b>$4.29</b></p>
-                                                <button
-                                                    class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                                    <small>Add to Cart</small>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-6 col-md-3 col-lg-2">
-                                        <div class="card p-2 border-0">
-                                            <div class="card-body h-50 p-0">
-                                                <a href="#" onclick="loadBookAvatar(this)"><img
-                                                        src="assets/images/books/dog_heaven.png" class="w-100"></a>
-                                                <p class="text-color-kidbook py-2 m-0"><b>$5.29</b></p>
-                                                <button
-                                                    class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                                    <small>Add to Cart</small>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-6 col-md-3 col-lg-2">
-                                        <div class="card p-2 border-0">
-                                            <div class="card-body h-50 p-0">
-                                                <a href="#" onclick="loadBookAvatar(this)"><img
-                                                        src="assets/images/books/fox.png" class="w-100"></a>
-                                                <p class="text-color-kidbook py-2 m-0"><b>$6.29</b></p>
-                                                <button
-                                                    class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                                    <small>Add to Cart</small>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-6 col-md-3 col-lg-2">
-                                        <div class="card p-2 border-0">
-                                            <div class="card-body h-50 p-0">
-                                                <a href="#" onclick="loadBookAvatar(this)"><img
-                                                        src="assets/images/books/girls.png" class="w-100"></a>
-                                                <p class="text-color-kidbook py-2 m-0"><b>$7.29</b></p>
-                                                <button
-                                                    class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                                                    <small>Add to Cart</small>
-                                                </button>
-                                            </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#similarItems" aria-expanded="true">
+                        <b class="ps-3">Similar Items</b>
+                    </button>
+                </h2>
+                <div id="similarItems" class="accordion-collapse collapse show">
+                    <div id="newBookCarousel" class="carousel slide text-center" data-bs-ride="carousel"
+                        data-bs-interval="1500">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="card p-2 border-0">
+                                        <div class="card-body h-50 p-0">
+                                            <a href="#" onclick="loadBookAvatar(this)"><img
+                                                    src="assets/images/books/block.png" class="w-100"></a>
+                                            <p class="text-color-kidbook py-2 m-0"><b>$1.29</b></p>
+                                            <button
+                                                class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                                                <small class="hover-text">Add to Cart</small>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev position-absolute top-50 start-0 translate-middle w-aut"
-                                href="#newBookCarousel" role="button" data-bs-slide="prev">
-                                <p class="carousel-control-prev-icon bg-dark rounded-3 py-5 px-4" aria-hidden="true">
-                                </p>
-                            </a>
-                            <a class="carousel-control-next position-absolute top-50 start-100 translate-middle w-aut"
-                                href="#newBookCarousel" role="button" data-bs-slide="next">
-                                <span class="carousel-control-next-icon bg-dark rounded-3 py-5 px-4"
-                                    aria-hidden="true"></span>
-                            </a>
+                            <div class="carousel-item">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="card p-2 border-0">
+                                        <div class="card-body h-50 p-0">
+                                            <a href="#" onclick="loadBookAvatar(this)"><img
+                                                    src="assets/images/books/boys.png" class="w-100"></a>
+                                            <p class="text-color-kidbook py-2 m-0"><b>$2.29</b></p>
+                                            <button
+                                                class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                                                <small>Add to Cart</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="card p-2 border-0">
+                                        <div class="card-body h-50 p-0">
+                                            <a href="#" onclick="loadBookAvatar(this)"><img
+                                                    src="assets/images/books/cupcake.png" class="w-100"></a>
+                                            <p class="text-color-kidbook py-2 m-0"><b>$3.29</b></p>
+                                            <button
+                                                class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                                                <small>Add to Cart</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="card p-2 border-0">
+                                        <div class="card-body h-50 p-0">
+                                            <a href="#" onclick="loadBookAvatar(this)"><img
+                                                    src="assets/images/books/dinosaurs.png" class="w-100"></a>
+                                            <p class="text-color-kidbook py-2 m-0"><b>$4.29</b></p>
+                                            <button
+                                                class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                                                <small>Add to Cart</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="card p-2 border-0">
+                                        <div class="card-body h-50 p-0">
+                                            <a href="#" onclick="loadBookAvatar(this)"><img
+                                                    src="assets/images/books/dog_heaven.png" class="w-100"></a>
+                                            <p class="text-color-kidbook py-2 m-0"><b>$5.29</b></p>
+                                            <button
+                                                class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                                                <small>Add to Cart</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="card p-2 border-0">
+                                        <div class="card-body h-50 p-0">
+                                            <a href="#" onclick="loadBookAvatar(this)"><img
+                                                    src="assets/images/books/fox.png" class="w-100"></a>
+                                            <p class="text-color-kidbook py-2 m-0"><b>$6.29</b></p>
+                                            <button
+                                                class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                                                <small>Add to Cart</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="card p-2 border-0">
+                                        <div class="card-body h-50 p-0">
+                                            <a href="#" onclick="loadBookAvatar(this)"><img
+                                                    src="assets/images/books/girls.png" class="w-100"></a>
+                                            <p class="text-color-kidbook py-2 m-0"><b>$7.29</b></p>
+                                            <button
+                                                class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
+                                                <small>Add to Cart</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <a class="carousel-control-prev position-absolute top-50 start-0 translate-middle w-aut"
+                            href="#newBookCarousel" role="button" data-bs-slide="prev">
+                            <p class="carousel-control-prev-icon bg-dark rounded-3 py-5 px-4" aria-hidden="true">
+                            </p>
+                        </a>
+                        <a class="carousel-control-next position-absolute top-50 start-100 translate-middle w-aut"
+                            href="#newBookCarousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded-3 py-5 px-4"
+                                aria-hidden="true"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <img id="bookAvatar" src="bookImgPath" alt="Book Image"></img> -->
-    <script src="assets/js/carousel.js"></script>
-    <link rel="stylesheet" href="assets/css/carousel.css">
+</div>
+<script src="assets/js/carousel.js"></script>
+<link rel="stylesheet" href="assets/css/carousel.css">

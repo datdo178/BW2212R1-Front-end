@@ -1,13 +1,12 @@
-<!-- BANNER -->
-<div class="bg-blue text-white text-center py-2">
-    <h1>By 5 books get 1 free</h1>
-</div>
-<div class="text-end">
-    <a href="#" class="nav-link text-decoration-underline"><small>See sale details*</small></a>
-</div>
-<!-- BOOK LIST-->
-<div id="bookList" class="row mx-0 pb-5">
-    <!-- Header: Breadcrumb, Title, Display Adjust in small screen -->
+<div class="row">
+    <!-- BANNER -->
+    <div class="bg-blue text-white text-center py-2">
+        <h1>By 5 books get 1 free</h1>
+    </div>
+    <div class="text-end">
+        <a href="#" class="nav-link text-decoration-underline"><small>See sale details*</small></a>
+    </div>
+    <!-- Breadcrumb, Title -->
     <div class="col-12 text-center">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -19,18 +18,18 @@
             </ol>
         </nav>
         <div class="bg-white rounded-pill p-1">
-            <h1 class="border border-dashed border-primary bg-white text-primary rounded-pill mb-0">New Arrivals</h1>
+            <h1 class="border border-dashed border-dark bg-white rounded-pill mb-0">New Arrivals</h1>
         </div>
         <p><small>Page 1 of 56 - 1,322 Results</small></p>
         <div class="d-flex d-lg-none justify-content-between w-100">
             <div class="dropdown flex-fill mx-2">
-                <button class="btn btn-dark border-dark border-1 rounded-pill py-1 w-100" id="itemPerPageDropdown"
+                <button class="btn btn-dark border-dark border-1 rounded-pill py-1 w-100" id="itemPerPageDropdownSmall"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <small class="hover-text px-1">View</small>
                 </button>
-                <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
-                    <label for="itemPerPage" class="form-label"><b>Items / page</b></label>
-                    <input type="range" class="form-range h-75" min="0" max="3" step="25%" id="itemPerPage">
+                <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdownSmall">
+                    <label for="itemPerPageSmall" class="form-label"><b>Items / page</b></label>
+                    <input type="range" class="form-range h-75" min="0" max="3" step="25%" id="itemPerPageSmall">
                     <div class="d-flex justify-content-between">
                         <span>12</span>
                         <span>24</span>
@@ -40,11 +39,11 @@
                 </div>
             </div>
             <div class="dropdown flex-fill mx-2">
-                <button class="btn btn-dark border-dark border-1 rounded-pill py-1 w-100" id="itemPerPageDropdown"
+                <button class="btn btn-dark border-dark border-1 rounded-pill py-1 w-100" id="sortBySmall"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <small class="hover-text">Sort By</small>
                 </button>
-                <ul class="dropdown-menu border-0 shadow py-1" aria-labelledby="itemPerPageDropdown">
+                <ul class="dropdown-menu border-0 shadow py-1" aria-labelledby="sortBySmall">
                     <li><a class="dropdown-item active" href="#">Popularity</a></li>
                     <li><a class="dropdown-item" href="#">Title A-Z</a></li>
                     <li><a class="dropdown-item" href="#">Title Z-A</a></li>
@@ -390,8 +389,9 @@
             </div>
         </div>
     </div>
+
     <!-- Sidebar: Display Adjust in large screen -->
-    <div class="d-none d-lg-block col-lg-4 col-xl-3">
+    <div id="sideBar" class="d-none d-lg-block col-lg-4 col-xl-3 sticky-top z-1 h-25">
         <div class="d-flex mb-2">
             <div class="dropdown">
                 <button class="btn btn-light rounded-end-0 border-dark-subtle border-1 py-1 dropdown-toggle"
@@ -411,10 +411,10 @@
             </div>
             <div class="dropdown flex-fill">
                 <button class="btn btn-light rounded-start-0 border-dark-subtle border-1 py-1 w-100 dropdown-toggle"
-                    id="itemPerPageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    id="sortBy" data-bs-toggle="dropdown" aria-expanded="false">
                     <small class="hover-text">Sort By</small>
                 </button>
-                <ul class="dropdown-menu border-0 shadow py-1" aria-labelledby="itemPerPageDropdown">
+                <ul class="dropdown-menu border-0 shadow py-1" aria-labelledby="sortBy">
                     <li><a class="dropdown-item active" href="#">Popularity</a></li>
                     <li><a class="dropdown-item" href="#">Title A-Z</a></li>
                     <li><a class="dropdown-item" href="#">Title Z-A</a></li>
@@ -427,8 +427,8 @@
                 </ul>
             </div>
         </div>
-        <div class="accordion">
-            <div class="accordion-item">
+        <div class="accordion border rounded-2  px-2">
+            <div class="accordion-item border-top-0">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#filterSubjectLg" aria-expanded="false">
@@ -575,7 +575,7 @@
                         <b>Language</b>
                     </button>
                 </h2>
-                <div id="filterLanguage" class="accordion-collapse collapse justify-content-center">
+                <div id="filterLanguageLg" class="accordion-collapse collapse justify-content-center">
                     <ul class="navbar-nav px-2">
                         <div class="d-flex justify-content-between align-items-center py-2">
                             <div>
@@ -684,7 +684,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-bottom-0">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#filterQuantityLg" aria-expanded="false">
@@ -747,10 +747,8 @@
         </div>
     </div>
     <!-- Book list -->
-    <!-- <div
-        class="col-12 bg-white row row-cols-2 row-cols-sm-3 overflow-scroll text-center mx-0 my-3 h-75 rounded-2 justify-content-center"> -->
     <div
-        class="col-12 col-lg-8 col-xl-9 bg-white row row-cols-2 row-cols-sm-3 row-cols-xl-4 text-center mt-3 mt-lg-0 overflow-scroll mx-0 h-75 rounded-2">
+        class="col-12 col-lg-8 col-xl-9 bg-white row row-cols-2 row-cols-sm-3 row-cols-xl-4 text-center mt-3 mt-lg-0 mx-0 rounded-2">
         <div class="card p-2 bg-none border-0">
             <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
                 <b class="text-white">-10%</b>
@@ -799,11 +797,11 @@
                         Packet | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice1" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice1">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -824,18 +822,19 @@
                     <img src="assets/images/books/yellow_bird.png" class="w-100">
                 </a>
                 <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
-                        class="nav-link hover-underline">Yellow bird</a></h5>
+                        class="nav-link hover-underline">Yellow
+                        bird</a></h5>
                 <p class="text-start m-0 small">By: Joyce Hansen</p>
                 <div class="d-flex small">
                     <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Boardset | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice2" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice2">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -863,11 +862,11 @@
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice3" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice3">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -891,18 +890,19 @@
                     <img src="assets/images/books/rillia.png" class="w-100">
                 </a>
                 <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
-                        class="nav-link hover-underline">Rilla of ingleside</a></h5>
+                        class="nav-link hover-underline">Rilla of
+                        ingleside</a></h5>
                 <p class="text-start m-0 small">By: Montgomery</p>
                 <div class="d-flex small">
                     <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Softcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice4" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice4">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -930,11 +930,11 @@
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice5" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice5">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -963,11 +963,11 @@
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice6" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice6">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -998,11 +998,11 @@
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice7" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice7">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -1033,11 +1033,11 @@
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice8" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice8">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -1068,11 +1068,11 @@
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice9" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice9">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -1093,18 +1093,19 @@
                     <img src="assets/images/books/girls.png" class="w-100">
                 </a>
                 <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
-                        class="nav-link hover-underline">Goddess girsl</a></h5>
+                        class="nav-link hover-underline">Goddess
+                        girsl</a></h5>
                 <p class="text-start m-0 small">By: Chrystal D.Giles</p>
                 <div class="d-flex small">
                     <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice10" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice10">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -1128,152 +1129,19 @@
                     <img src="assets/images/books/fox.png" class="w-100">
                 </a>
                 <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
-                        class="nav-link hover-underline">Scary stories</a></h5>
+                        class="nav-link hover-underline">Scary
+                        stories</a></h5>
                 <p class="text-start m-0 small">By: Christian</p>
                 <div class="d-flex small">
                     <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
                         Hardcover | Listprice: $4
                     </p>
                     <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
+                        <button class="border-0 bg-white" id="listPrice11" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
                         </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
-                            The price at which the manufacturer recommends that the retailer sell the
-                            product.
-                        </div>
-                    </div>
-                </div>
-                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
-                <button
-                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                    <small class="hover-text">Add to Cart</small>
-                </button>
-                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-            </div>
-        </div>
-        <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-10%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-2">
-                <a href="#" onclick="loadBookAvatar(this)">
-                    <img src="assets/images/books/block.png" class="w-100">
-                </a>
-                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
-                        class="nav-link hover-underline">Block</a></h5>
-                <p class="text-start m-0 small">By: Chrystal D.Giles</p>
-                <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
-                        Hardcover | Listprice: $4
-                    </p>
-                    <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
-                        </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
-                            The price at which the manufacturer recommends that the retailer sell the
-                            product.
-                        </div>
-                    </div>
-                </div>
-                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
-                <button
-                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                    <small class="hover-text">Add to Cart</small>
-                </button>
-                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-            </div>
-        </div>
-        <div class="card p-2 bg-none border-0">
-            <div class="card-body shadow rounded-2 p-2">
-                <a href="#" onclick="loadBookAvatar(this)">
-                    <img src="assets/images/books/boys.png" class="w-100">
-                </a>
-                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">Boys
-                        back row</a></h5>
-                <p class="text-start m-0 small">By: Mike Jung</p>
-                <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
-                        Packet | Listprice: $4
-                    </p>
-                    <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
-                        </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
-                            The price at which the manufacturer recommends that the retailer sell the
-                            product.
-                        </div>
-                    </div>
-                </div>
-                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
-                <button
-                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                    <small class="hover-text">Add to Cart</small>
-                </button>
-                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-            </div>
-        </div>
-        <div class="card p-2 bg-none border-0">
-            <div class="rounded-circle  border border-3 border-light position-absolute end-0 bg-danger px-2 py-3">
-                <b class="text-white">-07%</b>
-            </div>
-            <div class="card-body shadow rounded-2 p-2">
-                <a href="#" onclick="loadBookAvatar(this)">
-                    <img src="assets/images/books/yellow_bird.png" class="w-100">
-                </a>
-                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#"
-                        class="nav-link hover-underline">Yellow bird</a></h5>
-                <p class="text-start m-0 small">By: Joyce Hansen</p>
-                <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
-                        Boardset | Listprice: $4
-                    </p>
-                    <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
-                        </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
-                            The price at which the manufacturer recommends that the retailer sell the
-                            product.
-                        </div>
-                    </div>
-                </div>
-                <p class="text-color-kidbook py-2 m-0"><del>$2.99</del> <b>$1.29</b></p>
-                <button
-                    class="d-none d-sm-inline-block btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
-                    <small class="hover-text">Add to Cart</small>
-                </button>
-                <i class="d-sm-none fa-solid fa-cart-shopping text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-                <i class="fa-regular fa-heart text-color-kidbook hover-text-blue fa-xl ps-2"></i>
-            </div>
-        </div>
-        <div class="card p-2 bg-none border-0">
-            <div class="card-body shadow rounded-2 p-2">
-                <a href="#" onclick="loadBookAvatar(this)">
-                    <img src="assets/images/books/tornado.png" class="w-100">
-                </a>
-                <h5 class="text-start text-nowrap overflow-scroll m-0"><a href="#" class="nav-link hover-underline">The
-                        Tornado</a></h5>
-                <p class="text-start m-0 small">By: Jade Burt</p>
-                <div class="d-flex small">
-                    <p class="d-none d-md-block text-start text-muted text-nowrap small m-0">
-                        Hardcover | Listprice: $4
-                    </p>
-                    <div class="dropdown d-none d-md-inline-block lh-1">
-                        <button class="border-0 bg-white" id="itemPerPageDropdown" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-question-circle text-black-50 fa-xs"></i>
-                        </button>
-                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="itemPerPageDropdown">
+                        <div class="dropdown-menu border-0 shadow p-3" aria-labelledby="listPrice11">
                             The price at which the manufacturer recommends that the retailer sell the
                             product.
                         </div>
@@ -1305,8 +1173,8 @@
                 <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
-                <li class="page-item" id="itemPerPageDropdown" data-bs-toggle="dropdown" aria-expanded="false"><a
-                        class="page-link text-dark" href="#">...</a></li>
+                <li class="page-item" data-bs-toggle="dropdown" aria-expanded="false"><a class="page-link text-dark"
+                        href="#">...</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">51</a></li>
                 <li class="page-item"><a class="page-link text-dark" href="#">
                         <i class="fa-solid fa-chevron-right"></i>
@@ -1326,5 +1194,4 @@
             </ul>
         </nav>
     </div>
-
 </div>
