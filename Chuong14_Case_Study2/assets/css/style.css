@@ -45,7 +45,7 @@ body::before {
 }
 
 .dropdown-menu {
-    min-width: 250px !important;
+    min-width: 220px !important;
 }
 
 #sideBar {
@@ -53,11 +53,6 @@ body::before {
 }
 
 /* New Classes */
-.mw-520px {
-    max-width: 520px;
-    margin: auto;
-}
-
 .hover-bg-grey:hover {
     background-color: #F2F2F2;
 }

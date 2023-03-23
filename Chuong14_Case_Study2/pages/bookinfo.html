@@ -1,13 +1,13 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#" class="text-decoration-none" onclick="reload('home')">
+        <li class="breadcrumb-item"><a href="#" class="text-decoration-none" onclick="openPage('home')">
                 <small>Home</small></a>
         </li>
         <li class="breadcrumb-item"><a href="#" class="text-decoration-none">
                 <small>Categories</small></a>
         </li>
         <li class="breadcrumb-item">
-            <a href="#" class="text-decoration-none" onclick="reload('booklist')"><small>New Arrivals</small></a>
+            <a href="#" class="text-decoration-none" onclick="openPage('booklist')"><small>New Arrivals</small></a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">
             <small>Book Details</small>
@@ -16,9 +16,9 @@
 </nav>
 <div class="row bg-white">
     <div class="col-12 col-md-4 col-xl-4 text-center">
-        <img id="bookAvatar" src="bookImgPath" class="d-md-none border border-1 rounded-2" alt="Book Image"></img>
-        <img id="bookAvatar" src="bookImgPath" class="d-none d-md-block w-100 border border-1 rounded-2"
-            alt="Book Image"></img>
+        <img src="bookImgPath" class="d-md-none border border-1 rounded-2" alt="Book Image"/>
+        <img src="bookImgPath" class="d-none d-md-block w-100 border border-1 rounded-2"
+            alt="Book Image"/>
     </div>
     <div class="col-12 col-md-8 col-lg-6 col-xl-6">
         <h1 class="text-center py-3 pt-lg-0">Book title display here </h1>
@@ -78,7 +78,6 @@
                 </div>
             </div>
         </div>
-        </table>
     </div>
     <div class="col-12 mt-4">
         <h4>About</h4>
@@ -138,8 +137,8 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="card p-2 border-0">
                                         <div class="card-body h-50 p-0">
-                                            <a href="#" onclick="loadBookAvatar(this)"><img
-                                                    src="assets/images/books/block.png" class="w-100"></a>
+                                            <a href="#" onclick="openBookInfo(this)"><img
+                                                    src="assets/images/books/block.png" class="w-100" alt="Book image"></a>
                                             <p class="text-color-kidbook py-2 m-0"><b>$1.29</b></p>
                                             <button
                                                 class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -153,8 +152,8 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="card p-2 border-0">
                                         <div class="card-body h-50 p-0">
-                                            <a href="#" onclick="loadBookAvatar(this)"><img
-                                                    src="assets/images/books/boys.png" class="w-100"></a>
+                                            <a href="#" onclick="openBookInfo(this)"><img
+                                                    src="assets/images/books/boys.png" class="w-100" alt="Book image"></a>
                                             <p class="text-color-kidbook py-2 m-0"><b>$2.29</b></p>
                                             <button
                                                 class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -168,8 +167,8 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="card p-2 border-0">
                                         <div class="card-body h-50 p-0">
-                                            <a href="#" onclick="loadBookAvatar(this)"><img
-                                                    src="assets/images/books/cupcake.png" class="w-100"></a>
+                                            <a href="#" onclick="openBookInfo(this)"><img
+                                                    src="assets/images/books/cupcake.png" class="w-100" alt="Book image"></a>
                                             <p class="text-color-kidbook py-2 m-0"><b>$3.29</b></p>
                                             <button
                                                 class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -183,8 +182,8 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="card p-2 border-0">
                                         <div class="card-body h-50 p-0">
-                                            <a href="#" onclick="loadBookAvatar(this)"><img
-                                                    src="assets/images/books/dinosaurs.png" class="w-100"></a>
+                                            <a href="#" onclick="openBookInfo(this)"><img
+                                                    src="assets/images/books/dinosaurs.png" class="w-100" alt="Book image"></a>
                                             <p class="text-color-kidbook py-2 m-0"><b>$4.29</b></p>
                                             <button
                                                 class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -198,8 +197,8 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="card p-2 border-0">
                                         <div class="card-body h-50 p-0">
-                                            <a href="#" onclick="loadBookAvatar(this)"><img
-                                                    src="assets/images/books/dog_heaven.png" class="w-100"></a>
+                                            <a href="#" onclick="openBookInfo(this)"><img
+                                                    src="assets/images/books/dog_heaven.png" class="w-100" alt="Book image"></a>
                                             <p class="text-color-kidbook py-2 m-0"><b>$5.29</b></p>
                                             <button
                                                 class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -213,8 +212,8 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="card p-2 border-0">
                                         <div class="card-body h-50 p-0">
-                                            <a href="#" onclick="loadBookAvatar(this)"><img
-                                                    src="assets/images/books/fox.png" class="w-100"></a>
+                                            <a href="#" onclick="openBookInfo(this)"><img
+                                                    src="assets/images/books/fox.png" class="w-100" alt="Book image"></a>
                                             <p class="text-color-kidbook py-2 m-0"><b>$6.29</b></p>
                                             <button
                                                 class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">
@@ -228,8 +227,8 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="card p-2 border-0">
                                         <div class="card-body h-50 p-0">
-                                            <a href="#" onclick="loadBookAvatar(this)"><img
-                                                    src="assets/images/books/girls.png" class="w-100"></a>
+                                            <a href="#" onclick="openBookInfo(this)"><img
+                                                    src="assets/images/books/girls.png" class="w-100" alt="Book image"></a>
                                             <p class="text-color-kidbook py-2 m-0"><b>$7.29</b></p>
                                             <button
                                                 class="btn border-dark border-1 rounded-pill hover-bg-dark hover-text-white py-1 mb-1">

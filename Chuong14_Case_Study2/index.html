@@ -26,7 +26,7 @@
             class="row bg-white border-bottom border-3 justify-content-between align-items-center text-color-kidbook mx-0 justify-content-lg-around">
             <div class="col-2 col-sm-7 col-lg-5 col-xl-3 d-flex align-items-center">
                 <div>
-                    <a href="#" onclick="reload('home')">
+                    <a href="#" onclick="openPage('home')">
                         <img src="assets/images/icons/kb-logo.png" class="header-logo w-100" alt="Kidbooks logo">
                     </a>
                 </div>
@@ -53,11 +53,11 @@
                         <li><a class="dropdown-item hover-underline" href="#">Wishlist</a></li>
                         <li><a class="dropdown-item hover-underline" href="#">Support Request</a></li>
                         <li><a class="dropdown-item hover-underline fw-bold text-decoration-underline"
-                                onclick="reload('login')">Login</a></li>
+                                onclick="openPage('login')">Login</a></li>
                     </ul>
                 </div>
                 <i class="fa-regular fa-heart fa-xl hover-bg-grey p-2"></i>
-                <a href="#" class="position-relative text-color-kidbook" onclick="reload('cart')">
+                <a href="#" class="position-relative text-color-kidbook" onclick="openPage('cart')">
                     <span class="position-absolute end-0 translate-middle-y badge rounded-pill bg-dark">3</span>
                     <i class="fa fa-cart-shopping fa-xl hover-bg-grey p-2"></i>
                 </a>
@@ -528,14 +528,14 @@
                                 </div>
                             </div>
                             <div class="border-top border-2 border-dark border-bottom-0 ps-5 pt-2">
-                                <a onclick="reload('contact')" class="nav-link fw-bold hover-underline"><small>Contact
+                                <a onclick="openPage('contact')" class="nav-link fw-bold hover-underline"><small>Contact
                                         us</small></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="searchBox" class="d-none d-lg-none w-75 mx-auto">
+            <div id="searchBox" class="d-none d-lg-none w-75 mx-auto mb-1">
                 <input type="text" class="form-control border-1 rounded-start-pill" placeholder="Search">
                 <button type="button" class="border-0 rounded-end-pill bg-color-kidbook text-white px-3">
                     <i class="fa-solid fa-magnifying-glass px-1"></i>
@@ -593,7 +593,8 @@
                         </ul>
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
-                        <a href="#" class="nav-link fw-bold hover-underline ps-4" onclick="reload('booklist')">Shop All
+                        <a href="#" class="nav-link fw-bold hover-underline ps-4" onclick="openPage('booklist')">Shop
+                            All
                             Books >></a>
                     </div>
                 </ul>
@@ -662,7 +663,8 @@
                         </ul>
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
-                        <a href="#" class="nav-link fw-bold hover-underline ps-4" onclick="reload('booklist')">Shop All
+                        <a href="#" class="nav-link fw-bold hover-underline ps-4" onclick="openPage('booklist')">Shop
+                            All
                             >></a>
                     </div>
                 </ul>
@@ -685,7 +687,7 @@
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
                         <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2"
-                            onclick="reload('booklist')">Shop
+                            onclick="openPage('booklist')">Shop
                             All Toys and Activities >></a>
                     </div>
                 </ul>
@@ -729,7 +731,7 @@
                     </div>
                     <div class="bg-light py-2 mt-3 mb-0">
                         <a href="#" class="nav-link fw-bold hover-underline text-nowrap px-2"
-                            onclick="reload('booklist')">Shop
+                            onclick="openPage('booklist')">Shop
                             All >></a>
                     </div>
                 </ul>
@@ -737,9 +739,9 @@
         </div>
     </header>
     <main class="mb-5 container-fluid container-lg" id="includedContent"></main>
-    <footer class="mb-5 mb-lg-0 d-md-flex flex-row-reverse justify-content-center">
-        <div class="ms-xl-5 px-lg-3">
-            <div class="bg-dark text-white text-center px-3 mb-5 mb-lg-0 mw-520px">
+    <footer class="mb-5 mb-lg-0 row d-md-flex flex-row-reverse justify-content-center mx-0">
+        <div class="col-12 col-lg-6 col-xl-5 col-xxl-4">
+            <div class="bg-dark text-white text-center px-3 px-md-5 px-lg-3 mb-5 mb-lg-0">
                 <h4 class="pt-5">Sign up for our newsletter</h4>
                 <p class="small">The best of KidsBooks, straight to your inbox. Sign up to get $5 off your next
                     purchase,
@@ -759,7 +761,7 @@
                     <i class="fa-brands fa-instagram text-color-kidbook fa-2x px-2 py-2"></i>
                 </div>
             </div>
-            <div class="accordion d-md-none mw-520px px-3 mb-3">
+            <div class="accordion d-md-none px-3 mb-3">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -772,7 +774,7 @@
                             <li><a href="#" class="nav-link hover-underline">Help Center</a></li>
                             <li><a href="#" class="nav-link hover-underline">Shipping</a></li>
                             <li><a href="#" class="nav-link hover-underline">Returns</a></li>
-                            <li><a onclick="reload('contact')" class="nav-link hover-underline">Contact Us</a></li>
+                            <li><a onclick="openPage('contact')" class="nav-link hover-underline">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -808,10 +810,18 @@
                     </div>
                 </div>
             </div>
+            <ul class="d-md-none navbar-nav flex-row small fw-bold justify-content-center">
+                <li><a href="#" class="nav-link hover-underline px-3">Privacy Policy</a></li>
+                <li><a href="#" class="nav-link hover-underline px-3">Terms of Use</a></li>
+                <li><a href="#" class="nav-link hover-underline px-3">Sitemap</a></li>
+            </ul>
+            <p class="d-md-none px-3 text-center small pb-3">KidsBooks is owned and operated &copy; Book Depot, Inc. All
+                Rights
+                Reserved.</p>
         </div>
-        <div class="me-xl-5">
-            <div class="d-none d-md-block border-top border-2 border-dark mb-5 mx-1"></div>
-            <div class="mw-520px d-none d-md-flex justify-content-around mb-3">
+        <div class="d-none d-md-block col-12 col-md-10 col-lg-6 col-xl-5 col-xxl-4">
+            <div class="border-top border-2 border-dark mb-5"></div>
+            <div class="d-flex justify-content-around mb-3">
                 <ul class="navbar-nav">
                     <h4>Who we are</h4>
                     <li><a href="#" class="nav-link hover-underline">About Us</a></li>
@@ -823,7 +833,7 @@
                     <li><a href="#" class="nav-link hover-underline">Help Center</a></li>
                     <li><a href="#" class="nav-link hover-underline">Shipping</a></li>
                     <li><a href="#" class="nav-link hover-underline">Returns</a></li>
-                    <li><a onclick="reload('contact')" class="nav-link hover-underline">Contact Us</a></li>
+                    <li><a onclick="openPage('contact')" class="nav-link hover-underline">Contact Us</a></li>
                 </ul>
                 <ul class="navbar-nav">
                     <h4>My Account</h4>

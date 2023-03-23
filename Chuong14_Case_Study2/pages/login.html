@@ -1,14 +1,14 @@
 <div class="row justify-content-center mt-5 m-2">
-    <div class="mw-520px d-flex justify-content-center px-0">
+    <div class="col-12 col-sm-10 col-lg-8 col-xl-6 d-flex justify-content-center px-0">
         <button
             class="w-50 border-0 rounded-start-pill border-bottom border-2 border-color-kidbook fw-bold text-color-kidbook bg-light m-0 py-2 px-0">
             <small>SIGN IN</small>
         </button>
-        <button class="w-50 border-0 py-2 rounded-end-pill fw-bold text-black-50 m-0 py-2 px-0"><small>CREATE AN
+        <button class="w-50 border py-2 rounded-end-pill fw-bold text-black-50 m-0 py-2 px-0"><small>CREATE AN
                 ACCOUNT</small></button>
     </div>
     <h4 class="text-center py-5">Sign In</h4>
-    <form class="mw-520px d-flex flex-column" action="#" method="POST">
+    <form class="col-12 col-sm-10 col-lg-8 col-xl-6 d-flex flex-column" action="#" method="POST">
         <div class="form-floating mb-3">
             <input type="email" class="form-control border-dark rounded-pill" id="email" placeholder="a">
             <label for="email" class="text-black-50"><span class="bg-white rounded-pill px-2">Email: *</span></label>
@@ -23,7 +23,7 @@
             <input type="checkbox" class="form-check-input border-dark ms-0 me-2" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Remember me</label>
         </div>
-        <a onclick="reload('home')"
+        <a onclick="openPage('home')"
             class="text-center text-decoration-none bg-dark text-white w-50 align-self-center rounded-pill py-3 mb-3">
             <b>Sign in</b>
         </a>
@@ -32,20 +32,24 @@
             <span class="px-3 text-black-50 fs-4">or</span>
             <div class="flex-fill border-bottom border-2 border-dark-subtle"></div>
         </div>
-        <div class="d-sm-flex align-self-center">
-            <button
-                class="btn shadow-sm bg-white border rounded-0 px-0 mx-2 mb-3 mb-sm-0 h-100 align-self-center hover-bg-grey">
-                <img class="img-fluid px-3 py-2" src="assets/images/icons/google.png" alt="Google icon">
-                <span class="text-black-50 ps-0 pe-4 fw-bold">
-                    <small>Sign in with Google</small>
-                </span>
-            </button>
-            <button class="btn btn-primary rounded-0 shadow-sm px-0 mx-2 align-self-center d-flex align-items-center">
-                <i class="fa-brands fa-square-facebook fa-2x px-2 py-1"></i>
-                <span class="text-white ps-0 pe-3 fw-bold">
-                    <small>Sign in with Facebook</small>
-                </span>
-            </button>
+        <div class="row d-flex justify-content-center">
+            <div class="col-10 col-sm-8 col-md-5">
+                <button
+                    class="btn shadow-sm bg-white border rounded-0 mb-3 mb-md-0 align-self-center hover-bg-grey w-100">
+                    <img class="img-fluid py-2" src="assets/images/icons/google.png" alt="Google icon">
+                    <span class="text-black-50 ps-0 pe-4 fw-bold">
+                        <small>Sign in with Google</small>
+                    </span>
+                </button>
+            </div>
+            <div class="col-10 col-sm-8 col-md-5">
+                <button class="btn btn-primary rounded-0 shadow-sm align-self-center w-100">
+                    <span class="text-white fw-bold d-flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-square-facebook fa-2x px-2 py-1"></i>
+                        <small>Sign in with Facebook</small>
+                    </span>
+                </button>
+            </div>
         </div>
     </form>
 </div>

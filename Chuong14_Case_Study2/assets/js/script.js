@@ -1,14 +1,14 @@
 // JQUERY - REDIRECT PAGE
 $(function () {
-    $("#includedContent").load(`pages/home.html`);
+    $("#includedContent").load(`pages/login.html`);
 });
 
-function reload(page) {
+function openPage(page) {
     $("#includedContent").load(`pages/${page}.html`);
     $('html,body').scrollTop(0);
 }
 
-function loadBookAvatar(bookElm) {
+function openBookInfo(bookElm) {
     const bookImgPath = $(bookElm).find("img").attr("src");
 
     $.get("pages/bookinfo.html", function (result) {
