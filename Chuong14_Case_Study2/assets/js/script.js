@@ -1,6 +1,6 @@
 // JQUERY - REDIRECT PAGE
 $(function () {
-    $("#includedContent").load(`pages/login.html`);
+    $("#includedContent").load(`pages/home.html`);
 });
 
 function openPage(page) {
